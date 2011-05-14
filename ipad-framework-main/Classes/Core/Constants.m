@@ -16,4 +16,4 @@ float	  const VERTICAL_HEIGHT = 1004;
 float	  const DEFAULT_X = -1;
 float	  const DEFAULT_Y = -1;
 float	  const DEFAULT_WIDTH = -1;
-float     const DEFAULT_HEIGHT = -1
+float     const DEFAULT_HEIGHT = -1;
