@@ -40,12 +40,30 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 327072799;
-			PBXWorkspaceStateSaveDate = 327072799;
+			PBXPerProjectTemplateStateSaveDate = 327074032;
+			PBXWorkspaceStateSaveDate = 327074032;
+		};
+		perUserProjectItems = {
+			39254850137EC1060097DBEC /* PBXBookmark */ = 39254850137EC1060097DBEC /* PBXBookmark */;
+			39254851137EC1060097DBEC /* PBXTextBookmark */ = 39254851137EC1060097DBEC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 39E0FD5B137EBB01004D213F /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	39254850137EC1060097DBEC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 39E0FD7D137EBB78004D213F /* Constants.h */;
+	};
+	39254851137EC1060097DBEC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 39E0FD7D137EBB78004D213F /* Constants.h */;
+		name = "Constants.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 261;
+		vrLoc = 0;
 	};
 	39E0FD4A137EBAEE004D213F /* ipad-framework-main */ = {
 		isa = PBXExecutable;
@@ -87,5 +105,28 @@
 	39E0FD5C137EBB01004D213F /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	39E0FD78137EBB78004D213F /* BaseModule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 193}";
+			sepNavWindowFrame = "{{61, 21}, {750, 774}}";
+		};
+	};
+	39E0FD7D137EBB78004D213F /* Constants.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {883, 286}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 261}";
+		};
+	};
+	39E0FD7E137EBB78004D213F /* Constants.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{481, 0}";
+			sepNavVisRange = "{0, 481}";
+			sepNavWindowFrame = "{{84, 0}, {750, 774}}";
+		};
 	};
 }
