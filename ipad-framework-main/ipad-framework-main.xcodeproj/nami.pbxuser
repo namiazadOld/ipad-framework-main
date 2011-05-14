@@ -54,6 +54,7 @@
 			3925488F137EC2CF0097DBEC /* PBXTextBookmark */ = 3925488F137EC2CF0097DBEC /* PBXTextBookmark */;
 			39254890137EC2CF0097DBEC /* PBXTextBookmark */ = 39254890137EC2CF0097DBEC /* PBXTextBookmark */;
 			39254891137EC2CF0097DBEC /* PBXTextBookmark */ = 39254891137EC2CF0097DBEC /* PBXTextBookmark */;
+			39254894137EC2EF0097DBEC /* PBXTextBookmark */ = 39254894137EC2EF0097DBEC /* PBXTextBookmark */;
 		};
 		sourceControlManager = 39E0FD5B137EBB01004D213F /* Source Control */;
 		userBuildSettings = {
@@ -104,7 +105,7 @@
 		fRef = 39E0FD7E137EBB78004D213F /* Constants.m */;
 		name = "Constants.m: 19";
 		rLen = 0;
-		rLoc = 481;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 481;
 		vrLoc = 0;
@@ -114,7 +115,7 @@
 		fRef = 39E0FD7E137EBB78004D213F /* Constants.m */;
 		name = "Constants.m: 19";
 		rLen = 0;
-		rLoc = 481;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 482;
 		vrLoc = 0;
@@ -124,7 +125,7 @@
 		fRef = 39E0FD7E137EBB78004D213F /* Constants.m */;
 		name = "Constants.m: 19";
 		rLen = 0;
-		rLoc = 481;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 482;
 		vrLoc = 0;
@@ -144,7 +145,7 @@
 		fRef = 39E0FD7E137EBB78004D213F /* Constants.m */;
 		name = "Constants.m: 19";
 		rLen = 0;
-		rLoc = 481;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 481;
 		vrLoc = 0;
@@ -154,9 +155,19 @@
 		fRef = 39E0FD7E137EBB78004D213F /* Constants.m */;
 		name = "Constants.m: 19";
 		rLen = 0;
-		rLoc = 481;
+		rLoc = 482;
 		rType = 0;
 		vrLen = 481;
+		vrLoc = 0;
+	};
+	39254894137EC2EF0097DBEC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 39E0FD7E137EBB78004D213F /* Constants.m */;
+		name = "Constants.m: 19";
+		rLen = 0;
+		rLoc = 482;
+		rType = 0;
+		vrLen = 482;
 		vrLoc = 0;
 	};
 	39E0FD4A137EBAEE004D213F /* ipad-framework-main */ = {
@@ -240,8 +251,8 @@
 	39E0FD7E137EBB78004D213F /* Constants.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {883, 665}}";
-			sepNavSelRange = "{481, 0}";
-			sepNavVisRange = "{0, 481}";
+			sepNavSelRange = "{482, 0}";
+			sepNavVisRange = "{0, 482}";
 			sepNavWindowFrame = "{{84, 0}, {750, 774}}";
 		};
 	};
