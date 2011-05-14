@@ -1,0 +1,91 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* ipad-framework-main */ = {
+		activeExec = 0;
+		executables = (
+			39E0FD4A137EBAEE004D213F /* ipad-framework-main */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 39E0FD4A137EBAEE004D213F /* ipad-framework-main */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* ipad-framework-main */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* ipad-framework-main */,
+		);
+		codeSenseManager = 39E0FD5C137EBB01004D213F /* Code sense */;
+		executables = (
+			39E0FD4A137EBAEE004D213F /* ipad-framework-main */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					705,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 327072799;
+			PBXWorkspaceStateSaveDate = 327072799;
+		};
+		sourceControlManager = 39E0FD5B137EBB01004D213F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	39E0FD4A137EBAEE004D213F /* ipad-framework-main */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "ipad-framework-main";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	39E0FD5B137EBB01004D213F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "ipad-framework-main";
+			};
+		};
+	};
+	39E0FD5C137EBB01004D213F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
