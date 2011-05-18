@@ -18,4 +18,6 @@
 +(void) ShowError: (id)sender title: (NSString*)title content: (NSString*)content;
 +(void) AddControl:(iBaseControl*) widget ToContainer: (iBaseControl*) container;
 
+
+
 @end

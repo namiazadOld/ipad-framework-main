@@ -7,10 +7,11 @@
 //
 
 #import "ipad_framework_mainAppDelegate.h"
-#import "iPadFrameworkAppDelegate.h"
+
 #import "root.h"
 #import "SampleTable.h"
 #import "Utilities.h"
+#import "SampleTabController.h"
 
 
 
@@ -30,20 +31,21 @@
 	
 	
 	
-	//root *aRoot = [[root alloc]init];
-	//	
-	//	NSMutableArray* arguments = [[NSMutableArray alloc]init];
-	//	aRoot.window = window;
-	//	[aRoot initialize:arguments container: NULL];
-	//	[Utilities setCurrentView:aRoot.viewController];
+	root *aRoot = [[root alloc]init];
+	
+		
+		NSMutableArray* arguments = [[NSMutableArray alloc]init];
+		aRoot.window = window;
+		[aRoot initialize:arguments container: NULL];
+		[Utilities setCurrentView:aRoot.viewController];
 	
 	
-	SampleTabController* tabContoller = [[SampleTabController alloc] init];
-	[tabContoller initialize];
-	
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabContoller.viewController];
-	[window addSubview:[navController view]];
-	[navController setNavigationBarHidden:YES];
+	//SampleTabController* tabContoller = [[SampleTabController alloc] init];
+//	[tabContoller initialize];
+//	
+//	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabContoller.viewController];
+//	[window addSubview:[navController view]];
+//	[navController setNavigationBarHidden:YES];
 	
     [window makeKeyAndVisible];
 }

@@ -15,6 +15,32 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		39254A691380C1980097DBEC /* mobl_ipadstyle_buttonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A561380C1980097DBEC /* mobl_ipadstyle_buttonStyle.m */; };
+		39254A6A1380C1980097DBEC /* mobl_ipadstyle_headerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A581380C1980097DBEC /* mobl_ipadstyle_headerStyle.m */; };
+		39254A6B1380C1980097DBEC /* mobl_ipadstyle_itemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A5A1380C1980097DBEC /* mobl_ipadstyle_itemStyle.m */; };
+		39254A6C1380C1980097DBEC /* mobl_ipadstyle_labelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A5C1380C1980097DBEC /* mobl_ipadstyle_labelStyle.m */; };
+		39254A6D1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A5E1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.m */; };
+		39254A6E1380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A601380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.m */; };
+		39254A6F1380C1980097DBEC /* mobl_ipadstyle_sectionStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A621380C1980097DBEC /* mobl_ipadstyle_sectionStyle.m */; };
+		39254A701380C1980097DBEC /* mobl_ipadstyle_switchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A641380C1980097DBEC /* mobl_ipadstyle_switchStyle.m */; };
+		39254A711380C1980097DBEC /* mobl_ipadstyle_tableStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A661380C1980097DBEC /* mobl_ipadstyle_tableStyle.m */; };
+		39254A721380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39254A681380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.m */; };
+		39609CE61384349100B96C07 /* HumanResource_iItemCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CC71384349000B96C07 /* HumanResource_iItemCheck.m */; };
+		39609CE71384349100B96C07 /* HumanResource_iItemEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CC91384349000B96C07 /* HumanResource_iItemEdit.m */; };
+		39609CE81384349100B96C07 /* HumanResource_iItemNum.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CCB1384349000B96C07 /* HumanResource_iItemNum.m */; };
+		39609CE91384349100B96C07 /* HumanResource_itemCheckSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CCD1384349000B96C07 /* HumanResource_itemCheckSwitchStyle.m */; };
+		39609CEA1384349100B96C07 /* HumanResource_itemEditLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CCF1384349000B96C07 /* HumanResource_itemEditLabelStyle.m */; };
+		39609CEB1384349100B96C07 /* HumanResource_itemEditTextBoxStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CD11384349000B96C07 /* HumanResource_itemEditTextBoxStyle.m */; };
+		39609CEC1384349100B96C07 /* HumanResource_secondScreen_callback_a.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CD31384349000B96C07 /* HumanResource_secondScreen_callback_a.m */; };
+		39609CED1384349100B96C07 /* HumanResource_secondScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CD51384349000B96C07 /* HumanResource_secondScreen.m */; };
+		39609CEE1384349100B96C07 /* HumanResource_switchNextLineStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CD71384349000B96C07 /* HumanResource_switchNextLineStyle.m */; };
+		39609CEF1384349100B96C07 /* HumanResource_TabPage1.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CD91384349000B96C07 /* HumanResource_TabPage1.m */; };
+		39609CF01384349100B96C07 /* HumanResource_textBoxNextLineStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CDB1384349000B96C07 /* HumanResource_textBoxNextLineStyle.m */; };
+		39609CF11384349100B96C07 /* HumanResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CDD1384349000B96C07 /* HumanResource.m */; };
+		39609CF21384349100B96C07 /* root_callback_a.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CDF1384349000B96C07 /* root_callback_a.m */; };
+		39609CF31384349100B96C07 /* root_callback_tmp578.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CE11384349000B96C07 /* root_callback_tmp578.m */; };
+		39609CF41384349100B96C07 /* root_callback_tmp581.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CE31384349000B96C07 /* root_callback_tmp581.m */; };
+		39609CF51384349100B96C07 /* root_callback_tmp591.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CE51384349000B96C07 /* root_callback_tmp591.m */; };
 		39E0FDC5137EBB79004D213F /* BaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD78137EBB78004D213F /* BaseModule.m */; };
 		39E0FDC6137EBB79004D213F /* BindableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7A137EBB78004D213F /* BindableObject.m */; };
 		39E0FDC7137EBB79004D213F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7C137EBB78004D213F /* Callback.m */; };
@@ -28,7 +54,6 @@
 		39E0FDCF137EBB79004D213F /* StylingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD8C137EBB78004D213F /* StylingManager.m */; };
 		39E0FDD0137EBB79004D213F /* UIStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD8E137EBB78004D213F /* UIStyle.m */; };
 		39E0FDD1137EBB79004D213F /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD90137EBB78004D213F /* Utilities.m */; };
-		39E0FDD2137EBB79004D213F /* ipadui.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD92137EBB78004D213F /* ipadui.m */; };
 		39E0FDD3137EBB79004D213F /* root.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD94137EBB78004D213F /* root.m */; };
 		39E0FDD4137EBB79004D213F /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD97137EBB78004D213F /* MyClass.m */; };
 		39E0FDD5137EBB79004D213F /* SampleTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD99137EBB78004D213F /* SampleTabController.m */; };
@@ -67,6 +92,58 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ipad_framework_main_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipad_framework_main_Prefix.pch; sourceTree = "<group>"; };
+		39254A551380C1980097DBEC /* mobl_ipadstyle_buttonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_buttonStyle.h; sourceTree = "<group>"; };
+		39254A561380C1980097DBEC /* mobl_ipadstyle_buttonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_buttonStyle.m; sourceTree = "<group>"; };
+		39254A571380C1980097DBEC /* mobl_ipadstyle_headerStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_headerStyle.h; sourceTree = "<group>"; };
+		39254A581380C1980097DBEC /* mobl_ipadstyle_headerStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_headerStyle.m; sourceTree = "<group>"; };
+		39254A591380C1980097DBEC /* mobl_ipadstyle_itemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_itemStyle.h; sourceTree = "<group>"; };
+		39254A5A1380C1980097DBEC /* mobl_ipadstyle_itemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_itemStyle.m; sourceTree = "<group>"; };
+		39254A5B1380C1980097DBEC /* mobl_ipadstyle_labelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_labelStyle.h; sourceTree = "<group>"; };
+		39254A5C1380C1980097DBEC /* mobl_ipadstyle_labelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_labelStyle.m; sourceTree = "<group>"; };
+		39254A5D1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_leftButtonStyle.h; sourceTree = "<group>"; };
+		39254A5E1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_leftButtonStyle.m; sourceTree = "<group>"; };
+		39254A5F1380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_rightButtonStyle.h; sourceTree = "<group>"; };
+		39254A601380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_rightButtonStyle.m; sourceTree = "<group>"; };
+		39254A611380C1980097DBEC /* mobl_ipadstyle_sectionStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_sectionStyle.h; sourceTree = "<group>"; };
+		39254A621380C1980097DBEC /* mobl_ipadstyle_sectionStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_sectionStyle.m; sourceTree = "<group>"; };
+		39254A631380C1980097DBEC /* mobl_ipadstyle_switchStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_switchStyle.h; sourceTree = "<group>"; };
+		39254A641380C1980097DBEC /* mobl_ipadstyle_switchStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_switchStyle.m; sourceTree = "<group>"; };
+		39254A651380C1980097DBEC /* mobl_ipadstyle_tableStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_tableStyle.h; sourceTree = "<group>"; };
+		39254A661380C1980097DBEC /* mobl_ipadstyle_tableStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_tableStyle.m; sourceTree = "<group>"; };
+		39254A671380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_textBoxStyle.h; sourceTree = "<group>"; };
+		39254A681380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl_ipadstyle_textBoxStyle.m; sourceTree = "<group>"; };
+		39609CC61384349000B96C07 /* HumanResource_iItemCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_iItemCheck.h; sourceTree = "<group>"; };
+		39609CC71384349000B96C07 /* HumanResource_iItemCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_iItemCheck.m; sourceTree = "<group>"; };
+		39609CC81384349000B96C07 /* HumanResource_iItemEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_iItemEdit.h; sourceTree = "<group>"; };
+		39609CC91384349000B96C07 /* HumanResource_iItemEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_iItemEdit.m; sourceTree = "<group>"; };
+		39609CCA1384349000B96C07 /* HumanResource_iItemNum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_iItemNum.h; sourceTree = "<group>"; };
+		39609CCB1384349000B96C07 /* HumanResource_iItemNum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_iItemNum.m; sourceTree = "<group>"; };
+		39609CCC1384349000B96C07 /* HumanResource_itemCheckSwitchStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_itemCheckSwitchStyle.h; sourceTree = "<group>"; };
+		39609CCD1384349000B96C07 /* HumanResource_itemCheckSwitchStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_itemCheckSwitchStyle.m; sourceTree = "<group>"; };
+		39609CCE1384349000B96C07 /* HumanResource_itemEditLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_itemEditLabelStyle.h; sourceTree = "<group>"; };
+		39609CCF1384349000B96C07 /* HumanResource_itemEditLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_itemEditLabelStyle.m; sourceTree = "<group>"; };
+		39609CD01384349000B96C07 /* HumanResource_itemEditTextBoxStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_itemEditTextBoxStyle.h; sourceTree = "<group>"; };
+		39609CD11384349000B96C07 /* HumanResource_itemEditTextBoxStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_itemEditTextBoxStyle.m; sourceTree = "<group>"; };
+		39609CD21384349000B96C07 /* HumanResource_secondScreen_callback_a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_secondScreen_callback_a.h; sourceTree = "<group>"; };
+		39609CD31384349000B96C07 /* HumanResource_secondScreen_callback_a.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_secondScreen_callback_a.m; sourceTree = "<group>"; };
+		39609CD41384349000B96C07 /* HumanResource_secondScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_secondScreen.h; sourceTree = "<group>"; };
+		39609CD51384349000B96C07 /* HumanResource_secondScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_secondScreen.m; sourceTree = "<group>"; };
+		39609CD61384349000B96C07 /* HumanResource_switchNextLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_switchNextLineStyle.h; sourceTree = "<group>"; };
+		39609CD71384349000B96C07 /* HumanResource_switchNextLineStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_switchNextLineStyle.m; sourceTree = "<group>"; };
+		39609CD81384349000B96C07 /* HumanResource_TabPage1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_TabPage1.h; sourceTree = "<group>"; };
+		39609CD91384349000B96C07 /* HumanResource_TabPage1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_TabPage1.m; sourceTree = "<group>"; };
+		39609CDA1384349000B96C07 /* HumanResource_textBoxNextLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource_textBoxNextLineStyle.h; sourceTree = "<group>"; };
+		39609CDB1384349000B96C07 /* HumanResource_textBoxNextLineStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource_textBoxNextLineStyle.m; sourceTree = "<group>"; };
+		39609CDC1384349000B96C07 /* HumanResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanResource.h; sourceTree = "<group>"; };
+		39609CDD1384349000B96C07 /* HumanResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanResource.m; sourceTree = "<group>"; };
+		39609CDE1384349000B96C07 /* root_callback_a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_a.h; sourceTree = "<group>"; };
+		39609CDF1384349000B96C07 /* root_callback_a.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_a.m; sourceTree = "<group>"; };
+		39609CE01384349000B96C07 /* root_callback_tmp578.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_tmp578.h; sourceTree = "<group>"; };
+		39609CE11384349000B96C07 /* root_callback_tmp578.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_tmp578.m; sourceTree = "<group>"; };
+		39609CE21384349000B96C07 /* root_callback_tmp581.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_tmp581.h; sourceTree = "<group>"; };
+		39609CE31384349000B96C07 /* root_callback_tmp581.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_tmp581.m; sourceTree = "<group>"; };
+		39609CE41384349000B96C07 /* root_callback_tmp591.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_tmp591.h; sourceTree = "<group>"; };
+		39609CE51384349000B96C07 /* root_callback_tmp591.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_tmp591.m; sourceTree = "<group>"; };
 		39E0FD77137EBB78004D213F /* BaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModule.h; sourceTree = "<group>"; };
 		39E0FD78137EBB78004D213F /* BaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModule.m; sourceTree = "<group>"; };
 		39E0FD79137EBB78004D213F /* BindableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindableObject.h; sourceTree = "<group>"; };
@@ -93,7 +170,6 @@
 		39E0FD8E137EBB78004D213F /* UIStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIStyle.m; sourceTree = "<group>"; };
 		39E0FD8F137EBB78004D213F /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		39E0FD90137EBB78004D213F /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
-		39E0FD92137EBB78004D213F /* ipadui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ipadui.m; sourceTree = "<group>"; };
 		39E0FD93137EBB78004D213F /* root.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root.h; sourceTree = "<group>"; };
 		39E0FD94137EBB78004D213F /* root.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root.m; sourceTree = "<group>"; };
 		39E0FD96137EBB78004D213F /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
@@ -223,6 +299,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		39254A541380C1980097DBEC /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				39254A551380C1980097DBEC /* mobl_ipadstyle_buttonStyle.h */,
+				39254A561380C1980097DBEC /* mobl_ipadstyle_buttonStyle.m */,
+				39254A571380C1980097DBEC /* mobl_ipadstyle_headerStyle.h */,
+				39254A581380C1980097DBEC /* mobl_ipadstyle_headerStyle.m */,
+				39254A591380C1980097DBEC /* mobl_ipadstyle_itemStyle.h */,
+				39254A5A1380C1980097DBEC /* mobl_ipadstyle_itemStyle.m */,
+				39254A5B1380C1980097DBEC /* mobl_ipadstyle_labelStyle.h */,
+				39254A5C1380C1980097DBEC /* mobl_ipadstyle_labelStyle.m */,
+				39254A5D1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.h */,
+				39254A5E1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.m */,
+				39254A5F1380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.h */,
+				39254A601380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.m */,
+				39254A611380C1980097DBEC /* mobl_ipadstyle_sectionStyle.h */,
+				39254A621380C1980097DBEC /* mobl_ipadstyle_sectionStyle.m */,
+				39254A631380C1980097DBEC /* mobl_ipadstyle_switchStyle.h */,
+				39254A641380C1980097DBEC /* mobl_ipadstyle_switchStyle.m */,
+				39254A651380C1980097DBEC /* mobl_ipadstyle_tableStyle.h */,
+				39254A661380C1980097DBEC /* mobl_ipadstyle_tableStyle.m */,
+				39254A671380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.h */,
+				39254A681380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.m */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		39E0FD76137EBB78004D213F /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,9 +362,41 @@
 		39E0FD91137EBB78004D213F /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				39E0FD92137EBB78004D213F /* ipadui.m */,
+				39254A541380C1980097DBEC /* Styles */,
 				39E0FD93137EBB78004D213F /* root.h */,
 				39E0FD94137EBB78004D213F /* root.m */,
+				39609CC61384349000B96C07 /* HumanResource_iItemCheck.h */,
+				39609CC71384349000B96C07 /* HumanResource_iItemCheck.m */,
+				39609CC81384349000B96C07 /* HumanResource_iItemEdit.h */,
+				39609CC91384349000B96C07 /* HumanResource_iItemEdit.m */,
+				39609CCA1384349000B96C07 /* HumanResource_iItemNum.h */,
+				39609CCB1384349000B96C07 /* HumanResource_iItemNum.m */,
+				39609CCC1384349000B96C07 /* HumanResource_itemCheckSwitchStyle.h */,
+				39609CCD1384349000B96C07 /* HumanResource_itemCheckSwitchStyle.m */,
+				39609CCE1384349000B96C07 /* HumanResource_itemEditLabelStyle.h */,
+				39609CCF1384349000B96C07 /* HumanResource_itemEditLabelStyle.m */,
+				39609CD01384349000B96C07 /* HumanResource_itemEditTextBoxStyle.h */,
+				39609CD11384349000B96C07 /* HumanResource_itemEditTextBoxStyle.m */,
+				39609CD21384349000B96C07 /* HumanResource_secondScreen_callback_a.h */,
+				39609CD31384349000B96C07 /* HumanResource_secondScreen_callback_a.m */,
+				39609CD41384349000B96C07 /* HumanResource_secondScreen.h */,
+				39609CD51384349000B96C07 /* HumanResource_secondScreen.m */,
+				39609CD61384349000B96C07 /* HumanResource_switchNextLineStyle.h */,
+				39609CD71384349000B96C07 /* HumanResource_switchNextLineStyle.m */,
+				39609CD81384349000B96C07 /* HumanResource_TabPage1.h */,
+				39609CD91384349000B96C07 /* HumanResource_TabPage1.m */,
+				39609CDA1384349000B96C07 /* HumanResource_textBoxNextLineStyle.h */,
+				39609CDB1384349000B96C07 /* HumanResource_textBoxNextLineStyle.m */,
+				39609CDC1384349000B96C07 /* HumanResource.h */,
+				39609CDD1384349000B96C07 /* HumanResource.m */,
+				39609CDE1384349000B96C07 /* root_callback_a.h */,
+				39609CDF1384349000B96C07 /* root_callback_a.m */,
+				39609CE01384349000B96C07 /* root_callback_tmp578.h */,
+				39609CE11384349000B96C07 /* root_callback_tmp578.m */,
+				39609CE21384349000B96C07 /* root_callback_tmp581.h */,
+				39609CE31384349000B96C07 /* root_callback_tmp581.m */,
+				39609CE41384349000B96C07 /* root_callback_tmp591.h */,
+				39609CE51384349000B96C07 /* root_callback_tmp591.m */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -403,7 +538,6 @@
 				39E0FDCF137EBB79004D213F /* StylingManager.m in Sources */,
 				39E0FDD0137EBB79004D213F /* UIStyle.m in Sources */,
 				39E0FDD1137EBB79004D213F /* Utilities.m in Sources */,
-				39E0FDD2137EBB79004D213F /* ipadui.m in Sources */,
 				39E0FDD3137EBB79004D213F /* root.m in Sources */,
 				39E0FDD4137EBB79004D213F /* MyClass.m in Sources */,
 				39E0FDD5137EBB79004D213F /* SampleTabController.m in Sources */,
@@ -427,6 +561,32 @@
 				39E0FDE8137EBB79004D213F /* iTextBox.m in Sources */,
 				39E0FDE9137EBB79004D213F /* iTextField.m in Sources */,
 				39E0FDEA137EBB79004D213F /* iView.m in Sources */,
+				39254A691380C1980097DBEC /* mobl_ipadstyle_buttonStyle.m in Sources */,
+				39254A6A1380C1980097DBEC /* mobl_ipadstyle_headerStyle.m in Sources */,
+				39254A6B1380C1980097DBEC /* mobl_ipadstyle_itemStyle.m in Sources */,
+				39254A6C1380C1980097DBEC /* mobl_ipadstyle_labelStyle.m in Sources */,
+				39254A6D1380C1980097DBEC /* mobl_ipadstyle_leftButtonStyle.m in Sources */,
+				39254A6E1380C1980097DBEC /* mobl_ipadstyle_rightButtonStyle.m in Sources */,
+				39254A6F1380C1980097DBEC /* mobl_ipadstyle_sectionStyle.m in Sources */,
+				39254A701380C1980097DBEC /* mobl_ipadstyle_switchStyle.m in Sources */,
+				39254A711380C1980097DBEC /* mobl_ipadstyle_tableStyle.m in Sources */,
+				39254A721380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.m in Sources */,
+				39609CE61384349100B96C07 /* HumanResource_iItemCheck.m in Sources */,
+				39609CE71384349100B96C07 /* HumanResource_iItemEdit.m in Sources */,
+				39609CE81384349100B96C07 /* HumanResource_iItemNum.m in Sources */,
+				39609CE91384349100B96C07 /* HumanResource_itemCheckSwitchStyle.m in Sources */,
+				39609CEA1384349100B96C07 /* HumanResource_itemEditLabelStyle.m in Sources */,
+				39609CEB1384349100B96C07 /* HumanResource_itemEditTextBoxStyle.m in Sources */,
+				39609CEC1384349100B96C07 /* HumanResource_secondScreen_callback_a.m in Sources */,
+				39609CED1384349100B96C07 /* HumanResource_secondScreen.m in Sources */,
+				39609CEE1384349100B96C07 /* HumanResource_switchNextLineStyle.m in Sources */,
+				39609CEF1384349100B96C07 /* HumanResource_TabPage1.m in Sources */,
+				39609CF01384349100B96C07 /* HumanResource_textBoxNextLineStyle.m in Sources */,
+				39609CF11384349100B96C07 /* HumanResource.m in Sources */,
+				39609CF21384349100B96C07 /* root_callback_a.m in Sources */,
+				39609CF31384349100B96C07 /* root_callback_tmp578.m in Sources */,
+				39609CF41384349100B96C07 /* root_callback_tmp581.m in Sources */,
+				39609CF51384349100B96C07 /* root_callback_tmp591.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
