@@ -1,27 +1,32 @@
 
 
-#import <UIKit/UIKit.h>
-#import "NSStack.h"
-#import "NullObject.h"
-#import "NSSelector.h"	
-#import "iCustomControl.h"
-#import "Utilities.h"
-#import "Scope.h"
-#import "iView.h"
-#import "Callback.h"
-#import "StylingManager.h"
-#import "UIStyle.h"
 #import "root.h"
-#import "iTable.h"
-#import "iSection.h"
+#import "mobl_ipadstyle_itemStyle.h"
 #import "iItem.h"
+#import "HumanResource_iItemCheck.h"
+#import "mobl_ipadstyle_sectionStyle.h"
+#import "iSection.h"
+#import "HumanResource_iItemNum.h"
+#import "HumanResource_iItemEdit.h"
+#import "mobl_ipadstyle_tableStyle.h"
+#import "iTable.h"
+#import "mobl_ipadstyle_buttonStyle.h"
 #import "iButton.h"
+#import "HumanResource_textBoxNextLineStyle.h"
 #import "iTextBox.h"
+#import "mobl_ipadstyle_textBoxStyle.h"
 #import "iNumField.h"
+#import "HumanResource_switchNextLineStyle.h"
 #import "iSwitch.h"
-#import "iHeader.h"
+#import "mobl_ipadstyle_rightButtonStyle.h"
 #import "iRightButton.h"
-#import "iLabel.h"
+#import "mobl_ipadstyle_headerStyle.h"
+#import "iHeader.h"
+#import "root.h"
+#import "root_callback_tmp642.h"
+#import "root_callback_tmp632.h"
+#import "root_callback_tmp629.h"
+#import "root_callback_a.h"
 
 @implementation root
 @synthesize window;
@@ -29,7 +34,7 @@
 {
 	[super initialize:arguments container:parent];
 	[self.scope createInnerScope];
-	int n_15947 = -1;
+	int z_29659 = -1;
 	
 	
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
@@ -38,443 +43,475 @@
 	
 	NSStack* containerStack = [[NSStack alloc]init];
 	[containerStack push:self];
-	BindableObject* VarDeclInferred36 = [[BindableObject alloc] initWithValue: @""];
-	[self.scope set:@"firstName" variable:VarDeclInferred36];
-	BindableObject* VarDeclInferred37 = [[BindableObject alloc] initWithValue: @""];
-	[self.scope set:@"lastName" variable:VarDeclInferred37];
-	BindableObject* VarDeclInferred38 = [[BindableObject alloc] initWithNumber: 25];
-	[self.scope set:@"age" variable:VarDeclInferred38];
-	BindableObject* VarDeclInferred39 = [[BindableObject alloc] initWithBool: NO];
-	[self.scope set:@"newspaper" variable:VarDeclInferred39];
-	BindableObject* VarDeclInferred40 = [[BindableObject alloc] initWithValue: @"Registeration Form"];
-	[self.scope set:@"formTitle" variable:VarDeclInferred40];
-	BindableObject* VarDeclInferred41 = [[BindableObject alloc] initWithValue: @"Make Invalid"];
-	[self.scope set:@"makeInvalidTitle" variable:VarDeclInferred41];
-	BindableObject* VarDeclInferred42 = [[BindableObject alloc] initWithValue: @"Personal Information"];
-	[self.scope set:@"sectionOneTitle" variable:VarDeclInferred42];
-	BindableObject* VarDeclInferred43 = [[BindableObject alloc] initWithValue: @"Registeration Information"];
-	[self.scope set:@"sectionTwoTitle" variable:VarDeclInferred43];
-	BindableObject* VarDeclInferred44 = [[BindableObject alloc] initWithValue: @"Sponsored by UNICEF"];
-	[self.scope set:@"sponsor" variable:VarDeclInferred44];
-	BindableObject* VarDecl4 = [[BindableObject alloc] initWithValue: [[NSMutableArray alloc] initWithObjects:[[BindableObject alloc] initWithNumber:1],[[BindableObject alloc] initWithNumber:2],[[BindableObject alloc] initWithNumber:3], nil]];
-	[self.scope set:@"items" variable:VarDecl4];
-	
-	[self.scope createInnerScope];
-	//changing iHeader_ControlCall126 arguments to an array
-	
-	NSMutableArray* arguments_iHeader_ControlCall1260 = [[NSMutableArray alloc] init];
-	
-	[arguments_iHeader_ControlCall1260 addObject:(BindableObject*)[self.scope get: @"formTitle"]];
-	[arguments_iHeader_ControlCall1260 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_headerStyle alloc] initialize]]];
-	
-	//initializing [varName] control
-	iHeader* iHeader_ControlCall126 = [[iHeader alloc] initialize:arguments_iHeader_ControlCall1260 container: [containerStack top]];
-	//push iHeader_ControlCall126 to stack to add innert controls
-	[containerStack push:iHeader_ControlCall126];
-	BindableObject* DeriveDecl88 = [[BindableObject alloc] initWithValue: 
-	                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[Callbacktmp355 alloc] initWithScope:self.scope]]
+	BindableObject* VarDeclInferred85 = [[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] init]];
+	[self.scope set:@"styleVar" variable:VarDeclInferred85];
+	BindableObject* VarDeclInferred86 = [[BindableObject alloc] initWithValue: @""];
+	[self.scope set:@"firstName" variable:VarDeclInferred86];
+	BindableObject* VarDeclInferred87 = [[BindableObject alloc] initWithValue: @""];
+	[self.scope set:@"lastName" variable:VarDeclInferred87];
+	BindableObject* VarDeclInferred88 = [[BindableObject alloc] initWithNumber: 25];
+	[self.scope set:@"age" variable:VarDeclInferred88];
+	BindableObject* VarDeclInferred89 = [[BindableObject alloc] initWithBool: NO];
+	[self.scope set:@"newspaper" variable:VarDeclInferred89];
+	BindableObject* VarDeclInferred90 = [[BindableObject alloc] initWithValue: 
+	                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[root_callback_a alloc] initWithScope:self.scope]]
 	                                                                           ];
-	[self.scope set:@"tmp355" variable:DeriveDecl88];
+	[self.scope set:@"a" variable:VarDeclInferred90];
+	BindableObject* VarDeclInferred91 = [[BindableObject alloc] initWithValue: @"Registeration Form"];
+	[self.scope set:@"formTitle" variable:VarDeclInferred91];
+	BindableObject* VarDeclInferred92 = [[BindableObject alloc] initWithValue: @"Make Invalid"];
+	[self.scope set:@"makeInvalidTitle" variable:VarDeclInferred92];
+	BindableObject* VarDeclInferred93 = [[BindableObject alloc] initWithValue: @"Personal Information"];
+	[self.scope set:@"sectionOneTitle" variable:VarDeclInferred93];
+	BindableObject* VarDeclInferred94 = [[BindableObject alloc] initWithValue: @"Registeration Information"];
+	[self.scope set:@"sectionTwoTitle" variable:VarDeclInferred94];
+	BindableObject* VarDeclInferred95 = [[BindableObject alloc] initWithValue: @"Sponsored by UNICEF"];
+	[self.scope set:@"sponsor" variable:VarDeclInferred95];
+	BindableObject* VarDecl7 = [[BindableObject alloc] initWithValue: [[NSMutableArray alloc] initWithObjects:[[BindableObject alloc] initWithNumber:1],[[BindableObject alloc] initWithNumber:2],[[BindableObject alloc] initWithNumber:3], nil]];
+	[self.scope set:@"items" variable:VarDecl7];
 	
 	[self.scope createInnerScope];
-	//changing iRightButton_ControlCall127 arguments to an array
+	//changing iHeader_iHeader7 arguments to an array
 	
-	NSMutableArray* arguments_iRightButton_ControlCall1270 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iHeader_iHeader70 = [[NSMutableArray alloc] init];
 	
-	[arguments_iRightButton_ControlCall1270 addObject:(BindableObject*)[self.scope get: @"makeInvalidTitle"]];
-	[arguments_iRightButton_ControlCall1270 addObject:(BindableObject*)[self.scope get: @"tmp355"]];
-	[arguments_iRightButton_ControlCall1270 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_rightButtonStyle alloc] initialize]]];
+	[arguments_iHeader_iHeader70 addObject:(BindableObject*)[self.scope get: @"formTitle"]];
+	[arguments_iHeader_iHeader70 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_headerStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iRightButton* iRightButton_ControlCall127 = [[iRightButton alloc] initialize:arguments_iRightButton_ControlCall1270 container: [containerStack top]];
-	//push iRightButton_ControlCall127 to stack to add innert controls
-	[containerStack push:iRightButton_ControlCall127];
-	
-	//pop iRightButton_ControlCall127
-	[containerStack pop];
-	[iRightButton_ControlCall127 finilize];
-	[[containerStack top] addBodyControl:iRightButton_ControlCall127];
-	[self.scope exitScope];
-	
-	//pop iHeader_ControlCall126
-	[containerStack pop];
-	[iHeader_ControlCall126 finilize];
-	[[containerStack top] addBodyControl:iHeader_ControlCall126];
-	[self.scope exitScope];
-	BindableObject* DeriveDecl89 = [[BindableObject alloc] initWithValue: @"Form Title"];
-	[self.scope set:@"tmp356" variable:DeriveDecl89];
+	iHeader* iHeader_iHeader7 = [[iHeader alloc] initialize:arguments_iHeader_iHeader70 container: [containerStack top]];
+	//push iHeader_iHeader7 to stack to add innert controls
+	[containerStack push:iHeader_iHeader7];
+	BindableObject* DeriveDecl165 = [[BindableObject alloc] initWithValue: 
+	                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[root_callback_tmp629 alloc] initWithScope:self.scope]]
+	                                                                           ];
+	[self.scope set:@"tmp629" variable:DeriveDecl165];
 	
 	[self.scope createInnerScope];
-	//changing iTextBox_ControlCall128 arguments to an array
+	//changing iRightButton_iRightButton7 arguments to an array
 	
-	NSMutableArray* arguments_iTextBox_ControlCall1280 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iRightButton_iRightButton70 = [[NSMutableArray alloc] init];
 	
-	[arguments_iTextBox_ControlCall1280 addObject:(BindableObject*)[self.scope get: @"formTitle"]];
-	[arguments_iTextBox_ControlCall1280 addObject:(BindableObject*)[self.scope get: @"tmp356"]];
-	[arguments_iTextBox_ControlCall1280 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
-	
-	//initializing [varName] control
-	iTextBox* iTextBox_ControlCall128 = [[iTextBox alloc] initialize:arguments_iTextBox_ControlCall1280 container: [containerStack top]];
-	//push iTextBox_ControlCall128 to stack to add innert controls
-	[containerStack push:iTextBox_ControlCall128];
-	
-	//pop iTextBox_ControlCall128
-	[containerStack pop];
-	[iTextBox_ControlCall128 finilize];
-	[[containerStack top] addBodyControl:iTextBox_ControlCall128];
-	[self.scope exitScope];
-	BindableObject* DeriveDecl90 = [[BindableObject alloc] initWithValue: @"Header Button"];
-	[self.scope set:@"tmp357" variable:DeriveDecl90];
-	
-	[self.scope createInnerScope];
-	//changing iTextBox_ControlCall129 arguments to an array
-	
-	NSMutableArray* arguments_iTextBox_ControlCall1290 = [[NSMutableArray alloc] init];
-	
-	[arguments_iTextBox_ControlCall1290 addObject:(BindableObject*)[self.scope get: @"makeInvalidTitle"]];
-	[arguments_iTextBox_ControlCall1290 addObject:(BindableObject*)[self.scope get: @"tmp357"]];
-	[arguments_iTextBox_ControlCall1290 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	[arguments_iRightButton_iRightButton70 addObject:(BindableObject*)[self.scope get: @"makeInvalidTitle"]];
+	[arguments_iRightButton_iRightButton70 addObject:(BindableObject*)[self.scope get: @"tmp629"]];
+	[arguments_iRightButton_iRightButton70 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_rightButtonStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iTextBox* iTextBox_ControlCall129 = [[iTextBox alloc] initialize:arguments_iTextBox_ControlCall1290 container: [containerStack top]];
-	//push iTextBox_ControlCall129 to stack to add innert controls
-	[containerStack push:iTextBox_ControlCall129];
+	iRightButton* iRightButton_iRightButton7 = [[iRightButton alloc] initialize:arguments_iRightButton_iRightButton70 container: [containerStack top]];
+	//push iRightButton_iRightButton7 to stack to add innert controls
+	[containerStack push:iRightButton_iRightButton7];
 	
-	//pop iTextBox_ControlCall129
+	//pop iRightButton_iRightButton7
 	[containerStack pop];
-	[iTextBox_ControlCall129 finilize];
-	[[containerStack top] addBodyControl:iTextBox_ControlCall129];
-	[self.scope exitScope];
-	BindableObject* DeriveDecl91 = [[BindableObject alloc] initWithValue: @"First Name"];
-	[self.scope set:@"tmp358" variable:DeriveDecl91];
-	
-	[self.scope createInnerScope];
-	//changing iTextBox_ControlCall130 arguments to an array
-	
-	NSMutableArray* arguments_iTextBox_ControlCall1300 = [[NSMutableArray alloc] init];
-	
-	[arguments_iTextBox_ControlCall1300 addObject:(BindableObject*)[self.scope get: @"firstName"]];
-	[arguments_iTextBox_ControlCall1300 addObject:(BindableObject*)[self.scope get: @"tmp358"]];
-	[arguments_iTextBox_ControlCall1300 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
-	
-	//initializing [varName] control
-	iTextBox* iTextBox_ControlCall130 = [[iTextBox alloc] initialize:arguments_iTextBox_ControlCall1300 container: [containerStack top]];
-	//push iTextBox_ControlCall130 to stack to add innert controls
-	[containerStack push:iTextBox_ControlCall130];
-	
-	//pop iTextBox_ControlCall130
-	[containerStack pop];
-	[iTextBox_ControlCall130 finilize];
-	[[containerStack top] addBodyControl:iTextBox_ControlCall130];
-	[self.scope exitScope];
-	BindableObject* DeriveDecl92 = [[BindableObject alloc] initWithValue: @"Last Name"];
-	[self.scope set:@"tmp359" variable:DeriveDecl92];
-	
-	[self.scope createInnerScope];
-	//changing iTextBox_ControlCall131 arguments to an array
-	
-	NSMutableArray* arguments_iTextBox_ControlCall1310 = [[NSMutableArray alloc] init];
-	
-	[arguments_iTextBox_ControlCall1310 addObject:(BindableObject*)[self.scope get: @"lastName"]];
-	[arguments_iTextBox_ControlCall1310 addObject:(BindableObject*)[self.scope get: @"tmp359"]];
-	[arguments_iTextBox_ControlCall1310 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
-	
-	//initializing [varName] control
-	iTextBox* iTextBox_ControlCall131 = [[iTextBox alloc] initialize:arguments_iTextBox_ControlCall1310 container: [containerStack top]];
-	//push iTextBox_ControlCall131 to stack to add innert controls
-	[containerStack push:iTextBox_ControlCall131];
-	
-	//pop iTextBox_ControlCall131
-	[containerStack pop];
-	[iTextBox_ControlCall131 finilize];
-	[[containerStack top] addBodyControl:iTextBox_ControlCall131];
+	[iRightButton_iRightButton7 finilize];
+	[[containerStack top] addBodyControl:iRightButton_iRightButton7];
 	[self.scope exitScope];
 	
-	[self.scope createInnerScope];
-	//changing iSwitch_ControlCall132 arguments to an array
-	
-	NSMutableArray* arguments_iSwitch_ControlCall1320 = [[NSMutableArray alloc] init];
-	
-	[arguments_iSwitch_ControlCall1320 addObject:(BindableObject*)[self.scope get: @"newspaper"]];
-	[arguments_iSwitch_ControlCall1320 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_switchNextLineStyle alloc] initialize]]];
-	
-	//initializing [varName] control
-	iSwitch* iSwitch_ControlCall132 = [[iSwitch alloc] initialize:arguments_iSwitch_ControlCall1320 container: [containerStack top]];
-	//push iSwitch_ControlCall132 to stack to add innert controls
-	[containerStack push:iSwitch_ControlCall132];
-	
-	//pop iSwitch_ControlCall132
+	//pop iHeader_iHeader7
 	[containerStack pop];
-	[iSwitch_ControlCall132 finilize];
-	[[containerStack top] addBodyControl:iSwitch_ControlCall132];
+	[iHeader_iHeader7 finilize];
+	[[containerStack top] addBodyControl:iHeader_iHeader7];
 	[self.scope exitScope];
-	BindableObject* DeriveDecl93 = [[BindableObject alloc] initWithValue: @"Age"];
-	[self.scope set:@"tmp361" variable:DeriveDecl93];
+	BindableObject* DeriveDecl166 = [[BindableObject alloc] initWithValue: 
+	                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[root_callback_tmp632 alloc] initWithScope:self.scope]]
+	                                                                           ];
+	[self.scope set:@"tmp632" variable:DeriveDecl166];
+	BindableObject* DeriveDecl167 = [[BindableObject alloc] initWithValue: @"Go To Second Screen"];
+	[self.scope set:@"tmp631" variable:DeriveDecl167];
 	
 	[self.scope createInnerScope];
-	//changing iNumField_ControlCall133 arguments to an array
+	//changing iButton_iButton14 arguments to an array
 	
-	NSMutableArray* arguments_iNumField_ControlCall1330 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iButton_iButton140 = [[NSMutableArray alloc] init];
 	
-	[arguments_iNumField_ControlCall1330 addObject:(BindableObject*)[self.scope get: @"age"]];
-	[arguments_iNumField_ControlCall1330 addObject:(BindableObject*)[self.scope get: @"tmp361"]];
-	[arguments_iNumField_ControlCall1330 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_textBoxStyle alloc] initialize]]];
+	[arguments_iButton_iButton140 addObject:(BindableObject*)[self.scope get: @"tmp631"]];
+	[arguments_iButton_iButton140 addObject:(BindableObject*)[self.scope get: @"tmp632"]];
+	[arguments_iButton_iButton140 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_buttonStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iNumField* iNumField_ControlCall133 = [[iNumField alloc] initialize:arguments_iNumField_ControlCall1330 container: [containerStack top]];
-	//push iNumField_ControlCall133 to stack to add innert controls
-	[containerStack push:iNumField_ControlCall133];
+	iButton* iButton_iButton14 = [[iButton alloc] initialize:arguments_iButton_iButton140 container: [containerStack top]];
+	//push iButton_iButton14 to stack to add innert controls
+	[containerStack push:iButton_iButton14];
 	
-	//pop iNumField_ControlCall133
+	//pop iButton_iButton14
 	[containerStack pop];
-	[iNumField_ControlCall133 finilize];
-	[[containerStack top] addBodyControl:iNumField_ControlCall133];
+	[iButton_iButton14 finilize];
+	[[containerStack top] addBodyControl:iButton_iButton14];
 	[self.scope exitScope];
-	BindableObject* DeriveDecl94 = [[BindableObject alloc] initWithValue: @"Sponsor"];
-	[self.scope set:@"tmp362" variable:DeriveDecl94];
+	BindableObject* DeriveDecl168 = [[BindableObject alloc] initWithValue: @"Form Title"];
+	[self.scope set:@"tmp633" variable:DeriveDecl168];
 	
 	[self.scope createInnerScope];
-	//changing iTextBox_ControlCall134 arguments to an array
+	//changing iTextBox_iTextBox50 arguments to an array
 	
-	NSMutableArray* arguments_iTextBox_ControlCall1340 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iTextBox_iTextBox500 = [[NSMutableArray alloc] init];
 	
-	[arguments_iTextBox_ControlCall1340 addObject:(BindableObject*)[self.scope get: @"sponsor"]];
-	[arguments_iTextBox_ControlCall1340 addObject:(BindableObject*)[self.scope get: @"tmp362"]];
-	[arguments_iTextBox_ControlCall1340 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	[arguments_iTextBox_iTextBox500 addObject:(BindableObject*)[self.scope get: @"formTitle"]];
+	[arguments_iTextBox_iTextBox500 addObject:(BindableObject*)[self.scope get: @"tmp633"]];
+	[arguments_iTextBox_iTextBox500 addObject:(BindableObject*)[self.scope get: @"styleVar"]];
 	
 	//initializing [varName] control
-	iTextBox* iTextBox_ControlCall134 = [[iTextBox alloc] initialize:arguments_iTextBox_ControlCall1340 container: [containerStack top]];
-	//push iTextBox_ControlCall134 to stack to add innert controls
-	[containerStack push:iTextBox_ControlCall134];
+	iTextBox* iTextBox_iTextBox50 = [[iTextBox alloc] initialize:arguments_iTextBox_iTextBox500 container: [containerStack top]];
+	//push iTextBox_iTextBox50 to stack to add innert controls
+	[containerStack push:iTextBox_iTextBox50];
 	
-	//pop iTextBox_ControlCall134
+	//pop iTextBox_iTextBox50
 	[containerStack pop];
-	[iTextBox_ControlCall134 finilize];
-	[[containerStack top] addBodyControl:iTextBox_ControlCall134];
+	[iTextBox_iTextBox50 finilize];
+	[[containerStack top] addBodyControl:iTextBox_iTextBox50];
 	[self.scope exitScope];
-	BindableObject* DeriveDecl95 = [[BindableObject alloc] initWithValue: @"Section one title"];
-	[self.scope set:@"tmp363" variable:DeriveDecl95];
+	BindableObject* DeriveDecl169 = [[BindableObject alloc] initWithValue: @"Header Button"];
+	[self.scope set:@"tmp634" variable:DeriveDecl169];
 	
 	[self.scope createInnerScope];
-	//changing iTextBox_ControlCall135 arguments to an array
+	//changing iTextBox_iTextBox51 arguments to an array
 	
-	NSMutableArray* arguments_iTextBox_ControlCall1350 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iTextBox_iTextBox510 = [[NSMutableArray alloc] init];
 	
-	[arguments_iTextBox_ControlCall1350 addObject:(BindableObject*)[self.scope get: @"sectionOneTitle"]];
-	[arguments_iTextBox_ControlCall1350 addObject:(BindableObject*)[self.scope get: @"tmp363"]];
-	[arguments_iTextBox_ControlCall1350 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	[arguments_iTextBox_iTextBox510 addObject:(BindableObject*)[self.scope get: @"makeInvalidTitle"]];
+	[arguments_iTextBox_iTextBox510 addObject:(BindableObject*)[self.scope get: @"tmp634"]];
+	[arguments_iTextBox_iTextBox510 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iTextBox* iTextBox_ControlCall135 = [[iTextBox alloc] initialize:arguments_iTextBox_ControlCall1350 container: [containerStack top]];
-	//push iTextBox_ControlCall135 to stack to add innert controls
-	[containerStack push:iTextBox_ControlCall135];
+	iTextBox* iTextBox_iTextBox51 = [[iTextBox alloc] initialize:arguments_iTextBox_iTextBox510 container: [containerStack top]];
+	//push iTextBox_iTextBox51 to stack to add innert controls
+	[containerStack push:iTextBox_iTextBox51];
 	
-	//pop iTextBox_ControlCall135
+	//pop iTextBox_iTextBox51
 	[containerStack pop];
-	[iTextBox_ControlCall135 finilize];
-	[[containerStack top] addBodyControl:iTextBox_ControlCall135];
+	[iTextBox_iTextBox51 finilize];
+	[[containerStack top] addBodyControl:iTextBox_iTextBox51];
+	[self.scope exitScope];
+	BindableObject* DeriveDecl170 = [[BindableObject alloc] initWithValue: @"First Name"];
+	[self.scope set:@"tmp635" variable:DeriveDecl170];
+	
+	[self.scope createInnerScope];
+	//changing iTextBox_iTextBox52 arguments to an array
+	
+	NSMutableArray* arguments_iTextBox_iTextBox520 = [[NSMutableArray alloc] init];
+	
+	[arguments_iTextBox_iTextBox520 addObject:(BindableObject*)[self.scope get: @"firstName"]];
+	[arguments_iTextBox_iTextBox520 addObject:(BindableObject*)[self.scope get: @"tmp635"]];
+	[arguments_iTextBox_iTextBox520 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iTextBox* iTextBox_iTextBox52 = [[iTextBox alloc] initialize:arguments_iTextBox_iTextBox520 container: [containerStack top]];
+	//push iTextBox_iTextBox52 to stack to add innert controls
+	[containerStack push:iTextBox_iTextBox52];
+	
+	//pop iTextBox_iTextBox52
+	[containerStack pop];
+	[iTextBox_iTextBox52 finilize];
+	[[containerStack top] addBodyControl:iTextBox_iTextBox52];
+	[self.scope exitScope];
+	BindableObject* DeriveDecl171 = [[BindableObject alloc] initWithValue: @"Last Name"];
+	[self.scope set:@"tmp636" variable:DeriveDecl171];
+	
+	[self.scope createInnerScope];
+	//changing iTextBox_iTextBox53 arguments to an array
+	
+	NSMutableArray* arguments_iTextBox_iTextBox530 = [[NSMutableArray alloc] init];
+	
+	[arguments_iTextBox_iTextBox530 addObject:(BindableObject*)[self.scope get: @"lastName"]];
+	[arguments_iTextBox_iTextBox530 addObject:(BindableObject*)[self.scope get: @"tmp636"]];
+	[arguments_iTextBox_iTextBox530 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iTextBox* iTextBox_iTextBox53 = [[iTextBox alloc] initialize:arguments_iTextBox_iTextBox530 container: [containerStack top]];
+	//push iTextBox_iTextBox53 to stack to add innert controls
+	[containerStack push:iTextBox_iTextBox53];
+	
+	//pop iTextBox_iTextBox53
+	[containerStack pop];
+	[iTextBox_iTextBox53 finilize];
+	[[containerStack top] addBodyControl:iTextBox_iTextBox53];
+	[self.scope exitScope];
+	
+	[self.scope createInnerScope];
+	//changing iSwitch_iSwitch15 arguments to an array
+	
+	NSMutableArray* arguments_iSwitch_iSwitch150 = [[NSMutableArray alloc] init];
+	
+	[arguments_iSwitch_iSwitch150 addObject:(BindableObject*)[self.scope get: @"newspaper"]];
+	[arguments_iSwitch_iSwitch150 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_switchNextLineStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iSwitch* iSwitch_iSwitch15 = [[iSwitch alloc] initialize:arguments_iSwitch_iSwitch150 container: [containerStack top]];
+	//push iSwitch_iSwitch15 to stack to add innert controls
+	[containerStack push:iSwitch_iSwitch15];
+	
+	//pop iSwitch_iSwitch15
+	[containerStack pop];
+	[iSwitch_iSwitch15 finilize];
+	[[containerStack top] addBodyControl:iSwitch_iSwitch15];
+	[self.scope exitScope];
+	BindableObject* DeriveDecl172 = [[BindableObject alloc] initWithValue: @"Age"];
+	[self.scope set:@"tmp637" variable:DeriveDecl172];
+	
+	[self.scope createInnerScope];
+	//changing iNumField_iNumField15 arguments to an array
+	
+	NSMutableArray* arguments_iNumField_iNumField150 = [[NSMutableArray alloc] init];
+	
+	[arguments_iNumField_iNumField150 addObject:(BindableObject*)[self.scope get: @"age"]];
+	[arguments_iNumField_iNumField150 addObject:(BindableObject*)[self.scope get: @"tmp637"]];
+	[arguments_iNumField_iNumField150 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_textBoxStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iNumField* iNumField_iNumField15 = [[iNumField alloc] initialize:arguments_iNumField_iNumField150 container: [containerStack top]];
+	//push iNumField_iNumField15 to stack to add innert controls
+	[containerStack push:iNumField_iNumField15];
+	
+	//pop iNumField_iNumField15
+	[containerStack pop];
+	[iNumField_iNumField15 finilize];
+	[[containerStack top] addBodyControl:iNumField_iNumField15];
+	[self.scope exitScope];
+	BindableObject* DeriveDecl173 = [[BindableObject alloc] initWithValue: @"Sponsor"];
+	[self.scope set:@"tmp638" variable:DeriveDecl173];
+	
+	[self.scope createInnerScope];
+	//changing iTextBox_iTextBox54 arguments to an array
+	
+	NSMutableArray* arguments_iTextBox_iTextBox540 = [[NSMutableArray alloc] init];
+	
+	[arguments_iTextBox_iTextBox540 addObject:(BindableObject*)[self.scope get: @"sponsor"]];
+	[arguments_iTextBox_iTextBox540 addObject:(BindableObject*)[self.scope get: @"tmp638"]];
+	[arguments_iTextBox_iTextBox540 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iTextBox* iTextBox_iTextBox54 = [[iTextBox alloc] initialize:arguments_iTextBox_iTextBox540 container: [containerStack top]];
+	//push iTextBox_iTextBox54 to stack to add innert controls
+	[containerStack push:iTextBox_iTextBox54];
+	
+	//pop iTextBox_iTextBox54
+	[containerStack pop];
+	[iTextBox_iTextBox54 finilize];
+	[[containerStack top] addBodyControl:iTextBox_iTextBox54];
+	[self.scope exitScope];
+	BindableObject* DeriveDecl174 = [[BindableObject alloc] initWithValue: @"Section one title"];
+	[self.scope set:@"tmp639" variable:DeriveDecl174];
+	
+	[self.scope createInnerScope];
+	//changing iTextBox_iTextBox55 arguments to an array
+	
+	NSMutableArray* arguments_iTextBox_iTextBox550 = [[NSMutableArray alloc] init];
+	
+	[arguments_iTextBox_iTextBox550 addObject:(BindableObject*)[self.scope get: @"sectionOneTitle"]];
+	[arguments_iTextBox_iTextBox550 addObject:(BindableObject*)[self.scope get: @"tmp639"]];
+	[arguments_iTextBox_iTextBox550 addObject:[[BindableObject alloc] initWithValue: [[HumanResource_textBoxNextLineStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iTextBox* iTextBox_iTextBox55 = [[iTextBox alloc] initialize:arguments_iTextBox_iTextBox550 container: [containerStack top]];
+	//push iTextBox_iTextBox55 to stack to add innert controls
+	[containerStack push:iTextBox_iTextBox55];
+	
+	//pop iTextBox_iTextBox55
+	[containerStack pop];
+	[iTextBox_iTextBox55 finilize];
+	[[containerStack top] addBodyControl:iTextBox_iTextBox55];
 	[self.scope exitScope];
 	
 	for (BindableObject* item in [(BindableObject*)[self.scope get: @"items"] value])
 	{
 		[self.scope createInnerScope];
 		[self.scope set:@"item" variable:item];
-		BindableObject* DeriveDecl96 = [[BindableObject alloc] initWithValue: 
-		                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[Callbacktmp365 alloc] initWithScope:self.scope]]
+		BindableObject* DeriveDecl175 = [[BindableObject alloc] initWithValue: 
+		                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[root_callback_tmp642 alloc] initWithScope:self.scope]]
 		                                                                           ];
-		[self.scope set:@"tmp365" variable:DeriveDecl96];
-		BindableObject* DeriveDecl97 = [[BindableObject alloc] initWithValue: @"Age"];
-		[self.scope set:@"tmp364" variable:DeriveDecl97];
+		[self.scope set:@"tmp642" variable:DeriveDecl175];
+		BindableObject* DeriveDecl176 = [[BindableObject alloc] initWithValue: @"Age"];
+		[self.scope set:@"tmp641" variable:DeriveDecl176];
 		
 		[self.scope createInnerScope];
-		//changing iButton_ControlCall136 arguments to an array
+		//changing iButton_iButton15 arguments to an array
 		
-		NSMutableArray* arguments_iButton_ControlCall1360 = [[NSMutableArray alloc] init];
+		NSMutableArray* arguments_iButton_iButton150 = [[NSMutableArray alloc] init];
 		
-		[arguments_iButton_ControlCall1360 addObject:(BindableObject*)[self.scope get: @"tmp364"]];
-		[arguments_iButton_ControlCall1360 addObject:(BindableObject*)[self.scope get: @"tmp365"]];
-		[arguments_iButton_ControlCall1360 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_buttonStyle alloc] initialize]]];
+		[arguments_iButton_iButton150 addObject:(BindableObject*)[self.scope get: @"tmp641"]];
+		[arguments_iButton_iButton150 addObject:(BindableObject*)[self.scope get: @"tmp642"]];
+		[arguments_iButton_iButton150 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_buttonStyle alloc] initialize]]];
 		
 		//initializing [varName] control
-		iButton* iButton_ControlCall136 = [[iButton alloc] initialize:arguments_iButton_ControlCall1360 container: [containerStack top]];
-		//push iButton_ControlCall136 to stack to add innert controls
-		[containerStack push:iButton_ControlCall136];
+		iButton* iButton_iButton15 = [[iButton alloc] initialize:arguments_iButton_iButton150 container: [containerStack top]];
+		//push iButton_iButton15 to stack to add innert controls
+		[containerStack push:iButton_iButton15];
 		
-		//pop iButton_ControlCall136
+		//pop iButton_iButton15
 		[containerStack pop];
-		[iButton_ControlCall136 finilize];
-		[[containerStack top] addBodyControl:iButton_ControlCall136];
+		[iButton_iButton15 finilize];
+		[[containerStack top] addBodyControl:iButton_iButton15];
 		[self.scope exitScope];
 		
 		[self.scope exitScope];
 	}
 	
 	[self.scope createInnerScope];
-	//changing iTable_ControlCall137 arguments to an array
+	//changing iTable_iTable7 arguments to an array
 	
-	NSMutableArray* arguments_iTable_ControlCall1370 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iTable_iTable70 = [[NSMutableArray alloc] init];
 	
-	[arguments_iTable_ControlCall1370 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_tableStyle alloc] initialize]]];
+	[arguments_iTable_iTable70 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_tableStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iTable* iTable_ControlCall137 = [[iTable alloc] initialize:arguments_iTable_ControlCall1370 container: [containerStack top]];
-	//push iTable_ControlCall137 to stack to add innert controls
-	[containerStack push:iTable_ControlCall137];
+	iTable* iTable_iTable7 = [[iTable alloc] initialize:arguments_iTable_iTable70 container: [containerStack top]];
+	//push iTable_iTable7 to stack to add innert controls
+	[containerStack push:iTable_iTable7];
 	
 	[self.scope createInnerScope];
-	//changing iSection_ControlCall138 arguments to an array
+	//changing iSection_iSection14 arguments to an array
 	
-	NSMutableArray* arguments_iSection_ControlCall1380 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iSection_iSection140 = [[NSMutableArray alloc] init];
 	
-	[arguments_iSection_ControlCall1380 addObject:(BindableObject*)[self.scope get: @"sectionOneTitle"]];
-	[arguments_iSection_ControlCall1380 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_sectionStyle alloc] initialize]]];
+	[arguments_iSection_iSection140 addObject:(BindableObject*)[self.scope get: @"sectionOneTitle"]];
+	[arguments_iSection_iSection140 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_sectionStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iSection* iSection_ControlCall138 = [[iSection alloc] initialize:arguments_iSection_ControlCall1380 container: [containerStack top]];
-	//push iSection_ControlCall138 to stack to add innert controls
-	[containerStack push:iSection_ControlCall138];
-	BindableObject* DeriveDecl98 = [[BindableObject alloc] initWithValue: @"First Name"];
-	[self.scope set:@"tmp367" variable:DeriveDecl98];
-	BindableObject* DeriveDecl99 = [[BindableObject alloc] initWithValue: @"John"];
-	[self.scope set:@"tmp366" variable:DeriveDecl99];
+	iSection* iSection_iSection14 = [[iSection alloc] initialize:arguments_iSection_iSection140 container: [containerStack top]];
+	//push iSection_iSection14 to stack to add innert controls
+	[containerStack push:iSection_iSection14];
+	BindableObject* DeriveDecl177 = [[BindableObject alloc] initWithValue: @"First Name"];
+	[self.scope set:@"tmp644" variable:DeriveDecl177];
+	BindableObject* DeriveDecl178 = [[BindableObject alloc] initWithValue: @"John"];
+	[self.scope set:@"tmp643" variable:DeriveDecl178];
 	
 	[self.scope createInnerScope];
-	//changing iItemEdit_ControlCall139 arguments to an array
+	//changing HumanResource_iItemEdit_HumanResource_iItemEdit14 arguments to an array
 	
-	NSMutableArray* arguments_iItemEdit_ControlCall1390 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_HumanResource_iItemEdit_HumanResource_iItemEdit140 = [[NSMutableArray alloc] init];
 	
-	[arguments_iItemEdit_ControlCall1390 addObject:(BindableObject*)[self.scope get: @"firstName"]];
-	[arguments_iItemEdit_ControlCall1390 addObject:(BindableObject*)[self.scope get: @"tmp366"]];
-	[arguments_iItemEdit_ControlCall1390 addObject:(BindableObject*)[self.scope get: @"tmp367"]];
+	[arguments_HumanResource_iItemEdit_HumanResource_iItemEdit140 addObject:(BindableObject*)[self.scope get: @"firstName"]];
+	[arguments_HumanResource_iItemEdit_HumanResource_iItemEdit140 addObject:(BindableObject*)[self.scope get: @"tmp643"]];
+	[arguments_HumanResource_iItemEdit_HumanResource_iItemEdit140 addObject:(BindableObject*)[self.scope get: @"tmp644"]];
 	
 	//initializing [varName] control
-	iItemEdit* iItemEdit_ControlCall139 = [[iItemEdit alloc] initialize:arguments_iItemEdit_ControlCall1390 container: [containerStack top]];
-	//push iItemEdit_ControlCall139 to stack to add innert controls
-	[containerStack push:iItemEdit_ControlCall139];
+	HumanResource_iItemEdit* HumanResource_iItemEdit_HumanResource_iItemEdit14 = [[HumanResource_iItemEdit alloc] initialize:arguments_HumanResource_iItemEdit_HumanResource_iItemEdit140 container: [containerStack top]];
+	//push HumanResource_iItemEdit_HumanResource_iItemEdit14 to stack to add innert controls
+	[containerStack push:HumanResource_iItemEdit_HumanResource_iItemEdit14];
 	
-	//pop iItemEdit_ControlCall139
+	//pop HumanResource_iItemEdit_HumanResource_iItemEdit14
 	[containerStack pop];
-	[iItemEdit_ControlCall139 finilize];
-	[[containerStack top] addBodyControl:iItemEdit_ControlCall139];
+	[HumanResource_iItemEdit_HumanResource_iItemEdit14 finilize];
+	[[containerStack top] addBodyControl:HumanResource_iItemEdit_HumanResource_iItemEdit14];
 	[self.scope exitScope];
-	BindableObject* DeriveDecl100 = [[BindableObject alloc] initWithValue: @"Last Name"];
-	[self.scope set:@"tmp369" variable:DeriveDecl100];
-	BindableObject* DeriveDecl101 = [[BindableObject alloc] initWithValue: @"Smith"];
-	[self.scope set:@"tmp368" variable:DeriveDecl101];
+	BindableObject* DeriveDecl179 = [[BindableObject alloc] initWithValue: @"Last Name"];
+	[self.scope set:@"tmp646" variable:DeriveDecl179];
+	BindableObject* DeriveDecl180 = [[BindableObject alloc] initWithValue: @"Smith"];
+	[self.scope set:@"tmp645" variable:DeriveDecl180];
 	
 	[self.scope createInnerScope];
-	//changing iItemEdit_ControlCall140 arguments to an array
+	//changing HumanResource_iItemEdit_HumanResource_iItemEdit15 arguments to an array
 	
-	NSMutableArray* arguments_iItemEdit_ControlCall1400 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_HumanResource_iItemEdit_HumanResource_iItemEdit150 = [[NSMutableArray alloc] init];
 	
-	[arguments_iItemEdit_ControlCall1400 addObject:(BindableObject*)[self.scope get: @"lastName"]];
-	[arguments_iItemEdit_ControlCall1400 addObject:(BindableObject*)[self.scope get: @"tmp368"]];
-	[arguments_iItemEdit_ControlCall1400 addObject:(BindableObject*)[self.scope get: @"tmp369"]];
+	[arguments_HumanResource_iItemEdit_HumanResource_iItemEdit150 addObject:(BindableObject*)[self.scope get: @"lastName"]];
+	[arguments_HumanResource_iItemEdit_HumanResource_iItemEdit150 addObject:(BindableObject*)[self.scope get: @"tmp645"]];
+	[arguments_HumanResource_iItemEdit_HumanResource_iItemEdit150 addObject:(BindableObject*)[self.scope get: @"tmp646"]];
 	
 	//initializing [varName] control
-	iItemEdit* iItemEdit_ControlCall140 = [[iItemEdit alloc] initialize:arguments_iItemEdit_ControlCall1400 container: [containerStack top]];
-	//push iItemEdit_ControlCall140 to stack to add innert controls
-	[containerStack push:iItemEdit_ControlCall140];
+	HumanResource_iItemEdit* HumanResource_iItemEdit_HumanResource_iItemEdit15 = [[HumanResource_iItemEdit alloc] initialize:arguments_HumanResource_iItemEdit_HumanResource_iItemEdit150 container: [containerStack top]];
+	//push HumanResource_iItemEdit_HumanResource_iItemEdit15 to stack to add innert controls
+	[containerStack push:HumanResource_iItemEdit_HumanResource_iItemEdit15];
 	
-	//pop iItemEdit_ControlCall140
+	//pop HumanResource_iItemEdit_HumanResource_iItemEdit15
 	[containerStack pop];
-	[iItemEdit_ControlCall140 finilize];
-	[[containerStack top] addBodyControl:iItemEdit_ControlCall140];
+	[HumanResource_iItemEdit_HumanResource_iItemEdit15 finilize];
+	[[containerStack top] addBodyControl:HumanResource_iItemEdit_HumanResource_iItemEdit15];
 	[self.scope exitScope];
-	BindableObject* DeriveDecl102 = [[BindableObject alloc] initWithValue: @"Age"];
-	[self.scope set:@"tmp372" variable:DeriveDecl102];
-	BindableObject* DeriveDecl103 = [[BindableObject alloc] initWithValue: @"25"];
-	[self.scope set:@"tmp371" variable:DeriveDecl103];
+	BindableObject* DeriveDecl181 = [[BindableObject alloc] initWithValue: @"Age"];
+	[self.scope set:@"tmp648" variable:DeriveDecl181];
+	BindableObject* DeriveDecl182 = [[BindableObject alloc] initWithValue: @"25"];
+	[self.scope set:@"tmp647" variable:DeriveDecl182];
 	
 	[self.scope createInnerScope];
-	//changing iItemNum_ControlCall141 arguments to an array
+	//changing HumanResource_iItemNum_HumanResource_iItemNum7 arguments to an array
 	
-	NSMutableArray* arguments_iItemNum_ControlCall1410 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_HumanResource_iItemNum_HumanResource_iItemNum70 = [[NSMutableArray alloc] init];
 	
-	[arguments_iItemNum_ControlCall1410 addObject:(BindableObject*)[self.scope get: @"age"]];
-	[arguments_iItemNum_ControlCall1410 addObject:(BindableObject*)[self.scope get: @"tmp371"]];
-	[arguments_iItemNum_ControlCall1410 addObject:(BindableObject*)[self.scope get: @"tmp372"]];
+	[arguments_HumanResource_iItemNum_HumanResource_iItemNum70 addObject:(BindableObject*)[self.scope get: @"age"]];
+	[arguments_HumanResource_iItemNum_HumanResource_iItemNum70 addObject:(BindableObject*)[self.scope get: @"tmp647"]];
+	[arguments_HumanResource_iItemNum_HumanResource_iItemNum70 addObject:(BindableObject*)[self.scope get: @"tmp648"]];
 	
 	//initializing [varName] control
-	iItemNum* iItemNum_ControlCall141 = [[iItemNum alloc] initialize:arguments_iItemNum_ControlCall1410 container: [containerStack top]];
-	//push iItemNum_ControlCall141 to stack to add innert controls
-	[containerStack push:iItemNum_ControlCall141];
+	HumanResource_iItemNum* HumanResource_iItemNum_HumanResource_iItemNum7 = [[HumanResource_iItemNum alloc] initialize:arguments_HumanResource_iItemNum_HumanResource_iItemNum70 container: [containerStack top]];
+	//push HumanResource_iItemNum_HumanResource_iItemNum7 to stack to add innert controls
+	[containerStack push:HumanResource_iItemNum_HumanResource_iItemNum7];
 	
-	//pop iItemNum_ControlCall141
+	//pop HumanResource_iItemNum_HumanResource_iItemNum7
 	[containerStack pop];
-	[iItemNum_ControlCall141 finilize];
-	[[containerStack top] addBodyControl:iItemNum_ControlCall141];
-	[self.scope exitScope];
-	
-	//pop iSection_ControlCall138
-	[containerStack pop];
-	[iSection_ControlCall138 finilize];
-	[[containerStack top] addBodyControl:iSection_ControlCall138];
+	[HumanResource_iItemNum_HumanResource_iItemNum7 finilize];
+	[[containerStack top] addBodyControl:HumanResource_iItemNum_HumanResource_iItemNum7];
 	[self.scope exitScope];
 	
-	[self.scope createInnerScope];
-	//changing iSection_ControlCall142 arguments to an array
-	
-	NSMutableArray* arguments_iSection_ControlCall1420 = [[NSMutableArray alloc] init];
-	
-	[arguments_iSection_ControlCall1420 addObject:(BindableObject*)[self.scope get: @"sectionTwoTitle"]];
-	[arguments_iSection_ControlCall1420 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_sectionStyle alloc] initialize]]];
-	
-	//initializing [varName] control
-	iSection* iSection_ControlCall142 = [[iSection alloc] initialize:arguments_iSection_ControlCall1420 container: [containerStack top]];
-	//push iSection_ControlCall142 to stack to add innert controls
-	[containerStack push:iSection_ControlCall142];
-	BindableObject* DeriveDecl104 = [[BindableObject alloc] initWithValue: @"Newspaper"];
-	[self.scope set:@"tmp373" variable:DeriveDecl104];
-	
-	[self.scope createInnerScope];
-	//changing iItemCheck_ControlCall143 arguments to an array
-	
-	NSMutableArray* arguments_iItemCheck_ControlCall1430 = [[NSMutableArray alloc] init];
-	
-	[arguments_iItemCheck_ControlCall1430 addObject:(BindableObject*)[self.scope get: @"newspaper"]];
-	[arguments_iItemCheck_ControlCall1430 addObject:(BindableObject*)[self.scope get: @"tmp373"]];
-	
-	//initializing [varName] control
-	iItemCheck* iItemCheck_ControlCall143 = [[iItemCheck alloc] initialize:arguments_iItemCheck_ControlCall1430 container: [containerStack top]];
-	//push iItemCheck_ControlCall143 to stack to add innert controls
-	[containerStack push:iItemCheck_ControlCall143];
-	
-	//pop iItemCheck_ControlCall143
+	//pop iSection_iSection14
 	[containerStack pop];
-	[iItemCheck_ControlCall143 finilize];
-	[[containerStack top] addBodyControl:iItemCheck_ControlCall143];
+	[iSection_iSection14 finilize];
+	[[containerStack top] addBodyControl:iSection_iSection14];
 	[self.scope exitScope];
 	
 	[self.scope createInnerScope];
-	//changing iItem_ControlCall144 arguments to an array
+	//changing iSection_iSection15 arguments to an array
 	
-	NSMutableArray* arguments_iItem_ControlCall1440 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iSection_iSection150 = [[NSMutableArray alloc] init];
 	
-	[arguments_iItem_ControlCall1440 addObject:(BindableObject*)[self.scope get: @"sponsor"]];
-	[arguments_iItem_ControlCall1440 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadui_itemStyle alloc] initialize]]];
+	[arguments_iSection_iSection150 addObject:(BindableObject*)[self.scope get: @"sectionTwoTitle"]];
+	[arguments_iSection_iSection150 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_sectionStyle alloc] initialize]]];
 	
 	//initializing [varName] control
-	iItem* iItem_ControlCall144 = [[iItem alloc] initialize:arguments_iItem_ControlCall1440 container: [containerStack top]];
-	//push iItem_ControlCall144 to stack to add innert controls
-	[containerStack push:iItem_ControlCall144];
+	iSection* iSection_iSection15 = [[iSection alloc] initialize:arguments_iSection_iSection150 container: [containerStack top]];
+	//push iSection_iSection15 to stack to add innert controls
+	[containerStack push:iSection_iSection15];
+	BindableObject* DeriveDecl183 = [[BindableObject alloc] initWithValue: @"Newspaper"];
+	[self.scope set:@"tmp649" variable:DeriveDecl183];
 	
-	//pop iItem_ControlCall144
+	[self.scope createInnerScope];
+	//changing HumanResource_iItemCheck_HumanResource_iItemCheck7 arguments to an array
+	
+	NSMutableArray* arguments_HumanResource_iItemCheck_HumanResource_iItemCheck70 = [[NSMutableArray alloc] init];
+	
+	[arguments_HumanResource_iItemCheck_HumanResource_iItemCheck70 addObject:(BindableObject*)[self.scope get: @"newspaper"]];
+	[arguments_HumanResource_iItemCheck_HumanResource_iItemCheck70 addObject:(BindableObject*)[self.scope get: @"tmp649"]];
+	
+	//initializing [varName] control
+	HumanResource_iItemCheck* HumanResource_iItemCheck_HumanResource_iItemCheck7 = [[HumanResource_iItemCheck alloc] initialize:arguments_HumanResource_iItemCheck_HumanResource_iItemCheck70 container: [containerStack top]];
+	//push HumanResource_iItemCheck_HumanResource_iItemCheck7 to stack to add innert controls
+	[containerStack push:HumanResource_iItemCheck_HumanResource_iItemCheck7];
+	
+	//pop HumanResource_iItemCheck_HumanResource_iItemCheck7
 	[containerStack pop];
-	[iItem_ControlCall144 finilize];
-	[[containerStack top] addBodyControl:iItem_ControlCall144];
+	[HumanResource_iItemCheck_HumanResource_iItemCheck7 finilize];
+	[[containerStack top] addBodyControl:HumanResource_iItemCheck_HumanResource_iItemCheck7];
 	[self.scope exitScope];
 	
-	//pop iSection_ControlCall142
+	[self.scope createInnerScope];
+	//changing iItem_iItem31 arguments to an array
+	
+	NSMutableArray* arguments_iItem_iItem310 = [[NSMutableArray alloc] init];
+	
+	[arguments_iItem_iItem310 addObject:(BindableObject*)[self.scope get: @"sponsor"]];
+	[arguments_iItem_iItem310 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_itemStyle alloc] initialize]]];
+	
+	//initializing [varName] control
+	iItem* iItem_iItem31 = [[iItem alloc] initialize:arguments_iItem_iItem310 container: [containerStack top]];
+	//push iItem_iItem31 to stack to add innert controls
+	[containerStack push:iItem_iItem31];
+	
+	//pop iItem_iItem31
 	[containerStack pop];
-	[iSection_ControlCall142 finilize];
-	[[containerStack top] addBodyControl:iSection_ControlCall142];
+	[iItem_iItem31 finilize];
+	[[containerStack top] addBodyControl:iItem_iItem31];
 	[self.scope exitScope];
 	
-	//pop iTable_ControlCall137
+	//pop iSection_iSection15
 	[containerStack pop];
-	[iTable_ControlCall137 finilize];
-	[[containerStack top] addBodyControl:iTable_ControlCall137];
+	[iSection_iSection15 finilize];
+	[[containerStack top] addBodyControl:iSection_iSection15];
+	[self.scope exitScope];
+	
+	//pop iTable_iTable7
+	[containerStack pop];
+	[iTable_iTable7 finilize];
+	[[containerStack top] addBodyControl:iTable_iTable7];
 	[self.scope exitScope];
 	 
 	//pop screen 

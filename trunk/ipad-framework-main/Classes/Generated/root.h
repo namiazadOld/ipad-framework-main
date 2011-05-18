@@ -9,19 +9,24 @@
 
 
 #import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 #import "NSStack.h"
 #import "NullObject.h"
-#import "iWidget.h"
+#import "NSSelector.h"	
+#import "iCustomControl.h"
+#import "Utilities.h"
+#import "Scope.h"
 #import "iView.h"
-#import "iTable.h"
-#import "iSection.h"
-#import "iItem.h"
+#import "Callback.h"
+#import "StylingManager.h"
+#import "UIStyle.h"
 
-
-@interface root : iView <iWidget>{
+@interface root : iView{
 	UIWindow *window;
 }
 
 @property (nonatomic, retain) UIWindow *window;
+
+
 
 @end
