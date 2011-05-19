@@ -10,6 +10,7 @@
 
 
 @implementation MyClass
+@synthesize age;
 
 -(void)callback
 {

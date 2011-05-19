@@ -10,9 +10,10 @@
 
 
 @interface MyClass : NSObject {
-
+	float age;
 }
 
 -(void) callback;
+@property (assign) float age;
 
 @end
