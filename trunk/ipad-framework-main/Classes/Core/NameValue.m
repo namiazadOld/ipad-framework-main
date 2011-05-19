@@ -15,8 +15,8 @@
 
 -(NameValue*) initWithName: (NSString*)_name value:(id)_value
 {
-	name = _name;
-	value = _value;
+	self.name = _name;
+	self.value = _value;
 	return self;
 }
 
