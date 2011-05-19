@@ -14,5 +14,6 @@
 }
 
 -(void) initialize;
+-(Object*) initWithValues: (NSArray*)nvs;
 
 @end
