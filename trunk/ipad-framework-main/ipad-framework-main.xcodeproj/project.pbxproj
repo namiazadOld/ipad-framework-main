@@ -64,6 +64,8 @@
 		39E0FDE8137EBB79004D213F /* iTextBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FDBF137EBB79004D213F /* iTextBox.m */; };
 		39E0FDE9137EBB79004D213F /* iTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FDC1137EBB79004D213F /* iTextField.m */; };
 		39E0FDEA137EBB79004D213F /* iView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FDC3137EBB79004D213F /* iView.m */; };
+		39EA6CF6138AD998003D90E0 /* Tuple1.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6CF5138AD998003D90E0 /* Tuple1.m */; };
+		39EA6CFA138B3406003D90E0 /* TypedValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EA6CF9138B3406003D90E0 /* TypedValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +178,10 @@
 		39E0FDC2137EBB79004D213F /* iView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iView.h; sourceTree = "<group>"; };
 		39E0FDC3137EBB79004D213F /* iView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iView.m; sourceTree = "<group>"; };
 		39E0FDC4137EBB79004D213F /* iWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iWidget.h; sourceTree = "<group>"; };
+		39EA6CF4138AD998003D90E0 /* Tuple1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tuple1.h; sourceTree = "<group>"; };
+		39EA6CF5138AD998003D90E0 /* Tuple1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tuple1.m; sourceTree = "<group>"; };
+		39EA6CF8138B3406003D90E0 /* TypedValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypedValue.h; sourceTree = "<group>"; };
+		39EA6CF9138B3406003D90E0 /* TypedValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypedValue.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ipad_framework_main-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ipad_framework_main-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -317,6 +323,10 @@
 				39609CFC1384369300B96C07 /* Object.m */,
 				39609F9A1384881000B96C07 /* NameValue.h */,
 				39609F9B1384881000B96C07 /* NameValue.m */,
+				39EA6CF4138AD998003D90E0 /* Tuple1.h */,
+				39EA6CF5138AD998003D90E0 /* Tuple1.m */,
+				39EA6CF8138B3406003D90E0 /* TypedValue.h */,
+				39EA6CF9138B3406003D90E0 /* TypedValue.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -503,6 +513,8 @@
 				39254A721380C1980097DBEC /* mobl_ipadstyle_textBoxStyle.m in Sources */,
 				39609CFD1384369300B96C07 /* Object.m in Sources */,
 				39609F9C1384881000B96C07 /* NameValue.m in Sources */,
+				39EA6CF6138AD998003D90E0 /* Tuple1.m in Sources */,
+				39EA6CFA138B3406003D90E0 /* TypedValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
