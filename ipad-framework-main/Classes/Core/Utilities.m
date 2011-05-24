@@ -8,6 +8,8 @@
 
 #import "Utilities.h"
 #import "iBaseControl.h"
+#import "Constants.h"
+#import "Tuple1.h"
 
 
 @implementation Utilities
@@ -40,6 +42,18 @@ static UIViewController* currentView;
 	[container.children addObject:widget];
 }
 
++(BindableObject*) InitWithType: (TypedValue*) tv
+{
+	if ([tv.type isEqualToString:NUM_TYPE])
+		return [[BindableObject alloc] initWithNumber:[tv.value floatValue]];
+
+	if ([tv.type isEqualToString:BOOL_TYPE])
+		return [[BindableObject alloc] initWithBool:[tv.value boolValue]];
+	
+	
+	return [[BindableObject alloc] initWithValue:tv.value];
+}
+
 
 +(UIViewController*) CurrentView
 {
@@ -53,5 +67,17 @@ static UIViewController* currentView;
 	[viewController release];
 }
 
++(id) Tuple: (NSArray*)values
+{
+	switch ([values count]) {
+		case 1:
+		{
+			return [[Tuple1 alloc] initialize:values];
+			break;
+		}
+		default:
+			break;
+	}
+}
 
 @end
