@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "BindableObject.h"
 
 
 @interface Tuple1 : NSObject {
-	id _1;
+	BindableObject* _1;
 }
 
-@property (readwrite, assign) id _1;
+@property (readwrite, assign) BindableObject* _1;
 
 -(Tuple1*) initialize:(NSArray*)values;
 

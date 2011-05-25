@@ -34,6 +34,9 @@ static UIViewController* currentView;
 
 	UIView* view = [widget getView];
 	
+	if (view != NULL && [view isEqual:[container getChildrenHolder]])
+		return;
+	
 	if (view != NULL)
 		[[container getChildrenHolder] addSubview:view];
 		
