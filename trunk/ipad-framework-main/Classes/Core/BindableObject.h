@@ -33,7 +33,7 @@ typedef enum
 @property (retain, readonly) NSMutableArray* observers;
 
 
--(void) initFields;
+-(void) initFields:(ValueType)_type;
 -(BindableObject*) initWithValue: (id)_value;
 -(BindableObject*) initWithNumber: (float)_value;
 -(BindableObject*) initWithBool: (BOOL) _value;

@@ -31,6 +31,11 @@
 	return self.viewController.view;
 }
 
+-(UIView*) getChildrenHolder
+{
+	return self.viewController.view;
+}
+
 -(void) addBodyControl:(iBaseControl*) widget
 {
 	[Utilities AddControl:widget ToContainer:self];

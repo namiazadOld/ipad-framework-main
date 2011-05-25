@@ -12,47 +12,47 @@
 @implementation BindableObject
 @synthesize value, observers, numValue, boolValue, type;
 
--(void) initFields
+-(void) initFields:(ValueType)_type
 {
-	observers = [[NSMutableArray alloc] init];
+	if (observers == nil)
+	{
+		observers = [[NSMutableArray alloc] init];
+		type = _type;
+	}
+	
 }
 
 
 -(BindableObject*) initWithValue: (id)_value
 {
-	[self initFields];
+	[self initFields:Ref];
 	
-	value = _value;
-	type = Ref;
-	
+	self.value = _value;
+
 	return self;
 }
 
 -(BindableObject*) initWithNumber: (float)_value
 {
-	[self initFields];
+	[self initFields:Num];
 	
 	numValue = _value;
-	type = Num;
 	
 	return self;
 }
 
 -(BindableObject*) initWithBool: (BOOL) _value
 {
-	[self initFields];
+	[self initFields:Bool];
 	
 	boolValue = _value;
-	type = Bool;
 	
 	return self;
 }
 
 -(BindableObject*) initWithNull
 {
-	[self initFields];
-
-	type = Null;
+	[self initFields:Null];
 	
 	return self;
 }
@@ -74,6 +74,7 @@
 {
 	@synchronized(self)
 	{
+		[self initFields:Ref];
 		value = _value;
 		[self notifyObservers];
 	}
@@ -83,6 +84,7 @@
 {
 	@synchronized(self)
 	{
+		[self initFields:Num];
 		numValue = _value;
 		[self notifyObservers];
 	}
@@ -92,6 +94,7 @@
 {
 	@synchronized(self)
 	{
+		[self initFields:Bool];
 		boolValue = _value;
 		[self notifyObservers];
 	}
