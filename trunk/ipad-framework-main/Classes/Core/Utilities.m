@@ -10,6 +10,10 @@
 #import "iBaseControl.h"
 #import "Constants.h"
 #import "Tuple1.h"
+#import "Tuple2.h"
+#import "Tuple3.h"
+#import "Tuple4.h"
+#import "Tuple5.h"
 
 
 @implementation Utilities
@@ -76,7 +80,22 @@ static UIViewController* currentView;
 		case 1:
 		{
 			return [[Tuple1 alloc] initialize:values];
-			break;
+		}
+		case 2:
+		{
+			return [[Tuple2 alloc] initialize:values];
+		}
+		case 3:
+		{
+			return [[Tuple3 alloc] initialize:values];
+		}
+		case 4:
+		{
+			return [[Tuple4 alloc] initialize:values];
+		}
+		case 5:
+		{
+			return [[Tuple5 alloc] initialize:values];
 		}
 		default:
 			break;
