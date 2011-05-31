@@ -15,6 +15,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		393BF44A139562A500BB8AD6 /* mobl.m in Sources */ = {isa = PBXBuildFile; fileRef = 393BF449139562A500BB8AD6 /* mobl.m */; };
 		39609CFD1384369300B96C07 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609CFC1384369300B96C07 /* Object.m */; };
 		39609F9C1384881000B96C07 /* NameValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609F9B1384881000B96C07 /* NameValue.m */; };
 		3998D885139297D900C3F494 /* root_callback_tmp25.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D874139297D900C3F494 /* root_callback_tmp25.m */; };
@@ -96,6 +97,8 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ipad_framework_main_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipad_framework_main_Prefix.pch; sourceTree = "<group>"; };
+		393BF448139562A500BB8AD6 /* mobl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl.h; sourceTree = "<group>"; };
+		393BF449139562A500BB8AD6 /* mobl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl.m; sourceTree = "<group>"; };
 		39609CFB1384369300B96C07 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 		39609CFC1384369300B96C07 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
 		39609F9A1384881000B96C07 /* NameValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameValue.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 		393BF4411395627E00BB8AD6 /* stdlib */ = {
 			isa = PBXGroup;
 			children = (
+				393BF448139562A500BB8AD6 /* mobl.h */,
+				393BF449139562A500BB8AD6 /* mobl.m */,
 			);
 			path = stdlib;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				3998D88D139297D900C3F494 /* TabSample.m in Sources */,
 				3998D8AB13953CEF00C3F494 /* iDatePicker.m in Sources */,
 				3998D8D113955CF600C3F494 /* CustomDate.m in Sources */,
+				393BF44A139562A500BB8AD6 /* mobl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

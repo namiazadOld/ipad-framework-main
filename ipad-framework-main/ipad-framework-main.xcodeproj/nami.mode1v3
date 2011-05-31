@@ -266,6 +266,7 @@
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
 								<string>39E0FD76137EBB78004D213F</string>
+								<string>393BF4411395627E00BB8AD6</string>
 								<string>39E0FD91137EBB78004D213F</string>
 								<string>39254A541380C1980097DBEC</string>
 								<string>39E0FD95137EBB78004D213F</string>
@@ -278,6 +279,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>5</integer>
+									<integer>3</integer>
 									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -314,12 +317,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>mobl_ipadstyle_headerStyle.m</string>
+								<string>mobl.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,11 +332,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>mobl_ipadstyle_headerStyle.m</string>
+										<string>mobl.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>393BF4401395627200BB8AD6</string>
+										<string>393BF45D139562F100BB8AD6</string>
 										<key>history</key>
 										<array>
 											<string>39254A771380C1C10097DBEC</string>
@@ -357,7 +362,6 @@
 											<string>39EA7049138DCFF4003D90E0</string>
 											<string>39EA704A138DCFF4003D90E0</string>
 											<string>39EA7052138DD191003D90E0</string>
-											<string>39EA7056138DD191003D90E0</string>
 											<string>39EA7066138DD1FF003D90E0</string>
 											<string>39EA7067138DD1FF003D90E0</string>
 											<string>39EA7076138DD2F1003D90E0</string>
@@ -406,7 +410,10 @@
 											<string>3998D91313955E3600C3F494</string>
 											<string>3998D9431395601000C3F494</string>
 											<string>393BF43E1395627200BB8AD6</string>
-											<string>393BF43F1395627200BB8AD6</string>
+											<string>393BF459139562F100BB8AD6</string>
+											<string>393BF45A139562F100BB8AD6</string>
+											<string>393BF45B139562F100BB8AD6</string>
+											<string>393BF45C139562F100BB8AD6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
