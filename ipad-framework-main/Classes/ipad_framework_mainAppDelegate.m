@@ -31,21 +31,21 @@
 	
 	
 	
-	root *aRoot = [[root alloc]init];
-	
-		
-		NSMutableArray* arguments = [[NSMutableArray alloc]init];
-		aRoot.window = window;
-		[aRoot initialize:arguments container: NULL];
-		[Utilities setCurrentView:aRoot.viewController];
-	
-	
-	//SampleTabController* tabContoller = [[SampleTabController alloc] init];
-//	[tabContoller initialize];
+	//root *aRoot = [[root alloc]init];
 //	
-//	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabContoller.viewController];
-//	[window addSubview:[navController view]];
-//	[navController setNavigationBarHidden:YES];
+//		
+//		NSMutableArray* arguments = [[NSMutableArray alloc]init];
+//		aRoot.window = window;
+//		[aRoot initialize:arguments container: NULL];
+//		[Utilities setCurrentView:aRoot.viewController];
+	
+	
+	SampleTabController* tabContoller = [[SampleTabController alloc] init];
+	[tabContoller initialize];
+	
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabContoller.viewController];
+	[window addSubview:[navController view]];
+	[navController setNavigationBarHidden:YES];
 	
     [window makeKeyAndVisible];
 }
