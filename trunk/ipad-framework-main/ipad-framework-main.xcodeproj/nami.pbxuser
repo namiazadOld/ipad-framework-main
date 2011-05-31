@@ -118,6 +118,9 @@
 			393BF3D71395603200BB8AD6 /* PBXTextBookmark */ = 393BF3D71395603200BB8AD6 /* PBXTextBookmark */;
 			393BF3EA139560A800BB8AD6 /* PBXTextBookmark */ = 393BF3EA139560A800BB8AD6 /* PBXTextBookmark */;
 			393BF3EB139560A800BB8AD6 /* PBXTextBookmark */ = 393BF3EB139560A800BB8AD6 /* PBXTextBookmark */;
+			393BF43E1395627200BB8AD6 /* PBXTextBookmark */ = 393BF43E1395627200BB8AD6 /* PBXTextBookmark */;
+			393BF43F1395627200BB8AD6 /* PBXBookmark */ = 393BF43F1395627200BB8AD6 /* PBXBookmark */;
+			393BF4401395627200BB8AD6 /* PBXTextBookmark */ = 393BF4401395627200BB8AD6 /* PBXTextBookmark */;
 			39609CFF13844B1800B96C07 = 39609CFF13844B1800B96C07 /* PBXTextBookmark */;
 			39609D0113844B1800B96C07 = 39609D0113844B1800B96C07 /* PBXTextBookmark */;
 			39609D0213844B1800B96C07 = 39609D0213844B1800B96C07 /* PBXTextBookmark */;
@@ -266,6 +269,30 @@
 		rLoc = 184;
 		rType = 0;
 		vrLen = 191;
+		vrLoc = 0;
+	};
+	393BF43E1395627200BB8AD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 39E0FD78137EBB78004D213F /* BaseModule.m */;
+		name = "BaseModule.m: 12";
+		rLen = 0;
+		rLoc = 186;
+		rType = 0;
+		vrLen = 193;
+		vrLoc = 0;
+	};
+	393BF43F1395627200BB8AD6 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 39EA700B138DCF19003D90E0 /* mobl_ipadstyle_headerStyle.m */;
+	};
+	393BF4401395627200BB8AD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 39EA700B138DCF19003D90E0 /* mobl_ipadstyle_headerStyle.m */;
+		name = "mobl_ipadstyle_headerStyle.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 392;
 		vrLoc = 0;
 	};
 	39609CFB1384369300B96C07 /* Object.h */ = {
@@ -1325,6 +1352,13 @@
 			sepNavIntBoundsRect = "{{0, 0}, {785, 616}}";
 			sepNavSelRange = "{390, 0}";
 			sepNavVisRange = "{0, 400}";
+		};
+	};
+	39EA700B138DCF19003D90E0 /* mobl_ipadstyle_headerStyle.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1185, 611}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 392}";
 		};
 	};
 	39EA701B138DCF19003D90E0 /* mobl_ipadstyle_tabSetStyle.m */ = {

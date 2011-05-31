@@ -340,9 +340,17 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		393BF4411395627E00BB8AD6 /* stdlib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stdlib;
+			sourceTree = "<group>";
+		};
 		39E0FD76137EBB78004D213F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				393BF4411395627E00BB8AD6 /* stdlib */,
 				39E0FD77137EBB78004D213F /* BaseModule.h */,
 				39E0FD78137EBB78004D213F /* BaseModule.m */,
 				39E0FD79137EBB78004D213F /* BindableObject.h */,
