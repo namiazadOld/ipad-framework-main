@@ -145,7 +145,12 @@
 
 	if (height == DEFAULT_HEIGHT)
 		height = [self calculateHeight:control];
-		
+	
+	//TODO: This should be align for re-orientation
+	if (y < VERTICAL_HEIGHT)
+		if (y + height > VERTICAL_HEIGHT)
+			height = VERTICAL_HEIGHT - y;
+
 	return CGRectMake(x, y, width, height);
 }
 

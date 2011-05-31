@@ -14,6 +14,7 @@
 	UITabBarController* tabController;
 }
 
-@property (nonatomic, retain) UITabBarController* tabController;
+@property (retain) UITabBarController* tabController;
 
+-(void) initializeTabPages: (NSArray*) tabPages;
 @end

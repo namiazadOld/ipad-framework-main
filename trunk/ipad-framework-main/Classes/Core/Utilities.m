@@ -57,6 +57,9 @@ static UIViewController* currentView;
 	if ([tv.type isEqualToString:BOOL_TYPE])
 		return [[BindableObject alloc] initWithBool:[tv.value boolValue]];
 	
+	if ([tv.value isKindOfClass:[BindableObject class]])
+		return tv.value;
+	
 	
 	return [[BindableObject alloc] initWithValue:tv.value];
 }
