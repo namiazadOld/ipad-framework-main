@@ -758,13 +758,25 @@
 		vrLoc = 0;
 	};
 	3998D93113955F3200C3F494 /* mobl.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = mobl.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/stdlib/mobl.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1185, 617}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1185, 611}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 210}";
 		};
 	};
 	3998D93213955F3200C3F494 /* mobl.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = mobl.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/stdlib/mobl.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1185, 611}}";
 			sepNavSelRange = "{184, 0}";
@@ -867,8 +879,8 @@
 	};
 	39E0FD78137EBB78004D213F /* BaseModule.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1185, 617}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1185, 611}}";
+			sepNavSelRange = "{186, 0}";
 			sepNavVisRange = "{0, 193}";
 			sepNavWindowFrame = "{{61, 21}, {750, 774}}";
 		};
