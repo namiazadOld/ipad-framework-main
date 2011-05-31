@@ -28,6 +28,7 @@
 		3998D88D139297D900C3F494 /* TabSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D884139297D900C3F494 /* TabSample.m */; };
 		3998D8AB13953CEF00C3F494 /* iDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D8AA13953CEF00C3F494 /* iDatePicker.m */; };
 		3998D8D113955CF600C3F494 /* CustomDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D8D013955CF600C3F494 /* CustomDate.m */; };
+		3998D93313955F3200C3F494 /* mobl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D93213955F3200C3F494 /* mobl.m */; };
 		39E0FDC5137EBB79004D213F /* BaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD78137EBB78004D213F /* BaseModule.m */; };
 		39E0FDC6137EBB79004D213F /* BindableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7A137EBB78004D213F /* BindableObject.m */; };
 		39E0FDC7137EBB79004D213F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7C137EBB78004D213F /* Callback.m */; };
@@ -122,6 +123,8 @@
 		3998D8AA13953CEF00C3F494 /* iDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iDatePicker.m; sourceTree = "<group>"; };
 		3998D8CF13955CF600C3F494 /* CustomDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDate.h; sourceTree = "<group>"; };
 		3998D8D013955CF600C3F494 /* CustomDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDate.m; sourceTree = "<group>"; };
+		3998D93113955F3200C3F494 /* mobl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl.h; sourceTree = "<group>"; };
+		3998D93213955F3200C3F494 /* mobl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl.m; sourceTree = "<group>"; };
 		39E0FD77137EBB78004D213F /* BaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModule.h; sourceTree = "<group>"; };
 		39E0FD78137EBB78004D213F /* BaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModule.m; sourceTree = "<group>"; };
 		39E0FD79137EBB78004D213F /* BindableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindableObject.h; sourceTree = "<group>"; };
@@ -343,6 +346,8 @@
 		3998D92913955EF300C3F494 /* stdlib */ = {
 			isa = PBXGroup;
 			children = (
+				3998D93113955F3200C3F494 /* mobl.h */,
+				3998D93213955F3200C3F494 /* mobl.m */,
 			);
 			path = stdlib;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				3998D88D139297D900C3F494 /* TabSample.m in Sources */,
 				3998D8AB13953CEF00C3F494 /* iDatePicker.m in Sources */,
 				3998D8D113955CF600C3F494 /* CustomDate.m in Sources */,
+				3998D93313955F3200C3F494 /* mobl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
