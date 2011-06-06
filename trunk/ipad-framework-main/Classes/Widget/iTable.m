@@ -17,9 +17,9 @@
 @implementation iTable
 @synthesize tableViewController, sectionList, title;
 
--(iBaseControl*) initialize: (NSMutableArray*)arguments container: (iBaseControl*)parent
+-(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
-	[super initialize:arguments container: parent];
+	[super render:arguments container: parent elements: elements];
 	sectionList = [[NSMutableArray alloc]init];
 	return self;
 }

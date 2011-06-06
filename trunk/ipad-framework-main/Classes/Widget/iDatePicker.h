@@ -8,21 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
+#import "DateTime.h"
 
 
 
 @interface iDatePicker : iBaseControl {
 	UIDatePicker* datePicker;
+	DateTime* _date;
 	
 	BindableObject* dateBindableObject;
-	BindableObject* showTimeBindableObject;
+	//BindableObject* showTimeBindableObject;
 }
 
 @property (nonatomic, retain) UIDatePicker* datePicker;
-@property (nonatomic, retain) NSDate* date;
-@property (nonatomic, assign) BOOL showTime;
+@property (nonatomic, retain) DateTime* date;
+//@property (assign) BOOL showTime;
 @property (nonatomic, retain) BindableObject* dateBindableObject;
-@property (nonatomic, retain) BindableObject* showTimeBindableObject;
+//@property (nonatomic, retain) BindableObject* showTimeBindableObject;
 
 
 @end

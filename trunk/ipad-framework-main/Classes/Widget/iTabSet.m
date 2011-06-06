@@ -16,10 +16,10 @@
 @implementation iTabSet
 @synthesize tabController;
 
--(iBaseControl*) initialize: (NSMutableArray*) arguments container: (iBaseControl*)parent
+-(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	self.tabController = [[UITabBarController alloc] init];
-	[super initialize:arguments container: parent];
+	[super render:arguments container: parent elements: elements];
 	return self;
 }
 
@@ -29,9 +29,9 @@
 	for (BindableObject* bo in tabPages)
 	{
 		Tuple3* tuple = (Tuple3*)bo.value;
-		iTabPage* tabPage = [[iTabPage alloc] initialize:[[NSMutableArray alloc] initWithObjects:tuple._1, tuple._2, nil] container:self];
+		iTabPage* tabPage = [[iTabPage alloc] render:[[NSMutableArray alloc] initWithObjects:tuple._1, tuple._2, nil] container:self];
 		
-		iCustomControl* content = [(iCustomControl*)tuple._3.value initialize:[[NSMutableArray alloc] init] container:tabPage];
+		iCustomControl* content = [(iCustomControl*)tuple._3.value render:[[NSMutableArray alloc] init] container:tabPage];
 		[content finilize];
 				
 		[tabPage addBodyControl:content];

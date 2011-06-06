@@ -12,6 +12,8 @@
 @implementation SampleTabController
 @synthesize viewController;
 
+UIDatePicker* datePicker;
+
 -(void) initialize
 {
 	self.viewController = [[UIViewController alloc] init];
@@ -46,17 +48,42 @@
 //
 //	[self.viewController.view addSubview:t3];
 	
-	UIDatePicker* datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(100, 300, 335, 216)];
-		
-	NSDateFormatter *df = [[NSDateFormatter alloc] init];
-	df.timeStyle = NSDateFormatterNoStyle;
-	df.dateFormat = @"MM/dd/yyyy";
-	NSDate* date = [df dateFromString:@"12/11/2005"];
-	[datePicker setDate:date];
-	//datePicker.datePickerMode = UIDatePickerModeDate;
-	datePicker.datePickerMode = UIDatePickerModeTime;
+	datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(100, 300, 335, 216)];
+	
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[[NSDateComponents alloc] init] autorelease];
+    [components setYear:2005];
+    [components setMonth:5];
+    [components setDay:5];
+	[components setHour:12];
+	[components setMinute:45];
+	[components setSecond:74];
+	
+	
+	datePicker.date = [calendar dateFromComponents:components];
+	
+	datePicker.datePickerMode = UIDatePickerModeDate;
+	
+	UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	button.frame = CGRectMake(0, 0, 100, 100);
+	[button setTitle:@"Click" forState:UIControlStateNormal];
+	[button addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
 	
 	[self.viewController.view addSubview:datePicker];
+	[self.viewController.view addSubview:button];
+	
+	
+}
+
+-(void) change:(id)sender
+{
+	if (datePicker.datePickerMode == UIDatePickerModeDateAndTime)
+		datePicker.datePickerMode = UIDatePickerModeDate;
+	else {
+		datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+	}
+
+
 }
 
 @end

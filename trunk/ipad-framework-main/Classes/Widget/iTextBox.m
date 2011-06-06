@@ -71,10 +71,10 @@
 	label.adjustsFontSizeToFitWidth = YES;
 }
 
--(iBaseControl*) initialize: (NSMutableArray*) arguments container: (iBaseControl*)parent
+-(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	self.textBox = [[UITextField alloc] init];
-	[super initialize:arguments container: parent];
+	[super render:arguments container: parent elements: elements];
 	return self;
 }
 

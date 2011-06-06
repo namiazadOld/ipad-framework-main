@@ -47,6 +47,9 @@ static UIViewController* currentView;
 	[widget setParentWidget:container];
 	[widget parentChanged:container];
 	[container.children addObject:widget];
+	
+	if (container.currentRole != nil)
+		[container.currentRole.children addObject:widget];
 }
 
 +(BindableObject*) InitWithType: (TypedValue*) tv
