@@ -12,6 +12,7 @@
 #import "UIStyle.h"
 
 
+
 @interface iBaseControl : NSObject {
 	//CGRect lastInnerControlFrame;
 	iBaseControl* lastInnerControl;
@@ -30,6 +31,11 @@
 	Anchor anchor;
 	Place  place;
 	CGRect initialFrame;
+	
+	iBaseControl* currentRole;
+	iBaseControl* elementOf;
+	iBaseControl* elements;
+	
 }
 
 //@property (assign) CGRect lastInnerControlFrame;
@@ -47,8 +53,13 @@
 @property (assign) float marginTop;
 @property (assign) float marginBottom;
 @property (assign) int lineNo;
+@property (nonatomic, retain) iBaseControl* currentRole;
+@property (nonatomic, retain) iBaseControl* elementOf;
+@property (nonatomic, retain) iBaseControl* elements;
 
--(iBaseControl*) initialize: (NSMutableArray*)arguments container: (iBaseControl*)parent;
+-(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf;
+-(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements;
+-(void) renderElements: (iBaseControl*)parent;
 -(void) setControlStyle:(UIStyle *)style;
 -(CGRect) getRecommendedFrame: (iBaseControl*)parent;
 -(CGRect) getFrame;
@@ -66,5 +77,6 @@
 -(void)manageStyleArgument: (BindableObject*)bo;
 -(void) manageArgument: (BindableObject*)bo at:(int)index;
 -(void) eventOccured: (id) sender;
+
 
 @end

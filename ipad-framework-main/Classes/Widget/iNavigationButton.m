@@ -34,11 +34,11 @@
 }
 
 
--(iBaseControl*) initialize: (NSMutableArray*) arguments container: (iBaseControl*)parent
+-(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	self.button = [[UIBarButtonItem alloc] init];
 	[self.button setStyle:UIBarButtonSystemItemFastForward];
-	[super initialize:arguments container: parent];
+	[super render:arguments container: parent elements: elements];
 	return self;
 }
 

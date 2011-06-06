@@ -31,12 +31,12 @@
 	}
 }
 
--(iBaseControl*) initialize: (NSMutableArray*) arguments container: (iBaseControl*)parent
+-(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	self.label = [[UILabel alloc] init];
 	self.label.adjustsFontSizeToFitWidth = YES;
 	[self.label setBackgroundColor:[UIColor clearColor]];
-	[super initialize:arguments container: parent];
+	[super render:arguments container: parent elements: elements];
 	
 	self.label.font = [UIFont fontWithName:@"Helvetica-Bold" size:[UIFont labelFontSize]];
 	return self;

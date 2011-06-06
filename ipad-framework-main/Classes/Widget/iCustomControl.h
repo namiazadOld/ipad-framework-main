@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "iView.h"
 #import "iBaseControl.h"
 
 
@@ -16,5 +15,7 @@
 }
 
 @property (nonatomic, retain) iBaseControl* container;
+
+
 
 @end

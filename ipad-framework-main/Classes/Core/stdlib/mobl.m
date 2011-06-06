@@ -9,6 +9,6 @@
 #import "mobl.h"
 
 
-@implementation mobl dfdsfd
+@implementation mobl
 
 @end

@@ -26,7 +26,7 @@ typedef enum
 	NSMutableArray* observers;
 }
 
-@property (assign, readwrite) id value;
+@property (retain, readwrite) id value;
 @property (assign, readwrite) float numValue;
 @property (assign, readwrite) BOOL boolValue;
 @property (assign, readwrite) ValueType type;

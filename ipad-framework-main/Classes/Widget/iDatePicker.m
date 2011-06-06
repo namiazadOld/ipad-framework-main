@@ -8,47 +8,47 @@
 
 #import "iDatePicker.h"
 
-
+//TODO: Show Time does not work properly.
 @implementation iDatePicker
-@synthesize datePicker, date, dateBindableObject, showTimeBindableObject, showTime;
+@synthesize datePicker, date = _date, dateBindableObject;// showTimeBindableObject, showTime;
 
--(NSDate*) date
+-(DateTime*) date
 {
-	return datePicker.date;
+	if (_date == NULL)
+		_date = [[DateTime alloc] init];
+	_date.date = datePicker.date;
+	return _date;
 }
 
--(void)setDate:(NSDate *)aDate
-{
-	@synchronized(self)
-	{
-		if (![[datePicker date] isEqualToDate:aDate])
-		{
-			datePicker.date = [aDate retain];
-			[aDate release];
-		}
-	}
-}
-
--(BOOL) showTime
-{
-	return datePicker.datePickerMode == UIDatePickerModeDateAndTime;
-}
-
--(void)setShowTime:(BOOL)aBool
+-(void)setDate:(DateTime *)aDate
 {
 	@synchronized(self)
 	{
-		if (aBool)
-			datePicker.datePickerMode = UIDatePickerModeDateAndTime;
-		else 
-			datePicker.datePickerMode = UIDatePickerModeDate;
+		if (![[self.datePicker date] isEqualToDate:aDate.date])
+			[self.datePicker setDate:aDate.date];
 	}
 }
 
--(iBaseControl*) initialize: (NSMutableArray*) arguments container: (iBaseControl*)parent
+//-(BOOL) showTime
+//{
+//	return (self.datePicker.datePickerMode == UIDatePickerModeDateAndTime);
+//}
+//
+//-(void)setShowTime:(BOOL)aBool
+//{
+//	if (aBool)
+//		[self.datePicker setDatePickerMode:UIDatePickerModeDateAndTime];
+//	else
+//		[self.datePicker setDatePickerMode:UIDatePickerModeDate];
+//	
+//
+//}
+
+-(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	self.datePicker = [[UIDatePicker alloc] init];
-	[super initialize:arguments container: parent];
+	[super render:arguments container: parent elements: elements];
+	self.datePicker.datePickerMode = UIDatePickerModeDate;
 	return self;
 }
 
@@ -57,11 +57,13 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		[self.dateBindableObject setValue:self.datePicker.date];
-		if (datePicker.datePickerMode == UIDatePickerModeDateAndTime)
-			[self.showTimeBindableObject setBoolValue:YES];
-		else
-			[self.showTimeBindableObject setBoolValue:NO];
+		
+		[self.dateBindableObject.value release];
+		DateTime* dt = [[DateTime alloc] init];
+		dt.date = self.datePicker.date;
+		[self.dateBindableObject setValue:dt];
+		
+		//[self.showTimeBindableObject setBoolValue:(datePicker.datePickerMode == UIDatePickerModeDateAndTime)];
 		self.locked = NO;
 	}
 }
@@ -72,9 +74,9 @@
 	{
 		self.locked = YES;
 		if ([bo isEqual:self.dateBindableObject])
-			self.datePicker.date = (NSDate*) bo.value;
-		else
-			[self setShowTime:bo.boolValue];
+			[self setDate:(DateTime*)bo.value];
+		//else
+//			[self setShowTime:bo.boolValue];
 		self.locked = NO;
 	}
 }
@@ -85,13 +87,13 @@
 	switch (index) {
 		case 0:
 			self.dateBindableObject = bo;
-			[self setDate:(NSDate*)bo.value];
+			[self setDate:(DateTime*)bo.value];
 			break;
+		//case 1:
+//			self.showTimeBindableObject = bo;
+//			[self setShowTime:bo.boolValue];
+//			break;
 		case 1:
-			self.showTimeBindableObject = bo;
-			[self setShowTime:bo.boolValue];
-			break;
-		case 2:
 			[self setControlStyle:(UIStyle*)bo.value];
 			break;
 		default:

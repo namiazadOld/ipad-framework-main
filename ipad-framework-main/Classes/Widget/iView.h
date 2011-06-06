@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
 #import "iEmptyWidget.h"
+#import "iCustomControl.h"
 
 @interface iView : iBaseControl {
 
-	
 }
 
 @end

@@ -10,11 +10,22 @@
 #import "Constants.h"
 #import "NullObject.h"
 #import "StylingManager.h"
+#import "iView.h"
 
 @implementation iBaseControl
 @synthesize locked, parentWidget, 
 			lastInnerControl, viewController, anchor, place, lineNo,
-			initialFrame, children, marginLeft, marginRight, marginTop, marginBottom, scope;
+			initialFrame, children, marginLeft, marginRight, marginTop, marginBottom, scope,
+			currentRole, elementOf, elements;
+
+-(iBaseControl*) elementOf
+{
+	if ([self isKindOfClass:[iView class]])
+		return NULL;
+	if (elementOf == NULL)
+		return self;
+	return elementOf;
+}
 
 -(Scope*) scope
 {
@@ -49,10 +60,18 @@
 	self.marginBottom = style.margin_bottom;
 }
 
--(iBaseControl*) initialize: (NSMutableArray*)arguments container: (iBaseControl*)parent
+-(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf
+{
+	[super init];
+	self.elementOf = _elementOf;
+	return self;
+}
+
+-(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	children = [[NSMutableArray alloc] init];
 	initialFrame = CGRectMake(-1, -1, -1, -1);
+	self.elements = elements;
 	
 	if ([[self getChildrenHolder] respondsToSelector:@selector(addTarget:action:forControlEvents:)] && [self getChildrenHolder] != NULL)
 		[[self getChildrenHolder] addTarget:self action:@selector(eventOccured:) forControlEvents:UIControlEventAllEvents];
@@ -63,6 +82,14 @@
 	parent.lastInnerControl = self;
 	
 	return self;
+}
+
+-(void) renderElements: (iBaseControl*)parent
+{
+	if (self.elements == NULL && self.elementOf.elements != NULL)
+		[self.elementOf.elements render: NULL container: parent elements:NULL];
+	else if (self.elements != NULL)
+		[self.elements render: NULL container: parent elements:NULL];
 }
 
 -(CGRect) getRecommendedFrame:(iBaseControl*)parent
