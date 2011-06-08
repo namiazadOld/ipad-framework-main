@@ -21,6 +21,9 @@
 {
 	[super render:arguments container: parent elements: elements];
 	sectionList = [[NSMutableArray alloc]init];
+	
+	[self renderElements:self];
+	
 	return self;
 }
 

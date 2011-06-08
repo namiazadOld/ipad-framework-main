@@ -22,6 +22,7 @@
 {
 	self.cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"] autorelease];
 	[super render:arguments container: parent elements: elements];
+	[self renderElements:self];
 	return self;
 }
 
