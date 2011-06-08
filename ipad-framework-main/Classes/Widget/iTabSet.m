@@ -29,9 +29,9 @@
 	for (BindableObject* bo in tabPages)
 	{
 		Tuple3* tuple = (Tuple3*)bo.value;
-		iTabPage* tabPage = [[iTabPage alloc] render:[[NSMutableArray alloc] initWithObjects:tuple._1, tuple._2, nil] container:self];
+		iTabPage* tabPage = [[iTabPage alloc] render:[[NSMutableArray alloc] initWithObjects:tuple._1, tuple._2, nil] container:self elements:NULL];
 		
-		iCustomControl* content = [(iCustomControl*)tuple._3.value render:[[NSMutableArray alloc] init] container:tabPage];
+		iCustomControl* content = [(iCustomControl*)tuple._3.value render:[[NSMutableArray alloc] init] container:tabPage elements:NULL];
 		[content finilize];
 				
 		[tabPage addBodyControl:content];

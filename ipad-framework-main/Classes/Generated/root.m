@@ -1,13 +1,13 @@
 
 
 #import "root.h"
-#import "mobl_ipadstyle_textBoxStyle.h"
-#import "iTextBox.h"
+#import "mobl_ipadstyle_tabSetStyle.h"
+#import "iTabSet.h"
+#import "root_tab249.h"
+#import "root_tab179.h"
 #import "mobl_ipadstyle_labelStyle.h"
 #import "iLabel.h"
-#import "ControlVariable_generalInfo.h"
 #import "root.h"
-#import "rootControlCall21.h"
 
 @implementation root
 @synthesize window;
@@ -15,7 +15,7 @@
 {
 	[super render:arguments container:parent elements: elements];
 	[self.scope createInnerScope];
-	int f_19131 = -1;
+	int a_14183 = -1;
 	
 	
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
@@ -24,49 +24,20 @@
 	
 	NSStack* containerStack = [[NSStack alloc]init];
 	[containerStack push:self];
-	BindableObject* VarDeclInferred2 = [[BindableObject alloc] initWithValue: @"Smith"];
-	[self.scope set:@"s" variable:VarDeclInferred2];
+	BindableObject* DeriveDecl104 = [[BindableObject alloc] initWithValue: [[NSMutableArray alloc] initWithObjects:[[BindableObject alloc] initWithValue:[Utilities Tuple:[[NSArray alloc] initWithObjects:[[TypedValue alloc] initWithType:@"Ref" value:@"Tab1"],[[TypedValue alloc] initWithType:@"Ref" value:@""],[[TypedValue alloc] initWithType:@"Ref" value:[[root_tab179 alloc] init]], nil]]],[[BindableObject alloc] initWithValue:[Utilities Tuple:[[NSArray alloc] initWithObjects:[[TypedValue alloc] initWithType:@"Ref" value:@"Tab2"],[[TypedValue alloc] initWithType:@"Ref" value:@""],[[TypedValue alloc] initWithType:@"Ref" value:[[root_tab249 alloc] init]], nil]]], nil]];
+	[self.scope set:@"tmp326" variable:DeriveDecl104];
 	
 	[self.scope createInnerScope];
 	
-	NSMutableArray* arguments_ControlVariable_generalInfo_ControlVariable_generalInfo30 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments_iTabSet_iTabSet00 = [[NSMutableArray alloc] init];
 	
+	[arguments_iTabSet_iTabSet00 addObject:(BindableObject*)[self.scope get: @"tmp326"]];
+	[arguments_iTabSet_iTabSet00 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_tabSetStyle alloc] initialize]]];
 	
-	ControlVariable_generalInfo* ControlVariable_generalInfo_ControlVariable_generalInfo3 = [[ControlVariable_generalInfo alloc] init];
-	[ControlVariable_generalInfo_ControlVariable_generalInfo3 render:arguments_ControlVariable_generalInfo_ControlVariable_generalInfo30 container: [containerStack top] elements:[[rootControlCall21 alloc] initWithElementOf:self.elementOf]];
-	[ControlVariable_generalInfo_ControlVariable_generalInfo3 finilize];
-	[[containerStack top] addBodyControl:ControlVariable_generalInfo_ControlVariable_generalInfo3];
-	[self.scope exitScope];
-	BindableObject* DeriveDecl56 = [[BindableObject alloc] initWithValue: @"Confirm Last Name"];
-	[self.scope set:@"tmp140" variable:DeriveDecl56];
-	
-	[self.scope createInnerScope];
-	
-	NSMutableArray* arguments_iLabel_iLabel380 = [[NSMutableArray alloc] init];
-	
-	[arguments_iLabel_iLabel380 addObject:(BindableObject*)[self.scope get: @"tmp140"]];
-	[arguments_iLabel_iLabel380 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_labelStyle alloc] initialize]]];
-	
-	iLabel* iLabel_iLabel38 = [[iLabel alloc] init];
-	[iLabel_iLabel38 render:arguments_iLabel_iLabel380 container: [containerStack top] elements:NULL];
-	[iLabel_iLabel38 finilize];
-	[[containerStack top] addBodyControl:iLabel_iLabel38];
-	[self.scope exitScope];
-	BindableObject* DeriveDecl57 = [[BindableObject alloc] initWithValue: @"Smith"];
-	[self.scope set:@"tmp141" variable:DeriveDecl57];
-	
-	[self.scope createInnerScope];
-	
-	NSMutableArray* arguments_iTextBox_iTextBox90 = [[NSMutableArray alloc] init];
-	
-	[arguments_iTextBox_iTextBox90 addObject:(BindableObject*)[self.scope get: @"s"]];
-	[arguments_iTextBox_iTextBox90 addObject:(BindableObject*)[self.scope get: @"tmp141"]];
-	[arguments_iTextBox_iTextBox90 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_textBoxStyle alloc] initialize]]];
-	
-	iTextBox* iTextBox_iTextBox9 = [[iTextBox alloc] init];
-	[iTextBox_iTextBox9 render:arguments_iTextBox_iTextBox90 container: [containerStack top] elements:NULL];
-	[iTextBox_iTextBox9 finilize];
-	[[containerStack top] addBodyControl:iTextBox_iTextBox9];
+	iTabSet* iTabSet_iTabSet0 = [[iTabSet alloc] init];
+	[iTabSet_iTabSet0 render:arguments_iTabSet_iTabSet00 container: [containerStack top] elements:NULL];
+	[iTabSet_iTabSet0 finilize];
+	[[containerStack top] addBodyControl:iTabSet_iTabSet0];
 	[self.scope exitScope];
 	 
 	[containerStack pop]; 

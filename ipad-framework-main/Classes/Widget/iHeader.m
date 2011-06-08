@@ -18,6 +18,7 @@
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	[super render:arguments container: parent elements: elements];
+	[self renderElements:self];
 	return self;
 }
 
