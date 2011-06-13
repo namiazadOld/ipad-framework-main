@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Notifiable.h"
+#import "NSSelector.h"
+#import "Evaluator.h"
+
+
 
 typedef enum 
 {
@@ -17,27 +22,29 @@ typedef enum
 } ValueType;
 
 
-
-@interface BindableObject : NSObject {
+@interface BindableObject : NSObject<Notifiable> {
 	id value;
 	float numValue;
 	BOOL boolValue;
 	ValueType type;
-	NSMutableArray* observers;
+	NSMutableArray* listeners;
+	Evaluator* evaluator;
 }
 
 @property (retain, readwrite) id value;
 @property (assign, readwrite) float numValue;
 @property (assign, readwrite) BOOL boolValue;
 @property (assign, readwrite) ValueType type;
-@property (retain, readonly) NSMutableArray* observers;
+@property (retain, readonly) NSMutableArray* listeners;
+@property (retain, readwrite) Evaluator* evaluator;
 
 
 -(void) initFields:(ValueType)_type;
 -(BindableObject*) initWithValue: (id)_value;
 -(BindableObject*) initWithNumber: (float)_value;
 -(BindableObject*) initWithBool: (BOOL) _value;
--(void) notifyObservers;
--(void) addUIObserver: (id)control;
+-(void) notifyListeners;
+-(void) addListener: (id)control;
 
 @end
+

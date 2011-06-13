@@ -149,7 +149,7 @@
 
 }
 
--(void) observeBindableValueChanged:(BindableObject*) bo
+-(void) changeNotification:(BindableObject*) bo
 {
 	
 }
@@ -189,7 +189,7 @@
 
 -(void) manageArgument: (BindableObject*)bo at:(int)index
 {
-	[bo addUIObserver:self];
+	[bo addListener:self];
 }
 
 -(void) childUpdated: (iBaseControl*)child

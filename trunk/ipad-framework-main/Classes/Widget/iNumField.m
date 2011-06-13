@@ -70,7 +70,7 @@
 	}
 }
 
--(void) observeBindableValueChanged:(BindableObject*) bo
+-(void) changeNotification:(BindableObject*) bo
 {
 	if (!self.locked)
 	{
@@ -86,7 +86,7 @@
 
 -(void) manageArgument: (BindableObject*)bo at:(int)index
 {
-	[bo addUIObserver:self];
+	[bo addListener:self];
 	switch (index) {
 		case 0:
 			self.numberBindableObject = bo;
