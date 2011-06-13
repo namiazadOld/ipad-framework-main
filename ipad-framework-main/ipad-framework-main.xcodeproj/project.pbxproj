@@ -15,6 +15,13 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		3924F66913A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3924F66013A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.m */; };
+		3924F66A13A5C540007E4A3B /* ControlVariable_T.m in Sources */ = {isa = PBXBuildFile; fileRef = 3924F66213A5C540007E4A3B /* ControlVariable_T.m */; };
+		3924F66B13A5C540007E4A3B /* ControlVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3924F66413A5C540007E4A3B /* ControlVariable.m */; };
+		3924F66C13A5C540007E4A3B /* root_callback_tmp668.m in Sources */ = {isa = PBXBuildFile; fileRef = 3924F66613A5C540007E4A3B /* root_callback_tmp668.m */; };
+		3924F66D13A5C540007E4A3B /* root_tmp665_evaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3924F66813A5C540007E4A3B /* root_tmp665_evaluator.m */; };
+		3933252913A446BA009420CB /* Evaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3933252813A446BA009420CB /* Evaluator.m */; };
+		3933264713A45705009420CB /* SampleModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3933263913A45705009420CB /* SampleModule.m */; };
 		393BF44A139562A500BB8AD6 /* mobl.m in Sources */ = {isa = PBXBuildFile; fileRef = 393BF449139562A500BB8AD6 /* mobl.m */; };
 		393BF46413956BF400BB8AD6 /* mobl_ipadstyle_datePickerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 393BF46313956BF400BB8AD6 /* mobl_ipadstyle_datePickerStyle.m */; };
 		394E3BDB1395DD3E00AAEF29 /* iTimePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 394E3BDA1395DD3E00AAEF29 /* iTimePicker.m */; };
@@ -23,7 +30,6 @@
 		39609F9C1384881000B96C07 /* NameValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 39609F9B1384881000B96C07 /* NameValue.m */; };
 		3998D8AB13953CEF00C3F494 /* iDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D8AA13953CEF00C3F494 /* iDatePicker.m */; };
 		3998D8D113955CF600C3F494 /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 3998D8D013955CF600C3F494 /* DateTime.m */; };
-		39E0FDC5137EBB79004D213F /* BaseModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD78137EBB78004D213F /* BaseModule.m */; };
 		39E0FDC6137EBB79004D213F /* BindableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7A137EBB78004D213F /* BindableObject.m */; };
 		39E0FDC7137EBB79004D213F /* Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7C137EBB78004D213F /* Callback.m */; };
 		39E0FDC8137EBB79004D213F /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E0FD7E137EBB78004D213F /* Constants.m */; };
@@ -91,6 +97,21 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ipad_framework_main_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipad_framework_main_Prefix.pch; sourceTree = "<group>"; };
+		3924F65F13A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_nextlineTextBoxStyle.h; sourceTree = "<group>"; };
+		3924F66013A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_nextlineTextBoxStyle.m; sourceTree = "<group>"; };
+		3924F66113A5C540007E4A3B /* ControlVariable_T.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_T.h; sourceTree = "<group>"; };
+		3924F66213A5C540007E4A3B /* ControlVariable_T.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_T.m; sourceTree = "<group>"; };
+		3924F66313A5C540007E4A3B /* ControlVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable.h; sourceTree = "<group>"; };
+		3924F66413A5C540007E4A3B /* ControlVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable.m; sourceTree = "<group>"; };
+		3924F66513A5C540007E4A3B /* root_callback_tmp668.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_tmp668.h; sourceTree = "<group>"; };
+		3924F66613A5C540007E4A3B /* root_callback_tmp668.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_tmp668.m; sourceTree = "<group>"; };
+		3924F66713A5C540007E4A3B /* root_tmp665_evaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_tmp665_evaluator.h; sourceTree = "<group>"; };
+		3924F66813A5C540007E4A3B /* root_tmp665_evaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_tmp665_evaluator.m; sourceTree = "<group>"; };
+		3933251A13A3C844009420CB /* Notifiable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifiable.h; sourceTree = "<group>"; };
+		3933252713A446BA009420CB /* Evaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluator.h; sourceTree = "<group>"; };
+		3933252813A446BA009420CB /* Evaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluator.m; sourceTree = "<group>"; };
+		3933263813A45705009420CB /* SampleModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleModule.h; sourceTree = "<group>"; };
+		3933263913A45705009420CB /* SampleModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleModule.m; sourceTree = "<group>"; };
 		393BF448139562A500BB8AD6 /* mobl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl.h; sourceTree = "<group>"; };
 		393BF449139562A500BB8AD6 /* mobl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mobl.m; sourceTree = "<group>"; };
 		393BF46213956BF400BB8AD6 /* mobl_ipadstyle_datePickerStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mobl_ipadstyle_datePickerStyle.h; sourceTree = "<group>"; };
@@ -107,8 +128,6 @@
 		3998D8AA13953CEF00C3F494 /* iDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iDatePicker.m; sourceTree = "<group>"; };
 		3998D8CF13955CF600C3F494 /* DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTime.h; sourceTree = "<group>"; };
 		3998D8D013955CF600C3F494 /* DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTime.m; sourceTree = "<group>"; };
-		39E0FD77137EBB78004D213F /* BaseModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModule.h; sourceTree = "<group>"; };
-		39E0FD78137EBB78004D213F /* BaseModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModule.m; sourceTree = "<group>"; };
 		39E0FD79137EBB78004D213F /* BindableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindableObject.h; sourceTree = "<group>"; };
 		39E0FD7A137EBB78004D213F /* BindableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindableObject.m; sourceTree = "<group>"; };
 		39E0FD7B137EBB78004D213F /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
@@ -341,8 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				393BF4411395627E00BB8AD6 /* stdlib */,
-				39E0FD77137EBB78004D213F /* BaseModule.h */,
-				39E0FD78137EBB78004D213F /* BaseModule.m */,
 				39E0FD79137EBB78004D213F /* BindableObject.h */,
 				39E0FD7A137EBB78004D213F /* BindableObject.m */,
 				39E0FD7B137EBB78004D213F /* Callback.h */,
@@ -385,6 +402,9 @@
 				39EA6CF9138B3406003D90E0 /* TypedValue.m */,
 				3998D8CF13955CF600C3F494 /* DateTime.h */,
 				3998D8D013955CF600C3F494 /* DateTime.m */,
+				3933251A13A3C844009420CB /* Notifiable.h */,
+				3933252713A446BA009420CB /* Evaluator.h */,
+				3933252813A446BA009420CB /* Evaluator.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -395,6 +415,18 @@
 				39254A541380C1980097DBEC /* Styles */,
 				39E0FD94137EBB78004D213F /* root.m */,
 				39E0FD93137EBB78004D213F /* root.h */,
+				3933263813A45705009420CB /* SampleModule.h */,
+				3933263913A45705009420CB /* SampleModule.m */,
+				3924F65F13A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.h */,
+				3924F66013A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.m */,
+				3924F66113A5C540007E4A3B /* ControlVariable_T.h */,
+				3924F66213A5C540007E4A3B /* ControlVariable_T.m */,
+				3924F66313A5C540007E4A3B /* ControlVariable.h */,
+				3924F66413A5C540007E4A3B /* ControlVariable.m */,
+				3924F66513A5C540007E4A3B /* root_callback_tmp668.h */,
+				3924F66613A5C540007E4A3B /* root_callback_tmp668.m */,
+				3924F66713A5C540007E4A3B /* root_tmp665_evaluator.h */,
+				3924F66813A5C540007E4A3B /* root_tmp665_evaluator.m */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -526,7 +558,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* ipad_framework_mainAppDelegate.m in Sources */,
 				28193055112F811F00ECF9B4 /* ipad_framework_main.xcdatamodeld in Sources */,
-				39E0FDC5137EBB79004D213F /* BaseModule.m in Sources */,
 				39E0FDC6137EBB79004D213F /* BindableObject.m in Sources */,
 				39E0FDC7137EBB79004D213F /* Callback.m in Sources */,
 				39E0FDC8137EBB79004D213F /* Constants.m in Sources */,
@@ -587,6 +618,13 @@
 				393BF46413956BF400BB8AD6 /* mobl_ipadstyle_datePickerStyle.m in Sources */,
 				394E3BDB1395DD3E00AAEF29 /* iTimePicker.m in Sources */,
 				394E3C0F1395DF8F00AAEF29 /* mobl_ipadstyle_timePickerStyle.m in Sources */,
+				3933252913A446BA009420CB /* Evaluator.m in Sources */,
+				3933264713A45705009420CB /* SampleModule.m in Sources */,
+				3924F66913A5C540007E4A3B /* ControlVariable_nextlineTextBoxStyle.m in Sources */,
+				3924F66A13A5C540007E4A3B /* ControlVariable_T.m in Sources */,
+				3924F66B13A5C540007E4A3B /* ControlVariable.m in Sources */,
+				3924F66C13A5C540007E4A3B /* root_callback_tmp668.m in Sources */,
+				3924F66D13A5C540007E4A3B /* root_tmp665_evaluator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

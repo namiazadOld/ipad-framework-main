@@ -10,13 +10,13 @@
 
 
 @implementation BindableObject
-@synthesize value, observers, numValue, boolValue, type;
+@synthesize value, listeners, numValue, boolValue, type, evaluator;
 
 -(void) initFields:(ValueType)_type
 {
-	if (observers == nil)
+	if (listeners == nil)
 	{
-		observers = [[NSMutableArray alloc] init];
+		listeners = [[NSMutableArray alloc] init];
 		type = _type;
 	}
 	
@@ -57,16 +57,16 @@
 	return self;
 }
 
--(void) addUIObserver: (id) control
+-(void) addListener: (id) listener
 {
-	[self.observers addObject:control];
+	[self.listeners addObject:listener];
 }
 
--(void) notifyObservers
+-(void) notifyListeners
 {
-	for (id control in self.observers)
+	for (id<Notifiable> control in self.listeners)
 	{
-		[control observeBindableValueChanged:self];
+		[control changeNotification:self];
 	}
 }
 
@@ -76,7 +76,7 @@
 	{
 		[self initFields:Ref];
 		value = _value;
-		[self notifyObservers];
+		[self notifyListeners];
 	}
 }
 
@@ -86,7 +86,7 @@
 	{
 		[self initFields:Num];
 		numValue = _value;
-		[self notifyObservers];
+		[self notifyListeners];
 	}
 }
 
@@ -96,7 +96,27 @@
 	{
 		[self initFields:Bool];
 		boolValue = _value;
-		[self notifyObservers];
+		[self notifyListeners];
+	}
+}
+
+-(void) changeNotification:(BindableObject*) sender
+{
+	if (self.evaluator == NULL)
+		return;
+	
+	switch (sender.type) {
+		case Num:
+			[self setNumValue:[self.evaluator evaluateNum]];
+			break;
+		case Bool:
+			[self setBoolValue:[self.evaluator evaluateBool]];
+			break;
+		case Ref:
+			[self setValue:[self.evaluator evaluate]];
+			break;			
+		default:
+			break;
 	}
 }
 

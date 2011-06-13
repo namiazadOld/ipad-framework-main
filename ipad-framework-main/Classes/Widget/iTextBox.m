@@ -89,7 +89,7 @@
 	}
 }
 
--(void) observeBindableValueChanged:(BindableObject*) bo
+-(void) changeNotification:(BindableObject*) bo
 {
 	if (!self.locked)
 	{
