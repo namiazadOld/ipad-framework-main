@@ -13,7 +13,7 @@
 
 
 
-@interface iBaseControl : NSObject {
+@interface iBaseControl : NSObject<Notifiable> {
 	//CGRect lastInnerControlFrame;
 	iBaseControl* lastInnerControl;
 	BOOL locked;
@@ -70,7 +70,7 @@
 -(void) addBodyControl:(iBaseControl*) widget;
 -(void) finilize;
 -(void) addTarget:(id)target  action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
--(void) observeBindableValueChanged:(BindableObject*) bo;
+-(void) changeNotification:(BindableObject*) bo;
 -(void) parentChanged: (iBaseControl*)parent;
 -(void) childUpdated: (iBaseControl*)child;
 -(void) manageArguments: (NSMutableArray*)arguments container: (iBaseControl*)parent;
