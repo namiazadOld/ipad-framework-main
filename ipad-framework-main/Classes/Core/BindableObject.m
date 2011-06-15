@@ -105,7 +105,7 @@
 	if (self.evaluator == NULL)
 		return;
 	
-	switch (sender.type) {
+	switch (self.type) {
 		case Num:
 			[self setNumValue:[self.evaluator evaluateNum]];
 			break;

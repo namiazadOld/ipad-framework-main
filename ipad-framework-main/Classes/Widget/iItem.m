@@ -70,7 +70,8 @@
 		iTable* table = (iTable*)parent;
 		if ([table.sectionList count] == 0)
 		{
-			section = [[iSection alloc] initialize:[[NSMutableArray alloc] init] container: table];
+			section = [[iSection alloc] init];
+			[section render:[[NSMutableArray alloc] init] container:table elements:NULL];
 			[table.sectionList addObject:section];
 		}
 		

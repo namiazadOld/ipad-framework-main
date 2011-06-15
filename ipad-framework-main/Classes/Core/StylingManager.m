@@ -8,9 +8,22 @@
 
 #import "StylingManager.h"
 #import "iEmptyWidget.h"
+#import "iWhen.h"
 
 
 @implementation StylingManager
+
+static BOOL _ordered;
+
++(BOOL) ordered
+{
+	return _ordered;
+}
+
++(void) setOrdered:(BOOL)aBool
+{
+	_ordered = aBool;
+}
 
 +(float) getLeftAnchorStartingX: (float) lineY control:(iBaseControl*)control container: (iBaseControl*)parent
 {
@@ -19,6 +32,10 @@
 	for (iBaseControl* subView in [parent children])
 	{
 		if ([subView isEqual:control])
+			continue;
+		if (!subView.visible)
+			continue;
+		if ([subView isKindOfClass:[iWhen class]])
 			continue;
 		
 		CGRect frame = [subView getFrame];
@@ -44,6 +61,10 @@
 	{
 		if ([subView isEqual:control])
 			continue;
+		if (!subView.visible)
+			continue;
+		if ([subView isKindOfClass:[iWhen class]])
+			continue;
 
 		CGRect frame = [subView getFrame];
 		
@@ -58,13 +79,40 @@
 	return x - control.marginRight;
 }
 
++(float) calculateRawY:(iBaseControl*) control lastControl:(iBaseControl*)lastControl container:(iBaseControl*)parent
+{
+	CGRect lastControlFrame = [lastControl getFrame];
+	
+	float y = 0;
+	if (control.place == NextLine)
+	{
+		float maxHeightOfLastLine = lastControlFrame.origin.y + lastControlFrame.size.height + lastControl.marginBottom;
+		for (iBaseControl* subView in [parent children])
+		{
+			if (subView.lineNo != lastControl.lineNo)
+				continue;
+			if (!subView.visible)
+				continue;
+			if ([subView isKindOfClass:[iWhen class]])
+				continue;
+			CGRect frame = [subView getFrame];
+			if (frame.origin.y + frame.size.height + subView.marginBottom > maxHeightOfLastLine)
+				maxHeightOfLastLine = frame.origin.y + frame.size.height + subView.marginBottom;
+		}
+		y = maxHeightOfLastLine; 
+	}
+	else
+		y = lastControlFrame.origin.y;
+	
+	return y;
+	
+}
+
 +(float) calculateX:(iBaseControl*)control lastControl:(iBaseControl*)lastControl container:(iBaseControl*)parent
 {
 	CGRect lastControlFrame = [lastControl getFrame];
 	
-	float y = lastControlFrame.origin.y;
-	if (control.place == NextLine)
-		y += lastControlFrame.size.height + lastControl.marginBottom;
+	float y = [self calculateRawY:control lastControl:lastControl container:parent];
 	
 	switch (control.anchor) {
 		case None:
@@ -88,16 +136,14 @@
 	}	
 }
 
-+(float) calculateY:(iBaseControl*) control lastControl:(iBaseControl*)lastControl
+
++(float) calculateY:(iBaseControl*) control lastControl:(iBaseControl*)lastControl container:(iBaseControl*)parent
 {
 	CGRect lastControlFrame = [lastControl getFrame];
 	
-	float y = lastControlFrame.origin.y;
-	if (control.place == NextLine)
-		y += lastControlFrame.size.height + lastControl.marginBottom;
-	else 
-		y -= lastControl.marginTop;
-
+	float y = [self calculateRawY:control lastControl:lastControl container:parent];
+	if (control.place != NextLine)
+		y = lastControlFrame.origin.y - lastControl.marginTop;
 	return y + control.marginTop;
 }
 
@@ -117,6 +163,10 @@
 	
 	for (iBaseControl* child in control.children)
 	{
+		if (!child.visible)
+			continue;
+		if ([child isKindOfClass:[iWhen class]])
+			continue;
 		CGRect frame = [child getFrame];
 		if (child != NULL)
 			if (frame.origin.y + frame.size.height >= lowestY)
@@ -139,7 +189,7 @@
 		x = [self calculateX:control lastControl:lastControl container:parent];
 	
 	if (y == DEFAULT_Y)
-		y = [self calculateY:control lastControl:lastControl];
+		y = [self calculateY:control lastControl:lastControl container:parent];
 	
 	float width =[self calculateWidth:control container:parent startingX:x startingY:y];
 
@@ -159,9 +209,17 @@
 	container.lastInnerControl = [[iEmptyWidget alloc] init];
 	for (iBaseControl* child in container.children)
 	{
+		if (!child.visible)
+			continue;
+		if ([child isKindOfClass:[iWhen class]])
+			continue;
 		[child setFrame:[self styleRectangle:child container:container]];
 		container.lastInnerControl = child;
 		[StylingManager orderWidgets:child];
+	}
+	
+	if (![StylingManager ordered]) {
+		[StylingManager setOrdered:YES];
 	}
 }
 

@@ -12,10 +12,11 @@
 
 
 @interface StylingManager : NSObject {
-
+	
 }
 
 +(CGRect) styleRectangle: (iBaseControl*)control container:(iBaseControl*)parent;
 +(void) orderWidgets: (iBaseControl*)container;
++(BOOL) ordered;
 
 @end
