@@ -11,9 +11,10 @@
 #import "NullObject.h"
 #import "StylingManager.h"
 #import "iView.h"
+#import "iCustomControl.h"
 
 @implementation iBaseControl
-@synthesize locked, parentWidget, 
+@synthesize locked, parentWidget, visible,
 			lastInnerControl, viewController, anchor, place, lineNo,
 			initialFrame, children, marginLeft, marginRight, marginTop, marginBottom, scope,
 			currentRole, elementOf, elements;
@@ -69,6 +70,7 @@
 
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
+	visible = YES;
 	children = [[NSMutableArray alloc] init];
 	initialFrame = CGRectMake(-1, -1, -1, -1);
 	self.elements = elements;
@@ -195,6 +197,38 @@
 -(void) childUpdated: (iBaseControl*)child
 {
 	
+}
+
+-(void) hide
+{
+	self.visible = NO;
+	if (![self isKindOfClass:[iCustomControl class]])
+		[[self getView] setHidden:YES];
+	for (iBaseControl* control in self.children)
+	{
+		[control hide];
+		[[control getView] setHidden:YES];
+	}
+}
+
+-(void)show
+{
+	self.visible = YES;
+	if (![self isKindOfClass:[iCustomControl class]])
+		[[self getView] setHidden:NO];
+	for (iBaseControl* control in self.children)
+	{
+		[control show];
+		[[control getView] setHidden:NO];
+	}
+}
+
+-(iBaseControl*) getRootContainer
+{
+	iBaseControl* parent = self;
+	while (parent.parentWidget != NULL)
+		parent = parent.parentWidget;
+	return parent;
 }
 
 @end

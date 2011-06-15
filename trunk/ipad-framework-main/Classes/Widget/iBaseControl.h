@@ -36,6 +36,8 @@
 	iBaseControl* elementOf;
 	iBaseControl* elements;
 	
+	BOOL visible;
+	
 }
 
 //@property (assign) CGRect lastInnerControlFrame;
@@ -56,6 +58,7 @@
 @property (nonatomic, retain) iBaseControl* currentRole;
 @property (nonatomic, retain) iBaseControl* elementOf;
 @property (nonatomic, retain) iBaseControl* elements;
+@property (assign) BOOL visible;
 
 -(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf;
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements;
@@ -77,6 +80,8 @@
 -(void)manageStyleArgument: (BindableObject*)bo;
 -(void) manageArgument: (BindableObject*)bo at:(int)index;
 -(void) eventOccured: (id) sender;
-
+-(void) hide;
+-(void) show;
+-(iBaseControl*) getRootContainer;
 
 @end
