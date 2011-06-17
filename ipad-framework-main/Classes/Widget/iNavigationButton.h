@@ -8,16 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
+#import "iHeader.h"
 
 
 @interface iNavigationButton : iBaseControl {
 	UIBarButtonItem* button;
 	BindableObject* titleBindableObject;
+	iHeader* header;
 	
 }
 
 @property (nonatomic, retain) UIBarButtonItem* button;
 @property (nonatomic, retain) NSString* title;
 @property (nonatomic, retain) BindableObject* titleBindableObject;
+@property (nonatomic, retain) iHeader* header;
 
 @end

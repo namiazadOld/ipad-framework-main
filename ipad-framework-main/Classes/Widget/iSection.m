@@ -16,7 +16,17 @@
 
 @implementation iSection
 
-@synthesize title, itemList, titleBindableObject;
+@synthesize title, itemList, titleBindableObject, table;
+
+-(iTable*) table
+{
+	iBaseControl* parent = self.parentWidget;
+	
+	while (parent != NULL && ![parent isKindOfClass:[iTable class]])
+		parent = parent.parentWidget;
+	
+	return parent;
+}
 
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
@@ -34,7 +44,7 @@
 	{
 		self.locked = YES;
 		self.title = (NSString*)bo.value;
-		[self.parentWidget childUpdated:self];
+		[self.table childUpdated:self];
 		self.locked = NO;
 	}
 }
@@ -61,8 +71,8 @@
 {
 	if ([parent isKindOfClass:[iTable class]])
 	{
-		iTable* table = (iTable*)parent;
-		[table.sectionList addObject:self];		
+		iTable* _table = (iTable*)parent;
+		[_table.sectionList addObject:self];		
 		return;
 	}
 	
@@ -74,6 +84,20 @@
 -(void) childUpdated: (iBaseControl*)child
 {
 	[self.parentWidget childUpdated:child];
+}
+
+
+
+-(void) show
+{
+	[super show];
+	[self.table childUpdated:self];
+}
+
+-(void) hide
+{
+	[super hide];
+	[self.table childUpdated:self];
 }
 
 @end

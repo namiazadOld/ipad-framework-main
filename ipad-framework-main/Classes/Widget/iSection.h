@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
+#import "iTable.h"
 
 @interface iSection : iBaseControl {
 	NSMutableArray* itemList;
 	NSString* title;
-	BindableObject* titleBindableObject;
+	BindableObject* titleBindableObject;	
 }
 
 @property (nonatomic, retain) NSMutableArray* itemList;
 @property (retain) NSString* title;
 @property (nonatomic, retain) BindableObject* titleBindableObject;
+@property (nonatomic, retain) iTable* table;
 
 @end

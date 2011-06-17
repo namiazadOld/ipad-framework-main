@@ -13,7 +13,7 @@
 
 @implementation iHeader
 
-@synthesize title, rightButton, leftButton, titleBindableObject;
+@synthesize title, rightButton, leftButton, titleBindableObject, container;
 
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
@@ -56,15 +56,18 @@
 	if ([parent isKindOfClass:[iView class]])
 	{
 		iView* view = (iView*)parent;
+		self.container = view;
 		[view.viewController.navigationController setNavigationBarHidden:NO];
 		[view.viewController.navigationItem setTitle: self.title];
 		
-		if (self.rightButton != NULL)
-			view.viewController.navigationItem.rightBarButtonItem = self.rightButton;
-		
-		if (self.leftButton != NULL)
-			view.viewController.navigationItem.leftBarButtonItem = self.leftButton;
+		[self setButtons];
 	}
+}
+
+-(void) setButtons
+{
+	self.container.viewController.navigationItem.rightBarButtonItem = self.rightButton;
+	self.container.viewController.navigationItem.leftBarButtonItem = self.leftButton;
 }
 
 

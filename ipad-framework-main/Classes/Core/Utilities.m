@@ -14,6 +14,7 @@
 #import "Tuple3.h"
 #import "Tuple4.h"
 #import "Tuple5.h"
+#import "iCustomControl.h"
 
 
 @implementation Utilities
@@ -36,21 +37,45 @@ static UIViewController* currentView;
 +(void) AddControl:(iBaseControl*) widget ToContainer: (iBaseControl*) container
 {
 
-	UIView* view = [widget getView];
 	
-	if (view != NULL && [view isEqual:[container getChildrenHolder]])
-		return;
+	UIView* view = [widget getView];
 	
 	if (view != NULL)
 		[[container getChildrenHolder] addSubview:view];
-		
-	[widget setParentWidget:container];
+
 	[widget parentChanged:container];
-	[container.children addObject:widget];
+	
 	
 	if (container.currentRole != nil)
+	{
 		[container.currentRole.children addObject:widget];
-}
+		[widget setParentWidget:container.currentRole];
+	}
+	else
+	{
+		[container.children addObject:widget];
+		[widget setParentWidget:container];
+	}
+	
+	//UIView* view = [widget getView];
+//		
+//	
+//	if (view != NULL && [view isEqual:[container getChildrenHolder]])
+//		return;
+//	
+//	if (view != NULL)
+//		[[container getChildrenHolder] addSubview:view];
+//	
+//	
+//		
+//	[widget parentChanged:container];
+//	[container.children addObject:widget];
+//	[widget setParentWidget:container];
+	
+//	if (container.currentRole != nil)
+//		[container.currentRole.children addObject:widget];
+	
+	}
 
 +(BindableObject*) InitWithType: (TypedValue*) tv
 {

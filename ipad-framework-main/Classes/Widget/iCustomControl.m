@@ -24,17 +24,19 @@
 
 -(CGRect) getFrame
 {
-	return [self.container getFrame];
+	//return [self.container getFrame];
+	return CGRectMake(-1, -1, -1, -1);
 }
 
 -(void)setFrame:(CGRect)frame
 {
-	[self.container setFrame:frame];
+	//[self.container setFrame:frame];
 }
 
 -(UIView*) getView
 {
-	return [self.container getView];
+	//return [self.container getView];
+	return NULL;
 }
 
 -(void) addBodyControl:(iBaseControl*) widget

@@ -29,15 +29,14 @@ static BOOL _ordered;
 {
 	float x = 0.0;
 	
-	for (iBaseControl* subView in [parent children])
+	NSMutableArray* flattenChildren = [parent getFlattenChildren];
+	for (iBaseControl* subView in flattenChildren)
 	{
 		if ([subView isEqual:control])
 			continue;
 		if (!subView.visible)
 			continue;
-		if ([subView isKindOfClass:[iWhen class]])
-			continue;
-		
+				
 		CGRect frame = [subView getFrame];
 		
 		if (subView.anchor == Right || subView.anchor == LeftRight)
@@ -47,6 +46,7 @@ static BOOL _ordered;
 			if (frame.origin.x + frame.size.width + subView.marginRight >= x)
 				x = frame.origin.x + frame.size.width + subView.marginRight;
 	}
+	[flattenChildren release];
 	
 	return x + control.marginLeft;
 }
@@ -57,15 +57,14 @@ static BOOL _ordered;
 	
 	float x = parentFrame.size.width;
 	
-	for (iBaseControl* subView in [parent children])
+	NSMutableArray* flattenChildren = [parent getFlattenChildren];
+	for (iBaseControl* subView in flattenChildren)
 	{
 		if ([subView isEqual:control])
 			continue;
 		if (!subView.visible)
 			continue;
-		if ([subView isKindOfClass:[iWhen class]])
-			continue;
-
+		
 		CGRect frame = [subView getFrame];
 		
 		if (subView.anchor != Right)
@@ -75,6 +74,7 @@ static BOOL _ordered;
 			if (frame.origin.x - subView.marginLeft <= x)
 				x = frame.origin.x - subView.marginLeft;
 	}
+	[flattenChildren release];
 	
 	return x - control.marginRight;
 }
@@ -87,19 +87,19 @@ static BOOL _ordered;
 	if (control.place == NextLine)
 	{
 		float maxHeightOfLastLine = lastControlFrame.origin.y + lastControlFrame.size.height + lastControl.marginBottom;
-		for (iBaseControl* subView in [parent children])
+		NSMutableArray* flattenChildren = [parent getFlattenChildren];
+		for (iBaseControl* subView in flattenChildren)
 		{
 			if (subView.lineNo != lastControl.lineNo)
 				continue;
 			if (!subView.visible)
-				continue;
-			if ([subView isKindOfClass:[iWhen class]])
 				continue;
 			CGRect frame = [subView getFrame];
 			if (frame.origin.y + frame.size.height + subView.marginBottom > maxHeightOfLastLine)
 				maxHeightOfLastLine = frame.origin.y + frame.size.height + subView.marginBottom;
 		}
 		y = maxHeightOfLastLine; 
+		[flattenChildren release];
 	}
 	else
 		y = lastControlFrame.origin.y;
@@ -161,17 +161,17 @@ static BOOL _ordered;
 {
 	float lowestY = 0.0;
 	
-	for (iBaseControl* child in control.children)
+	NSMutableArray* flattenChildren = [control getFlattenChildren];
+	for (iBaseControl* child in flattenChildren)
 	{
 		if (!child.visible)
-			continue;
-		if ([child isKindOfClass:[iWhen class]])
 			continue;
 		CGRect frame = [child getFrame];
 		if (child != NULL)
 			if (frame.origin.y + frame.size.height >= lowestY)
 				lowestY = frame.origin.y + frame.size.height;
 	}
+	[flattenChildren release];
 	
 	return lowestY;
 }
@@ -207,20 +207,21 @@ static BOOL _ordered;
 +(void) orderWidgets: (iBaseControl*)container
 {
 	container.lastInnerControl = [[iEmptyWidget alloc] init];
-	for (iBaseControl* child in container.children)
+	NSMutableArray* flattenChildren = [container getFlattenChildren];
+	for (iBaseControl* child in flattenChildren)
 	{
 		if (!child.visible)
-			continue;
-		if ([child isKindOfClass:[iWhen class]])
 			continue;
 		[child setFrame:[self styleRectangle:child container:container]];
 		container.lastInnerControl = child;
 		[StylingManager orderWidgets:child];
 	}
 	
+	
 	if (![StylingManager ordered]) {
 		[StylingManager setOrdered:YES];
 	}
+	[flattenChildren release];
 }
 
 @end

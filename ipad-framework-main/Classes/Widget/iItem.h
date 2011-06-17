@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
+#import "iTable.h"
 
 
 
@@ -15,10 +16,12 @@
 	NSString* title;
 	UITableViewCell* cell;
 	BindableObject* titleBindableObject;
+
 }
 
 @property (retain) NSString* title;
 @property (nonatomic, retain) UITableViewCell* cell;
 @property (nonatomic, retain) BindableObject* titleBindableObject;
+@property (nonatomic, retain) iTable* table;
 
 @end
