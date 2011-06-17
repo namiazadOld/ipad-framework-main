@@ -12,6 +12,7 @@
 #import "StylingManager.h"
 #import "iView.h"
 #import "iCustomControl.h"
+#import "iWhen.h"
 
 @implementation iBaseControl
 @synthesize locked, parentWidget, visible,
@@ -89,9 +90,15 @@
 -(void) renderElements: (iBaseControl*)parent
 {
 	if (self.elements == NULL && self.elementOf.elements != NULL)
+	{
 		[self.elementOf.elements render: NULL container: parent elements:NULL];
+		[parent addBodyControl:self.elementOf.elements];
+	}
 	else if (self.elements != NULL)
+	{
 		[self.elements render: NULL container: parent elements:NULL];
+		[parent addBodyControl:self.elements];
+	}
 }
 
 -(CGRect) getRecommendedFrame:(iBaseControl*)parent
@@ -126,9 +133,20 @@
 
 -(void) addBodyControl:(iBaseControl*) widget
 {
-	[widget setParentWidget:self];
 	[widget parentChanged:self];
-	[self.children addObject:widget];
+	
+	if (self.currentRole != nil)
+	{
+		[self.currentRole.children addObject:widget];
+		[widget setParentWidget:self.currentRole];
+	}
+	else
+	{
+		[self.children addObject:widget];
+		[widget setParentWidget:self];
+	}
+	
+	
 }
 
 -(void) finilize
@@ -207,19 +225,25 @@
 	for (iBaseControl* control in self.children)
 	{
 		[control hide];
-		[[control getView] setHidden:YES];
+		if ([control getView] != NULL)
+			[[control getView] setHidden:YES];
+		[self childUpdated:control];
 	}
 }
 
 -(void)show
 {
 	self.visible = YES;
+	if (!parentWidget.visible)
+		return;
 	if (![self isKindOfClass:[iCustomControl class]])
 		[[self getView] setHidden:NO];
 	for (iBaseControl* control in self.children)
 	{
 		[control show];
-		[[control getView] setHidden:NO];
+		if ([control getView] != NULL)
+			[[control getView] setHidden:NO];
+		[self childUpdated:control];
 	}
 }
 
@@ -229,6 +253,19 @@
 	while (parent.parentWidget != NULL)
 		parent = parent.parentWidget;
 	return parent;
+}
+
+-(NSMutableArray*) getFlattenChildren
+{
+	NSMutableArray* flattenChildren = [[NSMutableArray alloc] init];
+	for (iBaseControl* child in self.children)
+	{
+		if ([child isKindOfClass:[iCustomControl class]])
+			[flattenChildren addObjectsFromArray:[child getFlattenChildren]];
+		else
+			[flattenChildren addObject:child];
+	}
+	return flattenChildren;
 }
 
 @end

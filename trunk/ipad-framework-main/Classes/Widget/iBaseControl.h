@@ -83,5 +83,6 @@
 -(void) hide;
 -(void) show;
 -(iBaseControl*) getRootContainer;
+-(NSMutableArray*) getFlattenChildren;
 
 @end

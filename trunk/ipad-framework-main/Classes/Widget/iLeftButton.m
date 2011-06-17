@@ -18,14 +18,31 @@
 {
 	if ([parent isKindOfClass:[iHeader class]])
 	{
-		iHeader* header = (iHeader*)parent;
-		header.leftButton = self.button;
+		iHeader* _header = (iHeader*)parent;
+		_header.leftButton = self.button;
+		
+		self.header = _header;
+		
 		return;
 	}
 	
 	//leftButton can only be added to header and footer
 	[Utilities ShowError:self title:MSG_WRONG_SCREEN_STRUCTURE content:@"Left Button can only be added to header and footer"];
 	
+}
+
+-(void)show
+{
+	[super show];
+	self.header.leftButton = self.button;
+	[self.header setButtons];
+}
+
+-(void)hide
+{
+	[super show];
+	self.header.leftButton = NULL;
+	[self.header setButtons];
 }
 
 @end

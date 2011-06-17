@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "iItem.h"
+
 
 
 @interface iTableViewController : UITableViewController {

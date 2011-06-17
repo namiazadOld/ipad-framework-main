@@ -13,7 +13,7 @@
 
 @implementation iNavigationButton
 
-@synthesize button, titleBindableObject;
+@synthesize button, titleBindableObject, header;
 
 //Properties Wrappers
 -(NSString*) title

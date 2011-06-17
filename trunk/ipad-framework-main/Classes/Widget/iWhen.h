@@ -12,7 +12,7 @@
 #import "iCustomControl.h"
 
 
-@interface iWhen : iBaseControl {
+@interface iWhen : iCustomControl {
 	iCustomControl* when;
 	iCustomControl* elseWhen;
 	BindableObject* conditionBindableObject;

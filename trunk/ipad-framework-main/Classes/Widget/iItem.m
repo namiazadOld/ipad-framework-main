@@ -16,7 +16,17 @@
 
 @implementation iItem
 
-@synthesize title, cell, titleBindableObject;
+@synthesize title, cell, titleBindableObject, table;
+
+-(iTable*) table
+{
+	iBaseControl* parent = self.parentWidget;
+	
+	while (parent != NULL && ![parent isKindOfClass:[iTable class]])
+		parent = parent.parentWidget;
+	
+	return parent;
+}
 
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
@@ -32,7 +42,7 @@
 	{
 		self.locked = YES;
 		self.title = (NSString*)bo.value;
-		[self.parentWidget childUpdated:self];
+		[self.table childUpdated:self];
 		self.locked = NO;
 	}
 }
@@ -67,15 +77,15 @@
 	if ([parent isKindOfClass:[iTable class]])
 	{
 		iSection* section;
-		iTable* table = (iTable*)parent;
-		if ([table.sectionList count] == 0)
+		iTable* _table = (iTable*)parent;
+		if ([_table.sectionList count] == 0)
 		{
 			section = [[iSection alloc] init];
-			[section render:[[NSMutableArray alloc] init] container:table elements:NULL];
-			[table.sectionList addObject:section];
+			[section render:[[NSMutableArray alloc] init] container:_table elements:NULL];
+			[_table.sectionList addObject:section];
 		}
 		
-		section = [table.sectionList objectAtIndex:0];
+		section = [_table.sectionList objectAtIndex:0];
 		[section.itemList addObject:self];
 		return;
 	}
@@ -100,5 +110,18 @@
 {
 	return self.cell.contentView;
 }
+
+-(void) show
+{
+	[super show];
+	[self.table childUpdated:self];
+}
+
+-(void) hide
+{
+	[super hide];
+	[self.table childUpdated:self];
+}
+
 
 @end

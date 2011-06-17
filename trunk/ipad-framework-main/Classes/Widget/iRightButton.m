@@ -17,8 +17,9 @@
 {
 	if ([parent isKindOfClass:[iHeader class]])
 	{
-		iHeader* header = (iHeader*)parent;
-		header.rightButton = self.button;
+		iHeader* _header = (iHeader*)parent;
+		self.header = _header;
+		_header.rightButton = self.button;
 		return;
 	}
 	
@@ -27,5 +28,18 @@
 
 }
 
+-(void)show
+{
+	[super show];
+	self.header.rightButton = self.button;
+	[self.header setButtons];
+}
+
+-(void)hide
+{
+	[super show];
+	self.header.rightButton = NULL;
+	[self.header setButtons];
+}
 
 @end

@@ -8,6 +8,8 @@
 
 #import "iWhen.h"
 #import "StylingManager.h"
+#import "NSStack.h"
+#import "Utilities.h"
 
 
 @implementation iWhen
@@ -54,7 +56,7 @@
 
 -(void) manageArgument: (BindableObject*)bo at:(int)index
 {
-	[super manageArgument:bo at:index];
+	[bo addListener:self];
 	switch (index) {
 		case 0:
 			self.conditionBindableObject = bo;
@@ -68,15 +70,45 @@
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
 	[super render:arguments container: parent elements: elements];
+	iBaseControl* cr = [parent currentRole];
+	[parent setCurrentRole:self];
+	[self.scope createInnerScope];
+	NSStack* containerStack = [[NSStack alloc] init];
+    [containerStack push:parent];
 	
+	[self.scope createInnerScope];
 	[self.when render:arguments container:parent elements:elements];
-	[self.elseWhen render:arguments container:parent elements:elements];
+	[self.when finilize];
+	[[containerStack top] addBodyControl:self.when];
+	[self.scope exitScope];
 	
-	//[self.children addObject:self.when];
-	//[self.children addObject:self.elseWhen];
+	[self.scope createInnerScope];
+	[self.elseWhen render:arguments container:parent elements:elements];
+	[self.elseWhen finilize];
+	[[containerStack top] addBodyControl:self.elseWhen];
+	[self.scope exitScope];
+	
+	[containerStack pop];
+	[self.scope exitScope];
+	[parent setCurrentRole:cr];
 	
 	[self setCondition:self.conditionBindableObject.boolValue];
 	return self;
 }
+
+-(void) addBodyControl:(iBaseControl*) widget
+{	
+	[Utilities AddControl:widget ToContainer:self];
+}
+
+-(void)show
+{
+	if (!self.parentWidget.visible)
+		return;
+	self.visible = YES;
+	[self setCondition:self.conditionBindableObject.boolValue];
+	
+}
+
 
 @end
