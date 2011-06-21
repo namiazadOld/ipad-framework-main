@@ -15,6 +15,11 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		39222CE513B114A80012CB57 /* ControlVariable_ctr1.m in Sources */ = {isa = PBXBuildFile; fileRef = 39222CDC13B114A80012CB57 /* ControlVariable_ctr1.m */; };
+		39222CE613B114A80012CB57 /* ControlVariable_ctr2.m in Sources */ = {isa = PBXBuildFile; fileRef = 39222CDE13B114A80012CB57 /* ControlVariable_ctr2.m */; };
+		39222CE713B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39222CE013B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.m */; };
+		39222CE813B114A80012CB57 /* ControlVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 39222CE213B114A80012CB57 /* ControlVariable.m */; };
+		39222CE913B114A80012CB57 /* root_callback_tmp121.m in Sources */ = {isa = PBXBuildFile; fileRef = 39222CE413B114A80012CB57 /* root_callback_tmp121.m */; };
 		3933252913A446BA009420CB /* Evaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3933252813A446BA009420CB /* Evaluator.m */; };
 		393BF44A139562A500BB8AD6 /* mobl.m in Sources */ = {isa = PBXBuildFile; fileRef = 393BF449139562A500BB8AD6 /* mobl.m */; };
 		393BF46413956BF400BB8AD6 /* mobl_ipadstyle_datePickerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 393BF46313956BF400BB8AD6 /* mobl_ipadstyle_datePickerStyle.m */; };
@@ -92,6 +97,16 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ipad_framework_main_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ipad_framework_main_Prefix.pch; sourceTree = "<group>"; };
+		39222CDB13B114A80012CB57 /* ControlVariable_ctr1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_ctr1.h; sourceTree = "<group>"; };
+		39222CDC13B114A80012CB57 /* ControlVariable_ctr1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_ctr1.m; sourceTree = "<group>"; };
+		39222CDD13B114A80012CB57 /* ControlVariable_ctr2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_ctr2.h; sourceTree = "<group>"; };
+		39222CDE13B114A80012CB57 /* ControlVariable_ctr2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_ctr2.m; sourceTree = "<group>"; };
+		39222CDF13B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable_nextlineTextBoxStyle.h; sourceTree = "<group>"; };
+		39222CE013B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable_nextlineTextBoxStyle.m; sourceTree = "<group>"; };
+		39222CE113B114A80012CB57 /* ControlVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlVariable.h; sourceTree = "<group>"; };
+		39222CE213B114A80012CB57 /* ControlVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlVariable.m; sourceTree = "<group>"; };
+		39222CE313B114A80012CB57 /* root_callback_tmp121.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = root_callback_tmp121.h; sourceTree = "<group>"; };
+		39222CE413B114A80012CB57 /* root_callback_tmp121.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = root_callback_tmp121.m; sourceTree = "<group>"; };
 		3933251A13A3C844009420CB /* Notifiable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notifiable.h; sourceTree = "<group>"; };
 		3933252713A446BA009420CB /* Evaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluator.h; sourceTree = "<group>"; };
 		3933252813A446BA009420CB /* Evaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluator.m; sourceTree = "<group>"; };
@@ -400,6 +415,16 @@
 				39254A541380C1980097DBEC /* Styles */,
 				39E0FD94137EBB78004D213F /* root.m */,
 				39E0FD93137EBB78004D213F /* root.h */,
+				39222CDB13B114A80012CB57 /* ControlVariable_ctr1.h */,
+				39222CDC13B114A80012CB57 /* ControlVariable_ctr1.m */,
+				39222CDD13B114A80012CB57 /* ControlVariable_ctr2.h */,
+				39222CDE13B114A80012CB57 /* ControlVariable_ctr2.m */,
+				39222CDF13B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.h */,
+				39222CE013B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.m */,
+				39222CE113B114A80012CB57 /* ControlVariable.h */,
+				39222CE213B114A80012CB57 /* ControlVariable.m */,
+				39222CE313B114A80012CB57 /* root_callback_tmp121.h */,
+				39222CE413B114A80012CB57 /* root_callback_tmp121.m */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -595,6 +620,11 @@
 				394E3C0F1395DF8F00AAEF29 /* mobl_ipadstyle_timePickerStyle.m in Sources */,
 				3933252913A446BA009420CB /* Evaluator.m in Sources */,
 				395023D213A7E09F001FB35F /* iWhen.m in Sources */,
+				39222CE513B114A80012CB57 /* ControlVariable_ctr1.m in Sources */,
+				39222CE613B114A80012CB57 /* ControlVariable_ctr2.m in Sources */,
+				39222CE713B114A80012CB57 /* ControlVariable_nextlineTextBoxStyle.m in Sources */,
+				39222CE813B114A80012CB57 /* ControlVariable.m in Sources */,
+				39222CE913B114A80012CB57 /* root_callback_tmp121.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

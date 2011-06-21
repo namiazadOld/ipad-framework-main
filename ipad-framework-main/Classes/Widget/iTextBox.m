@@ -11,6 +11,7 @@
 #import "NSSelector.h"
 #import "Constants.h"
 #import "iLabel.h"
+#import "Utilities.h"
 
 @implementation iTextBox
 
@@ -86,6 +87,8 @@
 		[self.textBindableObject setValue:self.textBox.text];
 		[self.placeholderBindableObject setValue:self.textBox.placeholder];
 		self.locked = NO;
+		
+		NSLog((NSString*)[[self.args objectAtIndex:0] value]);
 	}
 }
 

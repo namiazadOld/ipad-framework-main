@@ -15,10 +15,10 @@
 #import "iWhen.h"
 
 @implementation iBaseControl
-@synthesize locked, parentWidget, visible,
+@synthesize locked, parentWidget, visible, isRendered,
 			lastInnerControl, viewController, anchor, place, lineNo,
 			initialFrame, children, marginLeft, marginRight, marginTop, marginBottom, scope,
-			currentRole, elementOf, elements;
+			currentRole, elementOf, elements, args;
 
 -(iBaseControl*) elementOf
 {
@@ -69,20 +69,24 @@
 	return self;
 }
 
--(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
+-(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) _elements
 {
 	visible = YES;
 	children = [[NSMutableArray alloc] init];
 	initialFrame = CGRectMake(-1, -1, -1, -1);
-	self.elements = elements;
+	self.elements = _elements;
 	
 	if ([[self getChildrenHolder] respondsToSelector:@selector(addTarget:action:forControlEvents:)] && [self getChildrenHolder] != NULL)
 		[[self getChildrenHolder] addTarget:self action:@selector(eventOccured:) forControlEvents:UIControlEventAllEvents];
 	
 
-	[self manageArguments:arguments container:parent];
+	args = arguments;
+	
+	[self manageArguments:args container:parent];
 	
 	parent.lastInnerControl = self;
+	
+	self.isRendered = YES;
 	
 	return self;
 }
@@ -266,6 +270,32 @@
 			[flattenChildren addObject:child];
 	}
 	return flattenChildren;
+}
+
++(void) ChangeControl:(iBaseControl*)source to:(iBaseControl*)target
+{
+	//Listeners should be deleted
+	if (!source.isRendered)
+		return;
+	
+	[source hide];
+	int index = [source.parentWidget.children indexOfObject:source];
+	
+	
+	[source.parentWidget.children removeObject:source];
+						 
+	[target render:source.args container:source.parentWidget elements:NULL];
+	[target finilize];
+	[source.parentWidget addBodyControl:target];
+	
+	
+	[source.parentWidget.children removeObject:target];
+	[source.parentWidget.children insertObject:target atIndex:index];
+	
+	if ([StylingManager ordered])
+		[StylingManager orderWidgets:[target getRootContainer]];
+	
+	
 }
 
 @end
