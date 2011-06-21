@@ -1,15 +1,13 @@
 
 
 #import "root.h"
-#import "mobl_ipadstyle_labelStyle.h"
-#import "iLabel.h"
-#import "ControlVariable_ctr.h"
-#import "mobl_ipadstyle_labelStyle.h"
-#import "iLabel.h"
-#import "ControlVariable_ctr.h"
+#import "mobl_ipadstyle_buttonStyle.h"
+#import "iButton.h"
+#import "ControlVariable_ctr1.h"
+#import "ControlVariable_ctr2.h"
+#import "ControlVariable_ctr1.h"
 #import "root.h"
-#import "root_ControlVariable_ctr_ControlCall132.h"
-#import "root_ControlVariable_ctr_ControlCall131.h"
+#import "root_callback_tmp121.h"
 
 @implementation root
 @synthesize window;
@@ -17,7 +15,7 @@
 {
 	[super render:arguments container:parent elements: elements];
 	[self.scope createInnerScope];
-	int c_27083 = -1;
+	int z_7265 = -1;
 	
 	
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
@@ -26,29 +24,43 @@
 	
 	NSStack* containerStack = [[NSStack alloc]init];
 	[containerStack push:self];
-	BindableObject* VarDeclInferred102 = [[BindableObject alloc] initWithValue: @"Nami"];
-	[self.scope set:@"firstName" variable:VarDeclInferred102];
+	BindableObject* VarDeclInferred18 = [[BindableObject alloc] initWithValue: [[ControlVariable_ctr1 alloc] init]];
+	[self.scope set:@"c" variable:VarDeclInferred18];
+	BindableObject* DeriveDecl53 = [[BindableObject alloc] initWithValue: @"I am String"];
+	[self.scope set:@"tmp119" variable:DeriveDecl53];
 	
 	[self.scope createInnerScope];
 	
-	NSMutableArray* arguments_ControlVariable_ctr_ControlVariable_ctr190 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments53 = [[NSMutableArray alloc] init];
+	
+	[arguments53 addObject:(BindableObject*)[self.scope get: @"tmp119"]];
 	
 	
-	ControlVariable_ctr* ControlVariable_ctr_ControlVariable_ctr19 = [[ControlVariable_ctr alloc] init];
-	[ControlVariable_ctr_ControlVariable_ctr19 render:arguments_ControlVariable_ctr_ControlVariable_ctr190 container: [containerStack top] elements:[[root_ControlVariable_ctr_ControlCall132 alloc] initWithElementOf:self.elementOf]];
-	[ControlVariable_ctr_ControlVariable_ctr19 finilize];
-	[[containerStack top] addBodyControl:ControlVariable_ctr_ControlVariable_ctr19];
+	[[(BindableObject*)[self.scope get: @"c"] value] render:arguments53 container: [containerStack top] elements:NULL];
+	[[(BindableObject*)[self.scope get: @"c"] value] finilize];
+	[[containerStack top] addBodyControl:[(BindableObject*)[self.scope get: @"c"] value]];
 	[self.scope exitScope];
+	BindableObject* VarDeclInferred19 = [[BindableObject alloc] initWithBool: YES];
+	[self.scope set:@"done" variable:VarDeclInferred19];
+	BindableObject* DeriveDecl54 = [[BindableObject alloc] initWithValue: 
+	                                                                           [[NSSelector alloc] initWithSelector:@selector(action:) target:[[root_callback_tmp121 alloc] initWithScope:self.scope]]
+	                                                                           ];
+	[self.scope set:@"tmp121" variable:DeriveDecl54];
+	BindableObject* DeriveDecl55 = [[BindableObject alloc] initWithValue: @"Change"];
+	[self.scope set:@"tmp120" variable:DeriveDecl55];
 	
 	[self.scope createInnerScope];
 	
-	NSMutableArray* arguments_ControlVariable_ctr_ControlVariable_ctr200 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments54 = [[NSMutableArray alloc] init];
 	
+	[arguments54 addObject:(BindableObject*)[self.scope get: @"tmp120"]];
+	[arguments54 addObject:(BindableObject*)[self.scope get: @"tmp121"]];
+	[arguments54 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_buttonStyle alloc] initialize]]];
 	
-	ControlVariable_ctr* ControlVariable_ctr_ControlVariable_ctr20 = [[ControlVariable_ctr alloc] init];
-	[ControlVariable_ctr_ControlVariable_ctr20 render:arguments_ControlVariable_ctr_ControlVariable_ctr200 container: [containerStack top] elements:[[root_ControlVariable_ctr_ControlCall132 alloc] initWithElementOf:self.elementOf]];
-	[ControlVariable_ctr_ControlVariable_ctr20 finilize];
-	[[containerStack top] addBodyControl:ControlVariable_ctr_ControlVariable_ctr20];
+	iButton* iButton_iButton10 = [[iButton alloc] init];
+	[iButton_iButton10 render:arguments54 container: [containerStack top] elements:NULL];
+	[iButton_iButton10 finilize];
+	[[containerStack top] addBodyControl:iButton_iButton10];
 	[self.scope exitScope];
 	 
 	[containerStack pop]; 

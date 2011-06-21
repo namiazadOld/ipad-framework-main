@@ -7,6 +7,7 @@
 //
 
 #import "BindableObject.h"
+#import "iBaseControl.h"
 
 
 @implementation BindableObject
@@ -65,9 +66,7 @@
 -(void) notifyListeners
 {
 	for (id<Notifiable> control in self.listeners)
-	{
 		[control changeNotification:self];
-	}
 }
 
 -(void) setValue:(id)_value
@@ -75,6 +74,10 @@
 	@synchronized(self)
 	{
 		[self initFields:Ref];
+		
+		if (value != NULL && _value != NULL && [_value isKindOfClass:[iBaseControl class]])
+			[iBaseControl ChangeControl:(iBaseControl*)value to:(iBaseControl*)_value];
+		
 		value = _value;
 		[self notifyListeners];
 	}

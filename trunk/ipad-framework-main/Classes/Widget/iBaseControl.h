@@ -20,6 +20,7 @@
 	iBaseControl* parentWidget;
 	UIViewController* viewController;
 	NSMutableArray* children;
+	NSMutableArray* args;
 	Scope* scope;
 	
 	float marginLeft;
@@ -37,6 +38,10 @@
 	iBaseControl* elements;
 	
 	BOOL visible;
+	
+	
+	
+	BOOL isRendered;
 	
 }
 
@@ -59,6 +64,8 @@
 @property (nonatomic, retain) iBaseControl* elementOf;
 @property (nonatomic, retain) iBaseControl* elements;
 @property (assign) BOOL visible;
+@property (nonatomic, retain) NSMutableArray* args;
+@property (assign) BOOL isRendered;
 
 -(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf;
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements;
@@ -84,5 +91,6 @@
 -(void) show;
 -(iBaseControl*) getRootContainer;
 -(NSMutableArray*) getFlattenChildren;
++(void) ChangeControl:(iBaseControl*)source to:(iBaseControl*)target;
 
 @end
