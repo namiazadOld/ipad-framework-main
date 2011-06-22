@@ -47,7 +47,7 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		[self.textBindableObject setValue:self.label.text];
+		[self.textBindableObject setValue:[self.label.text retain]];
 		self.locked = NO;
 	}
 }

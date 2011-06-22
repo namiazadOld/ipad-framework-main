@@ -84,8 +84,10 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		[self.textBindableObject setValue:self.textBox.text];
-		[self.placeholderBindableObject setValue:self.textBox.placeholder];
+		
+		//Since by removing the control, its text will be released, do use "retain"
+		[self.textBindableObject setValue:[self.textBox.text retain]];
+		[self.placeholderBindableObject setValue:[self.textBox.placeholder retain]];
 		self.locked = NO;
 		
 		NSLog((NSString*)[[self.args objectAtIndex:0] value]);

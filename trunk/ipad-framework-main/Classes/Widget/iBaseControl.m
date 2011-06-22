@@ -15,7 +15,7 @@
 #import "iWhen.h"
 
 @implementation iBaseControl
-@synthesize locked, parentWidget, visible, isRendered,
+@synthesize locked, parentWidget, visible, isRendered, removeFromListener,
 			lastInnerControl, viewController, anchor, place, lineNo,
 			initialFrame, children, marginLeft, marginRight, marginTop, marginBottom, scope,
 			currentRole, elementOf, elements, args;
@@ -27,6 +27,13 @@
 	if (elementOf == NULL)
 		return self;
 	return elementOf;
+}
+
+-(void) setRemoveFromListener:(BOOL)aBool
+{
+	removeFromListener = aBool;
+	for(iBaseControl* child in children)
+		[child setRemoveFromListener:aBool];
 }
 
 -(Scope*) scope
@@ -62,6 +69,7 @@
 	self.marginBottom = style.margin_bottom;
 }
 
+
 -(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf
 {
 	[super init];
@@ -74,7 +82,7 @@
 	visible = YES;
 	children = [[NSMutableArray alloc] init];
 	initialFrame = CGRectMake(-1, -1, -1, -1);
-	self.elements = _elements;
+	elements = _elements;
 	
 	if ([[self getChildrenHolder] respondsToSelector:@selector(addTarget:action:forControlEvents:)] && [self getChildrenHolder] != NULL)
 		[[self getChildrenHolder] addTarget:self action:@selector(eventOccured:) forControlEvents:UIControlEventAllEvents];
@@ -82,7 +90,7 @@
 
 	args = arguments;
 	
-	[self manageArguments:args container:parent];
+	[self manageArguments:arguments container:parent];
 	
 	parent.lastInnerControl = self;
 	
@@ -283,8 +291,11 @@
 	
 	
 	[source.parentWidget.children removeObject:source];
+	
+	
+	[source setRemoveFromListener:YES];
 						 
-	[target render:source.args container:source.parentWidget elements:NULL];
+	[target render:source.args container:source.parentWidget elements:source.elements];
 	[target finilize];
 	[source.parentWidget addBodyControl:target];
 	
@@ -294,8 +305,6 @@
 	
 	if ([StylingManager ordered])
 		[StylingManager orderWidgets:[target getRootContainer]];
-	
-	
 }
 
 @end

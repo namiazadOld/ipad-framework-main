@@ -11,7 +11,7 @@
 
 
 @implementation BindableObject
-@synthesize value, listeners, numValue, boolValue, type, evaluator;
+@synthesize value, listeners, numValue, boolValue, type, evaluator, removeFromListener;
 
 -(void) initFields:(ValueType)_type
 {
@@ -20,7 +20,6 @@
 		listeners = [[NSMutableArray alloc] init];
 		type = _type;
 	}
-	
 }
 
 
@@ -65,6 +64,15 @@
 
 -(void) notifyListeners
 {
+	int i = 0;
+	while (i < [self.listeners count])
+	{
+		if ([[self.listeners objectAtIndex:i] removeFromListener])
+			[self.listeners removeObjectAtIndex:i];
+		else
+			i++;
+	}
+	
 	for (id<Notifiable> control in self.listeners)
 		[control changeNotification:self];
 }

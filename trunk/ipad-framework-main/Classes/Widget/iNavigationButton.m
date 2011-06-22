@@ -47,7 +47,7 @@
 	if (!self.locked)
 	{
 		self.locked = YES;
-		[self.titleBindableObject setValue:self.button.title];
+		[self.titleBindableObject setValue:[self.button.title retain]];
 		self.locked = NO;
 	}
 }

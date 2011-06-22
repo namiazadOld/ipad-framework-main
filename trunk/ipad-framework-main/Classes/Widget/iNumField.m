@@ -65,7 +65,7 @@
 		else
 			[self.numberBindableObject setNumValue:[currentValue floatValue]];
 		
-		[self.placeholderBindableObject setValue:self.textBox.placeholder];
+		[self.placeholderBindableObject setValue:[self.textBox.placeholder retain]];
 		self.locked = NO;
 	}
 }

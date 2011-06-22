@@ -60,7 +60,7 @@
 		
 		[self.dateBindableObject.value release];
 		DateTime* dt = [[DateTime alloc] init];
-		dt.date = self.datePicker.date;
+		dt.date = [self.datePicker.date retain];
 		[self.dateBindableObject setValue:dt];
 		
 		//[self.showTimeBindableObject setBoolValue:(datePicker.datePickerMode == UIDatePickerModeDateAndTime)];
