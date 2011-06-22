@@ -38,10 +38,8 @@
 	iBaseControl* elements;
 	
 	BOOL visible;
-	
-	
-	
 	BOOL isRendered;
+	BOOL removeFromListener;
 	
 }
 
@@ -66,6 +64,7 @@
 @property (assign) BOOL visible;
 @property (nonatomic, retain) NSMutableArray* args;
 @property (assign) BOOL isRendered;
+@property (assign) BOOL removeFromListener;
 
 -(iBaseControl*) initWithElementOf: (iBaseControl*)_elementOf;
 -(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements;

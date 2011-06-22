@@ -29,6 +29,7 @@ typedef enum
 	ValueType type;
 	NSMutableArray* listeners;
 	Evaluator* evaluator;
+	BOOL removeFromListener;
 }
 
 @property (retain, readwrite) id value;
@@ -37,7 +38,7 @@ typedef enum
 @property (assign, readwrite) ValueType type;
 @property (retain, readonly) NSMutableArray* listeners;
 @property (retain, readwrite) Evaluator* evaluator;
-
+@property (assign) BOOL removeFromListener;
 
 -(void) initFields:(ValueType)_type;
 -(BindableObject*) initWithValue: (id)_value;
