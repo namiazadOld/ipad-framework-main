@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
 #import "iTable.h"
+#import "NSSelector.h"
 
 
 
@@ -16,6 +17,7 @@
 	NSString* title;
 	UITableViewCell* cell;
 	BindableObject* titleBindableObject;
+	NSSelector* onClick;
 
 }
 
@@ -23,5 +25,6 @@
 @property (nonatomic, retain) UITableViewCell* cell;
 @property (nonatomic, retain) BindableObject* titleBindableObject;
 @property (nonatomic, retain) iTable* table;
+@property (nonatomic, retain) NSSelector* onClick;
 
 @end

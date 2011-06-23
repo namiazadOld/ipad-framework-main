@@ -16,7 +16,7 @@
 
 @implementation iItem
 
-@synthesize title, cell, titleBindableObject, table;
+@synthesize title, cell, titleBindableObject, table, onClick;
 
 -(iTable*) table
 {
@@ -58,6 +58,8 @@
 		case 1:
 			[self setControlStyle:(UIStyle*)bo.value];
 			break;
+		case 2:
+			self.onClick = (NSSelector*)bo.value;
 		default:
 			break;
 	}

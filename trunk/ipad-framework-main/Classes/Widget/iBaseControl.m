@@ -280,31 +280,73 @@
 	return flattenChildren;
 }
 
+-(iBaseControl*) getContainer
+{
+	iBaseControl* parent = self.parentWidget;
+	
+	while (parent != NULL && [parent isKindOfClass:[iCustomControl class]])
+		parent = parent.parentWidget;
+	
+	return parent;
+}
+
+//+(void) PrintHierarchy:(UIView*) view
+//{	
+//	if (view == NULL)
+//		return;
+//	
+//	
+//	NSLog([[view class] description]);
+//	for (UIView* child in view.subviews)
+//		[iBaseControl PrintHierarchy:child];
+//}
+//+(void) PrintHierarchy2:(iBaseControl*) root level:(int)level
+//{
+//	NSMutableString* aString = [NSMutableString stringWithFormat:@"%d ", level];
+//	CGRect f = [root getFrame];
+//	[aString appendFormat:[[root class] description]];
+//	[aString appendFormat:@" %f-%f-%f-%f", f.origin.x, f.origin.y, f.size.width, f.size.height];
+//	NSLog(aString);
+//	
+//	for (iBaseControl* child in root.children)
+//		[iBaseControl PrintHierarchy2:child level: level + 1];
+//}
+
 +(void) ChangeControl:(iBaseControl*)source to:(iBaseControl*)target
 {
-	//Listeners should be deleted
+
 	if (!source.isRendered)
 		return;
 	
+	iBaseControl* container = [source getContainer];
+	
 	[source hide];
 	int index = [source.parentWidget.children indexOfObject:source];
-	
-	
 	[source.parentWidget.children removeObject:source];
-	
-	
 	[source setRemoveFromListener:YES];
-						 
-	[target render:source.args container:source.parentWidget elements:source.elements];
-	[target finilize];
-	[source.parentWidget addBodyControl:target];
 	
+	if ([source.parentWidget isKindOfClass:[iCustomControl class]])
+		container.currentRole = source.parentWidget;
+	
+	
+	[target render:source.args container:container elements:NULL];
+	[target finilize];
+	[container addBodyControl:target];
+	[target show];
 	
 	[source.parentWidget.children removeObject:target];
 	[source.parentWidget.children insertObject:target atIndex:index];
 	
+	container.currentRole = NULL;
+	
 	if ([StylingManager ordered])
-		[StylingManager orderWidgets:[target getRootContainer]];
+	{
+		iBaseControl* root = [target getRootContainer];
+		[StylingManager regenerateLineNos:root];
+		[StylingManager orderWidgets:root];
+	}
+	
+	//[iBaseControl PrintHierarchy2:[target getRootContainer] level:0];
 }
 
 @end
