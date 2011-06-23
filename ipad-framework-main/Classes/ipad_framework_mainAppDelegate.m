@@ -30,7 +30,24 @@
 	//RootView *aRootView = [[RootView alloc]initWithNibName:@"RootView" bundle:[NSBundle mainBundle]];
 	
 	
+	/////////////////////SplitView
 	
+	//UISplitViewController* splitViewController = [[UISplitViewController alloc] init];
+//	
+//	UIViewController *root = [[[UIViewController alloc] init] autorelease];
+//	UIViewController *detail = [[[UIViewController alloc] init] autorelease]; 
+//	
+//	UINavigationController *rootNav = [[[UINavigationController alloc] initWithRootViewController:root]autorelease];
+//	UINavigationController *detailNav = [[[UINavigationController alloc] initWithRootViewController:detail] autorelease];
+//	
+//	splitViewController.viewControllers = [NSArray arrayWithObjects:rootNav, detailNav, nil];
+//	splitViewController.delegate = detail;
+//	
+//	
+//	[window addSubview:splitViewController.view];
+	////////////////////End of SplitView
+	
+	///////////////////Main 
 	root *aRoot = [[root alloc]init];
 	
 		
@@ -38,15 +55,15 @@
 	aRoot.window = window;
 	[aRoot render:arguments container: NULL elements: NULL];
 	[Utilities setCurrentView:aRoot.viewController];
-//	
+	///////////////////Main
 	
-//	SampleTabController* tabContoller = [[SampleTabController alloc] init];
+	//SampleTabController* tabContoller = [[SampleTabController alloc] init];
 //	[tabContoller initialize];
 //	
 //	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabContoller.viewController];
 //	[window addSubview:[navController view]];
 //	[navController setNavigationBarHidden:YES];
-//	
+	
     [window makeKeyAndVisible];
 }
 

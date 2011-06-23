@@ -204,6 +204,21 @@ static BOOL _ordered;
 	return CGRectMake(x, y, width, height);
 }
 
++(void) regenerateLineNos: (iBaseControl*) container
+{
+	NSMutableArray* flattenChildren = [container getFlattenChildren];
+	
+	int lineNo = 0;
+	
+	for (iBaseControl* child in flattenChildren)
+	{
+		if (child.place == NextLine)
+			child.lineNo = ++lineNo;
+		else
+			child.lineNo = lineNo;
+	}
+}
+
 +(void) orderWidgets: (iBaseControl*)container
 {
 	container.lastInnerControl = [[iEmptyWidget alloc] init];
@@ -213,6 +228,7 @@ static BOOL _ordered;
 		if (!child.visible)
 			continue;
 		[child setFrame:[self styleRectangle:child container:container]];
+		CGRect f = [child getFrame];
 		container.lastInnerControl = child;
 		[StylingManager orderWidgets:child];
 	}

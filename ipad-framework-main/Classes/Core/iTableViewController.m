@@ -9,6 +9,7 @@
 #import "iTableViewController.h"
 #import "iSection.h"
 #import "iItem.h"
+#import "NullObject.h"
 
 
 @implementation iTableViewController
@@ -102,6 +103,15 @@
 	
     return cell;
 }
+
+- (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    iItem* item = [self getItem:[self getSection:indexPath.section] at:indexPath.row];
+	
+	if (item.onClick != NULL && ![item.onClick isKindOfClass:[NullObject class]])
+		[item.onClick.target performSelector:item.onClick.method];
+
+}
+
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	

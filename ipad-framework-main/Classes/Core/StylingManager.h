@@ -16,6 +16,7 @@
 }
 
 +(CGRect) styleRectangle: (iBaseControl*)control container:(iBaseControl*)parent;
++(void) regenerateLineNos: (iBaseControl*) container;
 +(void) orderWidgets: (iBaseControl*)container;
 +(BOOL) ordered;
 

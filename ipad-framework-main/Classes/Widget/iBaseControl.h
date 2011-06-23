@@ -90,6 +90,7 @@
 -(void) show;
 -(iBaseControl*) getRootContainer;
 -(NSMutableArray*) getFlattenChildren;
+-(iBaseControl*) getContainer;
 +(void) ChangeControl:(iBaseControl*)source to:(iBaseControl*)target;
 
 @end
