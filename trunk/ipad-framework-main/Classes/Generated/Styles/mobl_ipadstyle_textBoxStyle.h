@@ -15,9 +15,11 @@
 #import "Object.h"
 #import "NameValue.h"
 #import "TypedValue.h"
+#import "DateTime.h"
+#import "Evaluator.h"
+#import "iWhen.h"
 
 @interface mobl_ipadstyle_textBoxStyle : UIStyle {
-	NSString* border_style;
 	
 }
 	
