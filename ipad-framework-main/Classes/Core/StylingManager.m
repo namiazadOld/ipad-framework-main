@@ -216,6 +216,8 @@ static BOOL _ordered;
 			child.lineNo = ++lineNo;
 		else
 			child.lineNo = lineNo;
+		
+		[StylingManager regenerateLineNos:child];
 	}
 }
 
