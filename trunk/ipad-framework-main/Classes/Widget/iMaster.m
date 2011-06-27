@@ -7,14 +7,24 @@
 //
 
 #import "iMaster.h"
+#import "Utilities.h"
+#import "iHeader.h"
 
 
 @implementation iMaster
-@synthesize masterView, titleBindableObject;
+@synthesize masterView;
+
+-(iMaster*) init
+{
+	self.masterView = [[UIViewController alloc] init];
+	//Setting for portrait mode:
+	self.masterView.view.frame = CGRectMake(0, 0, 268, 1004);
+	self.masterView.view.backgroundColor = [UIColor whiteColor];
+	return self;
+}
 
 -(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
 {
-	self.masterView = [[UIViewController alloc] init];
 	[super render:arguments container: parent elements: elements];
 	return self;
 }
@@ -26,7 +36,7 @@
 
 -(void)setFrame:(CGRect)frame
 {
-	self.masterView.view.frame = frame;
+	//since this control is completely internal, style management should not be applied on that.
 }
 
 -(UIView*) getView
@@ -34,6 +44,18 @@
 	return self.masterView.view;
 }
 
+-(void) setHeader:(iHeader *)header
+{
+	header.container = self;
+	[self.masterView.navigationController setNavigationBarHidden:NO];
+	[self.masterView.navigationItem setTitle: header.title];	
+	self.masterView.navigationItem.rightBarButtonItem = header.rightButton;
+	self.masterView.navigationItem.leftBarButtonItem = header.leftButton;
+}
 
+-(void) addBodyControl:(iBaseControl*) widget
+{
+	[Utilities AddControl:widget ToContainer:self];
+}
 
 @end

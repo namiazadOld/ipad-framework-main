@@ -11,7 +11,7 @@
 #import "Scope.h"
 #import "UIStyle.h"
 
-
+@class iHeader;
 
 @interface iBaseControl : NSObject<Notifiable> {
 	//CGRect lastInnerControlFrame;
@@ -91,6 +91,8 @@
 -(iBaseControl*) getRootContainer;
 -(NSMutableArray*) getFlattenChildren;
 -(iBaseControl*) getContainer;
+-(void) setHeader: (iHeader*) header;
 +(void) ChangeControl:(iBaseControl*)source to:(iBaseControl*)target;
+
 
 @end

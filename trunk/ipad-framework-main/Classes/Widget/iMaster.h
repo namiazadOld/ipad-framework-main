@@ -15,10 +15,8 @@
 
 @interface iMaster : iBaseControl {
 	UIViewController* masterView;
-	BindableObject* titleBindableObject;
 }
 
 @property (nonatomic, retain) UIViewController* masterView;
-@property (nonatomic, retain) BindableObject* titleBindableObject;
 
 @end

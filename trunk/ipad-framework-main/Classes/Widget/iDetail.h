@@ -8,16 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
-#import "iDetailViewController.h"
 #import "BindableObject.h"
 
 @interface iDetail : iBaseControl {
-	iDetailViewController* detailView;
-	BindableObject* titleBindableObject;
+	UIViewController* detailView;
 }
 
-@property (nonatomic, retain) iDetailViewController* detailView;
-@property (nonatomic, retain) NSString* title;
+@property (nonatomic, retain) UIViewController* detailView;
 @property (nonatomic, retain) BindableObject* titleBindableObject;
 
 @end

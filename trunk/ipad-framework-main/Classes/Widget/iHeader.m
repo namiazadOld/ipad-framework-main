@@ -53,21 +53,7 @@
 
 -(void) parentChanged: (iBaseControl*)parent
 {
-	if ([parent isKindOfClass:[iView class]])
-	{
-		iView* view = (iView*)parent;
-		self.container = view;
-		[view.viewController.navigationController setNavigationBarHidden:NO];
-		[view.viewController.navigationItem setTitle: self.title];
-		
-		[self setButtons];
-	}
-}
-
--(void) setButtons
-{
-	self.container.viewController.navigationItem.rightBarButtonItem = self.rightButton;
-	self.container.viewController.navigationItem.leftBarButtonItem = self.leftButton;
+	[parent setHeader:self];		
 }
 
 

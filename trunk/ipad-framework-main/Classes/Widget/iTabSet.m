@@ -70,6 +70,9 @@
 -(void)setFrame:(CGRect)frame
 {
 	self.tabController.view.frame = frame;
+	
+	for (UIViewController* tabPage in self.tabController.viewControllers)
+		tabPage.view.frame = frame;
 }
 
 -(UIView*) getView

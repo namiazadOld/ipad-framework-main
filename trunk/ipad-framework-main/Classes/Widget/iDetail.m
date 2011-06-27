@@ -7,55 +7,26 @@
 //
 
 #import "iDetail.h"
+#import "Utilities.h"
+#import "iHeader.h"
 
 
 @implementation iDetail
-@synthesize detailView, title, titleBindableObject;
+@synthesize detailView;
 
--(NSString*) title
+-(iDetail*) init
 {
-	return detailView.barTitle;
-}
-
--(void)setTitle:(NSString *)aString
-{
-	@synchronized(self)
-	{
-		if (self.detailView.barTitle != aString)
-		{
-			self.detailView.barTitle = [aString retain];
-			[aString release];
-		}
-	}
-}
-
--(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
-{
-	self.detailView = [[iDetailViewController alloc] init];
-	[super render:arguments container: parent elements: elements];
+	self.detailView = [[UIViewController alloc] init];
+	//Setting for portrait mode:
+	self.detailView.view.frame = CGRectMake(269, 0, 499, 1004);
+	self.detailView.view.backgroundColor = [UIColor whiteColor];
 	return self;
 }
 
-
--(void) eventOccured:(id)sender
-{
-	if (!self.locked)
-	{
-		self.locked = YES;
-		[self.titleBindableObject setValue:[self.detailView.barTitle retain]];
-		self.locked = NO;
-	}
-}
-
--(void) changeNotification:(BindableObject*) bo
-{
-	if (!self.locked)
-	{
-		self.locked = YES;
-		if ([bo isEqual:self.titleBindableObject])
-			self.detailView.barTitle = (NSString*) bo.value;
-		self.locked = NO;
-	}
+-(iBaseControl*) render: (NSMutableArray*) arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
+{	
+	[super render:arguments container: parent elements: elements];
+	return self;
 }
 
 -(CGRect) getFrame
@@ -65,7 +36,7 @@
 
 -(void)setFrame:(CGRect)frame
 {
-	self.detailView.view.frame = frame;
+	//since this control is completely internal, style management should not be applied on that.
 }
 
 -(UIView*) getView
@@ -73,6 +44,22 @@
 	return self.detailView.view;
 }
 
+-(void) setHeader:(iHeader *)header
+{
+	if (detailView.navigationController == NULL)
+	{
+		header.container = self;
+	}
+	header.container = self;
+	[self.detailView.navigationController setNavigationBarHidden:NO];
+	[self.detailView.navigationItem setTitle: header.title];	
+	self.detailView.navigationItem.rightBarButtonItem = header.rightButton;
+	self.detailView.navigationItem.leftBarButtonItem = header.leftButton;
+}
 
+-(void) addBodyControl:(iBaseControl*) widget
+{
+	[Utilities AddControl:widget ToContainer:self];
+}
 
 @end
