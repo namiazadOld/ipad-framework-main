@@ -290,6 +290,11 @@
 	return parent;
 }
 
+-(void) setHeader: (iHeader*) header
+{
+	
+}
+
 //+(void) PrintHierarchy:(UIView*) view
 //{	
 //	if (view == NULL)

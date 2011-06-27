@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "iBaseControl.h"
-#import "iView.h"
+
 
 
 
@@ -18,14 +18,14 @@
 	UIBarButtonItem* rightButton;
 	UIBarButtonItem* leftButton;
 	BindableObject* titleBindableObject;
-	iView* container;
+	iBaseControl* container;
 }
 
 @property (retain) NSString* title;
 @property (retain) UIBarButtonItem* rightButton;
 @property (retain) UIBarButtonItem* leftButton;
 @property (nonatomic, retain) BindableObject* titleBindableObject;
-@property (nonatomic, retain) iView* container;
+@property (nonatomic, retain) iBaseControl* container;
 
 -(void) setButtons;
 

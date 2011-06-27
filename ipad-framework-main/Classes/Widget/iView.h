@@ -12,7 +12,9 @@
 #import "iCustomControl.h"
 
 @interface iView : iBaseControl {
-
+	UINavigationController* navController;
 }
+
+@property (nonatomic, retain) UINavigationController* navController;
 
 @end

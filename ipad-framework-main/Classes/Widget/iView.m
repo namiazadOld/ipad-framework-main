@@ -9,16 +9,22 @@
 #import "iView.h"
 #import "Constants.h"
 #import "Utilities.h"
+#import "iHeader.h"
 
 
 @implementation iView
+@synthesize navController;
 
 
 
--(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) elements
+-(iBaseControl*) render: (NSMutableArray*)arguments container: (iBaseControl*)parent elements: (iBaseControl*) _elements
 {
 	viewController = [[UIViewController alloc]init];
-	[super render:arguments container: parent elements: elements];
+	[super render:arguments container: parent elements: _elements];
+	
+	self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+	[self.navController setNavigationBarHidden:YES];
+	
 	return self;
 }
 
@@ -40,6 +46,15 @@
 -(void) addBodyControl:(iBaseControl*) widget
 {
 	[Utilities AddControl:widget ToContainer:self];
+}
+
+-(void) setHeader: (iHeader*) header
+{
+	header.container = self;
+	[self.viewController.navigationController setNavigationBarHidden:NO];
+	[self.viewController.navigationItem setTitle: header.title];	
+	self.viewController.navigationItem.rightBarButtonItem = header.rightButton;
+	self.viewController.navigationItem.leftBarButtonItem = header.leftButton;
 }
 
 -(void) manageArgument:(BindableObject *)bo at:(int)index
