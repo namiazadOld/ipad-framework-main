@@ -233,6 +233,7 @@ static BOOL _ordered;
 		CGRect f = [child getFrame];
 		container.lastInnerControl = child;
 		[StylingManager orderWidgets:child];
+		
 	}
 	
 	

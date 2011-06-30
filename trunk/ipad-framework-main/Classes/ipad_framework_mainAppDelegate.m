@@ -64,6 +64,48 @@
 //	[window addSubview:[navController view]];
 //	[navController setNavigationBarHidden:YES];
 	
+	
+	//UITabBarController* t = [[UITabBarController alloc] init];
+//
+//	UIViewController* p1 = [[UIViewController alloc] init];
+//	p1.title = @"TAB1";
+//	
+//	UIViewController* content1 = [[UIViewController alloc] init];
+//	UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:content1];
+//	UIBarButtonItem* item1 = [[UIBarButtonItem alloc] init];
+//	item1.title = @"Item1";
+//	content1.navigationItem.leftBarButtonItem = item1;
+//	content1.navigationItem.title = @"Header1";
+//	
+//	UILabel* l1 = [[UILabel alloc] init];
+//	l1.frame = CGRectMake(10, 10, 100, 100);
+//	l1.text = @"I am 1";
+//	[content1.view addSubview:l1];
+//	
+//	[p1.view addSubview:nav1.view];
+//	
+//	UIViewController* p2 = [[UIViewController alloc] init];
+//	p2.title = @"TAB2";
+//	
+//	UIViewController* content2 = [[UIViewController alloc] init];
+//	UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:content2];
+//	UIBarButtonItem* item2 = [[UIBarButtonItem alloc] init];
+//	item2.title = @"Item1";
+//	content2.navigationItem.leftBarButtonItem = item2;
+//	content2.navigationItem.title = @"Header2";
+//	
+//	UILabel* l2 = [[UILabel alloc] init];
+//	l2.frame = CGRectMake(10, 10, 100, 100);
+//	l2.text = @"I am 2";
+//	[content2.view addSubview:l2];
+//	
+//	[p2.view addSubview:nav2.view];
+//	
+//	
+//	t.viewControllers = [[NSArray alloc] initWithObjects:p1, p2, nil];
+//	
+//	[window addSubview:t.view];
+	
     [window makeKeyAndVisible];
 }
 

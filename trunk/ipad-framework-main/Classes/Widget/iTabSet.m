@@ -11,6 +11,7 @@
 #import "iTabPage.h"
 #import "iCustomControl.h"
 #import "Utilities.h"
+#import "StylingManager.h"
 
 
 @implementation iTabSet
@@ -39,7 +40,6 @@
 		[actualPages addObject:tabPage.tabPage];
 	}
 
-	
 	[self.tabController setViewControllers:actualPages];
 }
 
@@ -73,6 +73,7 @@
 	
 	for (UIViewController* tabPage in self.tabController.viewControllers)
 		tabPage.view.frame = frame;
+	
 }
 
 -(UIView*) getView

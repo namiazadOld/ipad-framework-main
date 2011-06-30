@@ -7,6 +7,7 @@
 //
 
 #import "iSplitView.h"
+#import "StylingManager.h"
 
 @implementation iSplitView
 @synthesize splitView, master, detail;
@@ -18,15 +19,15 @@
 	
 	self.detail = [[iDetail alloc] init];
 	self.master = [[iMaster alloc] init];
-	UINavigationController *masterNav = [[[UINavigationController alloc] initWithRootViewController:self.master.masterView]autorelease];
-	UINavigationController *detailNav = [[[UINavigationController alloc] initWithRootViewController:self.detail.detailView] autorelease];
+	UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:self.master.masterView];
+	UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:self.detail.detailView];
 	[masterNav setNavigationBarHidden:YES];
 	[detailNav setNavigationBarHidden:YES];
 		
 	[super render:arguments container: parent elements:_elements];
 	
-	masterNav.view.frame = [self.master getFrame];
-	detailNav.view.frame = [self.detail getFrame];
+	//masterNav.view.frame = [self.master getFrame];
+	//detailNav.view.frame = [self.detail getFrame];
 	
 	[self.splitView.view addSubview:masterNav.view];
 	[self.splitView.view addSubview:detailNav.view];
@@ -83,7 +84,15 @@
 
 -(void)setFrame:(CGRect)frame
 {
+	float ratioMaster = 268.0/768.0;
+	float ratioDetail = 499.0/768.0;
 	self.splitView.view.frame = frame;
+	self.master.masterView.view.frame = CGRectMake(0, 0, ratioMaster * frame.size.width, frame.size.height);
+	self.detail.detailView.view.frame = CGRectMake(0, 0, ratioDetail * frame.size.width, frame.size.height);	
+
+	self.master.masterView.navigationController.view.frame = CGRectMake(0, 0, ratioMaster * frame.size.width, frame.size.height);
+	self.detail.detailView.navigationController.view.frame = CGRectMake(ratioMaster * frame.size.width + 2, 0, ratioDetail * frame.size.width, frame.size.height);
+	
 }
 
 -(UIView*) getView
