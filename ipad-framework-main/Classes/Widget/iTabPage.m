@@ -86,7 +86,6 @@
 -(void)setFrame:(CGRect)frame
 {
 	//Tabpage is a completely internal control and style managment should not be applied to that.
-	//self.tabPage.view.frame = frame;
 }
 
 -(UIView*) getView

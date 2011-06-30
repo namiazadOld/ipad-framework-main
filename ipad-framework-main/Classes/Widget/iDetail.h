@@ -15,6 +15,6 @@
 }
 
 @property (nonatomic, retain) UIViewController* detailView;
-@property (nonatomic, retain) BindableObject* titleBindableObject;
+
 
 @end
