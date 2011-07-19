@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entity.h"
 
 
 @interface mobl : NSObject {
-
+	
 }
+
++(void) add: (Entity*) newItem;
 
 @end

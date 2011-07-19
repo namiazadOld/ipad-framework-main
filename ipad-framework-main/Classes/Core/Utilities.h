@@ -19,5 +19,8 @@
 +(void) AddControl:(iBaseControl*) widget ToContainer: (iBaseControl*) container;
 +(BindableObject*) InitWithType: (TypedValue*) tv;
 +(id) Tuple: (NSArray*)values;
++(NSString*) StringWithUUID;
++(void) setManagedObjectContext: (NSManagedObjectContext*)_managedObjectContext;
++(void) setManagedObjectModel: (NSManagedObjectModel*)_managedObjectModel;
 
 @end
