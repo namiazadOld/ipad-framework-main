@@ -151,6 +151,27 @@
 			393BF4A41395799A00BB8AD6 = 393BF4A41395799A00BB8AD6 /* PBXTextBookmark */;
 			393BF4A61395799A00BB8AD6 = 393BF4A61395799A00BB8AD6 /* PBXTextBookmark */;
 			393BF4B51395799A00BB8AD6 = 393BF4B51395799A00BB8AD6 /* PBXTextBookmark */;
+			393D987613D61CFA00D2A4C4 /* PBXTextBookmark */ = 393D987613D61CFA00D2A4C4 /* PBXTextBookmark */;
+			393D987713D61CFA00D2A4C4 /* PBXTextBookmark */ = 393D987713D61CFA00D2A4C4 /* PBXTextBookmark */;
+			393D987813D61CFA00D2A4C4 /* PBXTextBookmark */ = 393D987813D61CFA00D2A4C4 /* PBXTextBookmark */;
+			393D989C13D61D7000D2A4C4 /* PBXTextBookmark */ = 393D989C13D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D989E13D61D7000D2A4C4 /* PBXTextBookmark */ = 393D989E13D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98A013D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98A013D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98A213D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98A213D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98A413D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98A413D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98A613D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98A613D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98A813D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98A813D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98AA13D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98AA13D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98AC13D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98AC13D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98AE13D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98AE13D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B013D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98B013D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B113D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98B113D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B213D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98B213D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B313D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98B313D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B413D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98B413D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B613D61D7000D2A4C4 /* PBXTextBookmark */ = 393D98B613D61D7000D2A4C4 /* PBXTextBookmark */;
+			393D98B913D61D9400D2A4C4 /* PBXTextBookmark */ = 393D98B913D61D9400D2A4C4 /* PBXTextBookmark */;
+			393D98BA13D61D9400D2A4C4 /* PBXTextBookmark */ = 393D98BA13D61D9400D2A4C4 /* PBXTextBookmark */;
 			39422F8A13D4973800DBC35E = 39422F8A13D4973800DBC35E /* PBXTextBookmark */;
 			39422F8B13D4973800DBC35E = 39422F8B13D4973800DBC35E /* PBXTextBookmark */;
 			39422FE613D4B6ED00DBC35E = 39422FE613D4B6ED00DBC35E /* PBXTextBookmark */;
@@ -326,7 +347,26 @@
 		vrLen = 361;
 		vrLoc = 0;
 	};
+	391DB89313D615480066596C /* DateTime.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = DateTime.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Types/DateTime.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {929, 641}}";
+			sepNavSelRange = "{439, 0}";
+			sepNavVisRange = "{0, 446}";
+		};
+	};
 	391DB89413D615480066596C /* DateTime.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = DateTime.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Types/DateTime.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {922, 641}}";
 			sepNavSelRange = "{0, 0}";
@@ -334,6 +374,12 @@
 		};
 	};
 	391DB89613D615480066596C /* Entity.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Entity.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Types/Entity.m";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {709, 689}}";
 			sepNavSelRange = "{488, 0}";
@@ -341,6 +387,12 @@
 		};
 	};
 	391DB8A113D615480066596C /* Tuple5.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = Tuple5.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Types/Tuple5.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {709, 641}}";
 			sepNavSelRange = "{0, 0}";
@@ -637,6 +689,321 @@
 		rLoc = 0;
 		rType = 0;
 		vrLen = 399;
+		vrLoc = 0;
+	};
+	393D987613D61CFA00D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 391DB8A113D615480066596C /* Tuple5.h */;
+		name = "Tuple5.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 303;
+		vrLoc = 0;
+	};
+	393D987713D61CFA00D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 391DB89313D615480066596C /* DateTime.h */;
+		name = "DateTime.h: 19";
+		rLen = 0;
+		rLoc = 439;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 0;
+	};
+	393D987813D61CFA00D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 391DB89313D615480066596C /* DateTime.h */;
+		name = "DateTime.h: 19";
+		rLen = 0;
+		rLoc = 439;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 0;
+	};
+	393D988513D61D6000D2A4C4 /* Entity.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {709, 689}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 850}";
+		};
+	};
+	393D988613D61D6000D2A4C4 /* Object.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {709, 641}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 277}";
+		};
+	};
+	393D988813D61D6000D2A4C4 /* Tuple1.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {709, 641}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 370}";
+		};
+	};
+	393D988F13D61D6000D2A4C4 /* Tuple4.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {709, 641}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 410}";
+		};
+	};
+	393D989C13D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D989D13D61D7000D2A4C4 /* DateTime.h */;
+		name = "DateTime.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 0;
+	};
+	393D989D13D61D7000D2A4C4 /* DateTime.h */ = {
+		isa = PBXFileReference;
+		name = DateTime.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/DateTime.h";
+		sourceTree = "<absolute>";
+	};
+	393D989E13D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D989F13D61D7000D2A4C4 /* DateTime.m */;
+		name = "DateTime.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 811;
+		vrLoc = 0;
+	};
+	393D989F13D61D7000D2A4C4 /* DateTime.m */ = {
+		isa = PBXFileReference;
+		name = DateTime.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/DateTime.m";
+		sourceTree = "<absolute>";
+	};
+	393D98A013D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98A113D61D7000D2A4C4 /* Entity.h */;
+		name = "Entity.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 436;
+		vrLoc = 0;
+	};
+	393D98A113D61D7000D2A4C4 /* Entity.h */ = {
+		isa = PBXFileReference;
+		name = Entity.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Entity.h";
+		sourceTree = "<absolute>";
+	};
+	393D98A213D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98A313D61D7000D2A4C4 /* Object.m */;
+		name = "Object.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 294;
+		vrLoc = 0;
+	};
+	393D98A313D61D7000D2A4C4 /* Object.m */ = {
+		isa = PBXFileReference;
+		name = Object.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Object.m";
+		sourceTree = "<absolute>";
+	};
+	393D98A413D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98A513D61D7000D2A4C4 /* Tuple1.m */;
+		name = "Tuple1.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 382;
+		vrLoc = 0;
+	};
+	393D98A513D61D7000D2A4C4 /* Tuple1.m */ = {
+		isa = PBXFileReference;
+		name = Tuple1.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Tuple1.m";
+		sourceTree = "<absolute>";
+	};
+	393D98A613D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98A713D61D7000D2A4C4 /* Tuple2.h */;
+		name = "Tuple2.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 302;
+		vrLoc = 0;
+	};
+	393D98A713D61D7000D2A4C4 /* Tuple2.h */ = {
+		isa = PBXFileReference;
+		name = Tuple2.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Tuple2.h";
+		sourceTree = "<absolute>";
+	};
+	393D98A813D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98A913D61D7000D2A4C4 /* Tuple2.m */;
+		name = "Tuple2.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	393D98A913D61D7000D2A4C4 /* Tuple2.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = Tuple2.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Tuple2.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {709, 641}}";
+			sepNavSelRange = "{401, 0}";
+			sepNavVisRange = "{0, 410}";
+		};
+	};
+	393D98AA13D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98AB13D61D7000D2A4C4 /* Tuple3.h */;
+		name = "Tuple3.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 302;
+		vrLoc = 0;
+	};
+	393D98AB13D61D7000D2A4C4 /* Tuple3.h */ = {
+		isa = PBXFileReference;
+		name = Tuple3.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Tuple3.h";
+		sourceTree = "<absolute>";
+	};
+	393D98AC13D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98AD13D61D7000D2A4C4 /* Tuple3.m */;
+		name = "Tuple3.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	393D98AD13D61D7000D2A4C4 /* Tuple3.m */ = {
+		isa = PBXFileReference;
+		name = Tuple3.m;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Tuple3.m";
+		sourceTree = "<absolute>";
+	};
+	393D98AE13D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98AF13D61D7000D2A4C4 /* Tuple4.h */;
+		name = "Tuple4.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 302;
+		vrLoc = 0;
+	};
+	393D98AF13D61D7000D2A4C4 /* Tuple4.h */ = {
+		isa = PBXFileReference;
+		name = Tuple4.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Tuple4.h";
+		sourceTree = "<absolute>";
+	};
+	393D98B013D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D988F13D61D6000D2A4C4 /* Tuple4.m */;
+		name = "Tuple4.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 410;
+		vrLoc = 0;
+	};
+	393D98B113D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 39E0FD7B137EBB78004D213F /* Callback.h */;
+		name = "Callback.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 361;
+		vrLoc = 0;
+	};
+	393D98B213D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D988813D61D6000D2A4C4 /* Tuple1.h */;
+		name = "Tuple1.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 370;
+		vrLoc = 0;
+	};
+	393D98B313D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D988513D61D6000D2A4C4 /* Entity.m */;
+		name = "Entity.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 850;
+		vrLoc = 0;
+	};
+	393D98B413D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98B513D61D7000D2A4C4 /* Object.h */;
+		name = "Object.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	393D98B513D61D7000D2A4C4 /* Object.h */ = {
+		isa = PBXFileReference;
+		name = Object.h;
+		path = "/Users/nami/Documents/ipad-framework-main/Classes/Core/Object.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {709, 641}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 277}";
+		};
+	};
+	393D98B613D61D7000D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D988613D61D6000D2A4C4 /* Object.h */;
+		name = "Object.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	393D98B913D61D9400D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98B513D61D7000D2A4C4 /* Object.h */;
+		name = "Object.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 277;
+		vrLoc = 0;
+	};
+	393D98BA13D61D9400D2A4C4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 393D98A913D61D7000D2A4C4 /* Tuple2.m */;
+		name = "Tuple2.m: 21";
+		rLen = 0;
+		rLoc = 401;
+		rType = 0;
+		vrLen = 410;
 		vrLoc = 0;
 	};
 	39422F8A13D4973800DBC35E /* PBXTextBookmark */ = {

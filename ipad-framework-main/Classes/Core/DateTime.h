@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Object.h"
 
 
-@interface DateTime : NSObject {
+@interface DateTime : Object {
 	NSDate* date;
 }
 
 @property (nonatomic, retain) NSDate* date;
 +(DateTime*) create: (float)year arg:(float)month arg:(float)day arg:(float)hour arg:(float)minute arg:(float)second arg:(float)ms;
--(float) getDay;
+-(float) getDay; 
 
 @end
