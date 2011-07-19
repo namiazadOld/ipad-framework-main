@@ -18,6 +18,8 @@
 
 -(Object*) initWithValues: (NSArray*)nvs
 {
- }
+	[self initialize];
+	return self;
+}
 
 @end

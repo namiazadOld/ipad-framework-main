@@ -20,6 +20,8 @@
 @implementation Utilities
 
 static UIViewController* currentView;
+static NSManagedObjectModel* managedObjectModel;
+static NSManagedObjectContext* managedObjectContext;
 
 +(void) ShowError: (id)sender title: (NSString*)title content: (NSString*)content
 {
@@ -56,26 +58,7 @@ static UIViewController* currentView;
 		[container.children addObject:widget];
 		[widget setParentWidget:container];
 	}
-	
-	//UIView* view = [widget getView];
-//		
-//	
-//	if (view != NULL && [view isEqual:[container getChildrenHolder]])
-//		return;
-//	
-//	if (view != NULL)
-//		[[container getChildrenHolder] addSubview:view];
-//	
-//	
-//		
-//	[widget parentChanged:container];
-//	[container.children addObject:widget];
-//	[widget setParentWidget:container];
-	
-//	if (container.currentRole != nil)
-//		[container.currentRole.children addObject:widget];
-	
-	}
+}
 
 +(BindableObject*) InitWithType: (TypedValue*) tv
 {
@@ -105,6 +88,26 @@ static UIViewController* currentView;
 	[viewController release];
 }
 
++(NSManagedObjectContext*) ManagedObjectContext
+{
+	return managedObjectContext;
+}
+
++(void) setManagedObjectContext: (NSManagedObjectContext*)_managedObjectContext
+{
+	managedObjectContext = _managedObjectContext;
+}
+
++(NSManagedObjectModel*) ManagedObjectModel
+{
+	return managedObjectModel;
+}
+
++(void) setManagedObjectModel: (NSManagedObjectModel*)_managedObjectModel
+{
+	managedObjectModel = _managedObjectModel;
+}
+
 +(id) Tuple: (NSArray*)values
 {
 	switch ([values count]) {
@@ -129,8 +132,15 @@ static UIViewController* currentView;
 			return [[Tuple5 alloc] initialize:values];
 		}
 		default:
-			break;
+			return nil;
 	}
+}
+
++(NSString*) StringWithUUID {
+	CFUUIDRef	uuidObj = CFUUIDCreate(nil);
+	NSString	*uuidString = (NSString*)CFUUIDCreateString(nil, uuidObj);
+	CFRelease(uuidObj);
+	return [uuidString autorelease];
 }
 
 @end

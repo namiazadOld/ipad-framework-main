@@ -1,12 +1,13 @@
 
 
 #import "root.h"
-#import "mobl_ipadstyle_splitViewStyle.h"
-#import "root_detail1873.h"
-#import "root_master1373.h"
-#import "iSplitView.h"
-#import "root_detail1872.h"
+#import "mobl_ipadstyle_rightButtonStyle.h"
+#import "iRightButton.h"
+#import "ControlVariable_AddPerson.h"
+#import "mobl_ipadstyle_headerStyle.h"
+#import "iHeader.h"
 #import "root.h"
+#import "root_iHeader_ControlCall7.h"
 
 @implementation root
 @synthesize window;
@@ -17,31 +18,24 @@
 	[window addSubview:[navController view]];
 	
 	[self.scope createInnerScope];
-	int w_3606 = -1;
+	int h_15723 = -1;
 	
 	NSStack* containerStack = [[NSStack alloc]init];
 	[containerStack push:self];
-	BindableObject* VarDeclInferred103 = [[BindableObject alloc] initWithValue: @""];
-	[self.scope set:@"language" variable:VarDeclInferred103];
-	BindableObject* VarDeclInferred104 = [[BindableObject alloc] initWithValue: @""];
-	[self.scope set:@"keyboardType" variable:VarDeclInferred104];
-	BindableObject* VarDeclInferred105 = [[BindableObject alloc] initWithValue: @""];
-	[self.scope set:@"mouseType" variable:VarDeclInferred105];
-	BindableObject* VarDeclInferred106 = [[BindableObject alloc] initWithValue: [[root_detail1872 alloc] init]];
-	[self.scope set:@"detailVar" variable:VarDeclInferred106];
+	BindableObject* DeriveDecl39 = [[BindableObject alloc] initWithValue: @"General Infor"];
+	[self.scope set:@"tmp117" variable:DeriveDecl39];
 	
 	[self.scope createInnerScope];
 	
-	NSMutableArray* arguments703 = [[NSMutableArray alloc] init];
+	NSMutableArray* arguments27 = [[NSMutableArray alloc] init];
 	
-	[arguments703 addObject:[[BindableObject alloc] initWithValue: [[root_master1373 alloc] init]]];
-	[arguments703 addObject:[[BindableObject alloc] initWithValue: [[root_detail1873 alloc] init]]];
-	[arguments703 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_splitViewStyle alloc] initialize]]];
+	[arguments27 addObject:(BindableObject*)[self.scope get: @"tmp117"]];
+	[arguments27 addObject:[[BindableObject alloc] initWithValue: [[mobl_ipadstyle_headerStyle alloc] initialize]]];
 	
-	iSplitView* iSplitView_iSplitView54 = [[iSplitView alloc] init];
-	[iSplitView_iSplitView54 render:arguments703 container: [containerStack top] elements:NULL];
-	[iSplitView_iSplitView54 finilize];
-	[[containerStack top] addBodyControl:iSplitView_iSplitView54];
+	iHeader* iHeader_iHeader7 = [[iHeader alloc] init];
+	[iHeader_iHeader7 render:arguments27 container: [containerStack top] elements:[[root_iHeader_ControlCall7 alloc] initWithElementOf:self.elementOf]];
+	[iHeader_iHeader7 finilize];
+	[[containerStack top] addBodyControl:iHeader_iHeader7];
 	[self.scope exitScope];
 	 
 	[containerStack pop]; 
