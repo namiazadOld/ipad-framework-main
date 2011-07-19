@@ -18,7 +18,7 @@
 {
 	[super initialize:values];
 	self._2 = [Utilities InitWithType:(TypedValue*)[values objectAtIndex:1]];
-	return self;
+	return self
 }
 
 @end
