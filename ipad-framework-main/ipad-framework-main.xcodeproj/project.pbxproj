@@ -361,9 +361,17 @@
 			path = stdlib;
 			sourceTree = "<group>";
 		};
+		393D98BF13D61DCF00D2A4C4 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
 		39E0FD76137EBB78004D213F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				393D98BF13D61DCF00D2A4C4 /* Types */,
 				393BF4411395627E00BB8AD6 /* stdlib */,
 				393D988213D61D6000D2A4C4 /* DateTime.h */,
 				393D988313D61D6000D2A4C4 /* DateTime.m */,
