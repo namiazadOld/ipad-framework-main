@@ -22,7 +22,7 @@
 	return nsed;
 }
 
--(void) sync: (NSManagedObject*)entity
+-(void) sync: (NSManagedObject*)entity   
 {
 	
 }
