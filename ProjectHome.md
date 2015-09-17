@@ -1,0 +1,1 @@
+this a framework to facilitate ipad apps development
